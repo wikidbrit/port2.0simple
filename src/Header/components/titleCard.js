@@ -14,8 +14,8 @@ const TitleCard = () => {
         </div>
       </p>
       <p>
-        I help you ideate, iterate, and developer the best solution your brand
-        deserves.
+        I help you ideate, iterate, and developer the best solution <br></br>
+        your brand deserves.
       </p>
     </div>
   );
