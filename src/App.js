@@ -1,15 +1,17 @@
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './Header/Header';
-import Projects from './Projects/Projects';
 
-import Layout from './components/layout';
+import Home from './pages/Home';
+import ProjectTemplate from './template/ProjectTemplate';
 
 function App() {
   return (
-    <Layout>
-      <Header />
-      <Projects />
-    </Layout>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/template" element={<ProjectTemplate />} />
+      </Routes>
+    </>
   );
 }
 

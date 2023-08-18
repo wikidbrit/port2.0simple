@@ -4,12 +4,12 @@ import CtaButtons from './subcomponents/CtaButtons';
 
 const TitleCard = () => {
   return (
-    <div className="text-pWhite space-y-10">
+    <div className="text-pWhite space-y-14">
       <LookingForWork />
       <div className="text-[4.2rem] w-[90%] -space-y-6">
         <p>Hey, I'm Paul</p>
         <p className="gradient-text">a UI/UX Designer and </p>
-        <p className="gradient-text">Font End Developer.</p>
+        <p className="gradient-text">Front End Developer.</p>
       </div>
       <CtaButtons />
       <p className="text-pText">
