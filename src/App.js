@@ -3,6 +3,7 @@ import './App.css';
 
 import Home from './pages/Home';
 import ProjectTemplate from './template/ProjectTemplate';
+import FourZeroFour from './pages/FourZeroFour';
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/template" element={<ProjectTemplate />} />
+        <Route path="*" element={<FourZeroFour />} />
+        <Route path="project/:slug" element={<ProjectTemplate />} />
       </Routes>
     </>
   );

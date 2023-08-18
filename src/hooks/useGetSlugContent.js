@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
-const useGetContent = () => {
+const useGetSlugContent = ({ slug }) => {
   const [data, setData] = useState(null);
 
   const query = `
 {
-  portfolioCollection {
+  portfolioCollection(where: {slug: "${slug}"}) {
     items {
       title
       subtext
@@ -54,4 +54,4 @@ const useGetContent = () => {
 
   return { data };
 };
-export default useGetContent;
+export default useGetSlugContent;
