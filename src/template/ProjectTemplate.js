@@ -17,14 +17,14 @@ const ProjectTemplate = () => {
     <Layout>
       <div>
         <Link to="/">
-          <button className="absolute top-26 right-36">
+          <button className="">
             <CtaButton icon={<FiArrowLeft />} text={'Go Back'} />
           </button>
         </Link>
         <p className="text-[4.2rem] text-pWhite">{data[0].title}</p>
         <p className="text-pText">{data[0].openingText}</p>
         {data[0].contentImageCollection.items.map((item, index) => (
-          <p key={index}>{item.url}</p>
+          <img key={index} alt="test" src={item.url}></img>
         ))}
         <p className="text-pText">{data[0].conclusion}</p>
       </div>
