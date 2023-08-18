@@ -17,7 +17,7 @@ const ProjectTemplate = () => {
     <Layout>
       <div>
         <Link to="/">
-          <button className="">
+          <button className="fixed left-20 mt-7">
             <CtaButton icon={<FiArrowLeft />} text={'Go Back'} />
           </button>
         </Link>

@@ -11,10 +11,16 @@ const CtaButtons = () => {
         icon={<MdMailOutline color="#00B4D6" size={'1.2rem'} />}
         text={'Contact'}
       />
-      <CtaButton
-        icon={<AiOutlineLinkedin color="#00B4D6" size={'1.2rem'} />}
-        text={'LinkedIn'}
-      />
+      <a
+        href="https://www.linkedin.com/in/pflemingonline/"
+        target="blank"
+        rel="noreferrer"
+      >
+        <CtaButton
+          icon={<AiOutlineLinkedin color="#00B4D6" size={'1.2rem'} />}
+          text={'LinkedIn'}
+        />
+      </a>
       <CtaButton
         icon={<MdOutlineFileOpen color="#00B4D6" size={'1.2rem'} />}
         text={'Resume'}
