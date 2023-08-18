@@ -1,9 +1,10 @@
 import React from 'react';
+import LookingForWork from './subcomponents/LookingForWork';
 
 const TitleCard = () => {
   return (
     <div className="text-gray-300 space-y-10">
-      <p>Hey, I'm Paul Fleming. Welcome to my portfolio page!</p>
+      <LookingForWork />
       <p className="flex flex-row text-[5.3rem] overflow-visible">
         Developer &{' '}
         <div className="relative poetsenOne">

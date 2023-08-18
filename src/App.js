@@ -7,7 +7,6 @@ import Nav from './nav/nav';
 function App() {
   return (
     <Layout>
-      <Nav />
       <Header />
     </Layout>
   );
