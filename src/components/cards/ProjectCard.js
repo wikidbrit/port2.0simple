@@ -13,7 +13,11 @@ const ProjectCard = ({ title, subTitle, image }) => {
         <GoArrowUpRight color="#00B4D6" size={'1.2rem'} />
       </div>
 
-      <div className=" h-48 bg-gray-300 w-full rounded-xl">{image}</div>
+      <img
+        src={image}
+        alt="testing"
+        className="object-cover h-48 w-full rounded-xl"
+      ></img>
     </div>
   );
 };

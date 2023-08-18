@@ -5,11 +5,9 @@ import useGetContent from '../hooks/useGetContent';
 const Projects = () => {
   const { data } = useGetContent();
 
-  if (!data) return <div>Loading</div>;
-
   const portfolioData = data;
 
-  console.log(portfolioData);
+  if (!data) return <div>Loading</div>;
 
   return (
     <div className="grid grid-cols-2 gap-4">
@@ -17,8 +15,8 @@ const Projects = () => {
         <ProjectCard
           key={index}
           title={item.title}
-          subTitle={item.subTitle}
-          image={'text'}
+          subTitle={item.subtext}
+          image={item.coverimage.url}
         />
       ))}
     </div>

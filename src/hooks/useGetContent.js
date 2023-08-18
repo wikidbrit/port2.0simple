@@ -46,7 +46,7 @@ const useGetContent = () => {
         // rerender the entire component with new data
         setData(data.portfolioCollection.items);
       });
-  }, []);
+  }, [query]);
 
   if (!data) {
     return 'loading';
