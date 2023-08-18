@@ -2,8 +2,8 @@ import React from 'react';
 
 const Layout = ({ children }) => {
   return (
-    <div className="w-scree h-screen bg-zinc-900">
-      <div className=" pt-52 px-52">{children}</div>
+    <div className="w-scree h-screen bg-pDark">
+      <div className=" pt-28 px-[21rem]">{children}</div>
     </div>
   );
 };

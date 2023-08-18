@@ -3,3 +3,9 @@
     src: local('PoetsenOne-Regular'),
          url('./fonts/PoetsenOne-Regular.ttf') format('ttf'),
 }
+
+@font-face {
+    font-family: 'Helvetica-Neue';
+    src: local('Helvetica-Neue'),
+         url('./fonts/HelveticaNeue.ttc') format('ttc'),
+}

@@ -7,7 +7,7 @@ const LookingForWork = () => {
         <div className="absolute blur-sm rounded-full bg-green-500 -top-0.5 -left-0.5 h-3 w-3 animate-pulse"></div>
         <div className=" rounded-full bg-green-500 h-2 w-2 shadow-sm border-[1px] border-green-800"></div>
       </div>
-      <p>Looking for work</p>
+      <p className="text-pText">Looking for work</p>
     </div>
   );
 };
