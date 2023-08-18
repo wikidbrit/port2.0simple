@@ -4,26 +4,26 @@ const useGetSlugContent = ({ slug }) => {
   const [data, setData] = useState(null);
 
   const query = `
-{
-  portfolioCollection(where: {slug: "${slug}"}) {
-    items {
-      title
-      subtext
-      coverimage{
-        url
-      }
-      openingText
-      contentImageCollection{
-        items{
+  {
+    portfolioCollection(where: {slug: "${slug}"}) {
+      items {
+        title
+        subtext
+        coverimage{
           url
         }
+        openingText
+        contentImageCollection{
+          items{
+            url
+          }
+        }
+        conclusion
+        slug
       }
-      conclusion
-      slug
     }
   }
-}
-    `;
+  `;
 
   useEffect(() => {
     window
@@ -51,6 +51,8 @@ const useGetSlugContent = ({ slug }) => {
   if (!data) {
     return 'loading';
   }
+
+  console.log(data);
 
   return { data };
 };
