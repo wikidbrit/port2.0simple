@@ -4,10 +4,23 @@ import useGetContent from '../hooks/useGetContent';
 
 const Projects = () => {
   const { data } = useGetContent();
+
+  if (!data) return <div>Loading</div>;
+
+  const portfolioData = data;
+
+  console.log(portfolioData);
+
   return (
     <div className="grid grid-cols-2 gap-4">
-      <ProjectCard title={'card1'} subTitle={'Subtitle1'} image={'urlTest'} />
-      <ProjectCard title={'card2'} subTitle={'Subtitle2'} image={'urlTest'} />
+      {portfolioData.map((item, index) => (
+        <ProjectCard
+          key={index}
+          title={item.title}
+          subTitle={item.subTitle}
+          image={'text'}
+        />
+      ))}
     </div>
   );
 };

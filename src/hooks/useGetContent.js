@@ -44,15 +44,13 @@ const useGetContent = () => {
         }
 
         // rerender the entire component with new data
-        setData(data.portfolioCollection.items[0]);
+        setData(data.portfolioCollection.items);
       });
   }, []);
 
   if (!data) {
     return 'loading';
   }
-
-  console.log(data);
 
   return { data };
 };
