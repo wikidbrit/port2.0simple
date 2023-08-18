@@ -1,13 +1,14 @@
 import './App.css';
 import Header from './Header/Header';
+import Projects from './Projects/Projects';
 
 import Layout from './components/layout';
-import Nav from './nav/nav';
 
 function App() {
   return (
     <Layout>
       <Header />
+      <Projects />
     </Layout>
   );
 }
