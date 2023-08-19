@@ -6,7 +6,7 @@ const TitleCard = () => {
   return (
     <div className="text-pWhite space-y-14">
       <LookingForWork />
-      <div className="text-[4rem] w-[90%] -space-y-4 font-medium">
+      <div className="text-[4rem] -space-y-6 font-medium title">
         <p className="text-neoGrey">Hey, I'm Paul</p>
         <p className="blue-gradient">a UI/UX Designer and </p>
         <p className="blue-gradient">Front End Developer.</p>

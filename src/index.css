@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
-.poetsenOne {
-  font-family: PoetsenOne-Regular;
-}
-
 .pinkBlue {
   background: var(--gradient, linear-gradient(135deg, #FF00E3 0%, #00B4D6 100%));
   background-clip: text;
@@ -24,7 +20,7 @@
 
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: Muli-Regular, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -33,6 +29,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.title {
+  font-family: Muli-Bold, sans-serif;
+}
+
 .raised {
   background: linear-gradient(135deg, #E8EBEB 0%, #FAFAFA 100%);
   box-shadow: 4px 4px 4px 0px rgba(190, 190, 190, 0.50), -4px -4px 4px 0px rgba(255, 255, 255, 0.50);
