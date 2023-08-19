@@ -10,7 +10,7 @@ const ProjectCard = ({ title, subTitle, image }) => {
           <p className="text-neoGrey text-2xl">{title}</p>
           <p className="text-neoGrey">{subTitle}</p>
         </div>
-        <div className="inset rounded-full p-2 h-fit">
+        <div className=" rounded-full p-2 h-fit">
           <GoArrowUpRight color="#4B99FE" size={'1.2rem'} />
         </div>
       </div>
