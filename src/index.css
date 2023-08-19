@@ -33,3 +33,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.raised {
+background: linear-gradient(135deg, #E8EBEB 0%, #FAFAFA 100%);
+box-shadow: 4px 4px 4px 0px rgba(190, 190, 190, 0.50), -4px -4px 4px 0px rgba(255, 255, 255, 0.50);
+}
+
+.inset {
+  fill: linear-gradient(135deg, #E8E7E7 0%, #FAFAFA 100%);
+box-shadow: 4px 4px 4px 0px rgba(190, 190, 190, 0.50) inset, -4px -4px 4px 0px rgba(255, 255, 255, 0.50) inset;
+}
+
