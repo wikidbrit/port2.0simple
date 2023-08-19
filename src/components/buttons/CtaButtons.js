@@ -1,5 +1,5 @@
 import React from 'react';
-import CtaButton from './buttons/CtaButton';
+import CtaButton from './CtaButton';
 
 import { MdMailOutline, MdOutlineFileOpen } from 'react-icons/md';
 import { AiOutlineLinkedin } from 'react-icons/ai';

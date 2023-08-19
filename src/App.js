@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from './pages/Home';
-import ProjectTemplate from './template/ProjectTemplate';
+import ProjectTemplate from './templates/ProjectTemplate';
 import FourZeroFour from './pages/FourZeroFour';
 
 function App() {

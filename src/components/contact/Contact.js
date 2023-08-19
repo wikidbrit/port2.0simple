@@ -1,5 +1,5 @@
 import React from 'react';
-import CtaButtons from '../Header/components/subcomponents/CtaButtons';
+import CtaButtons from '../buttons/CtaButtons';
 
 const Contact = () => {
   return (

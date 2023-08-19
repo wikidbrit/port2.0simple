@@ -1,5 +1,5 @@
 import React from 'react';
-import CtaButton from '../Header/components/subcomponents/buttons/CtaButton';
+import CtaButton from '../components/buttons/CtaButton';
 import { useNavigate } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 

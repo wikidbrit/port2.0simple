@@ -1,9 +1,11 @@
 import React from 'react';
-import Layout from '../components/layout';
-import CtaButton from '../Header/components/subcomponents/buttons/CtaButton';
-import { FiArrowLeft } from 'react-icons/fi';
 import { Link, useParams } from 'react-router-dom';
+
 import useGetSlugContent from '../hooks/useGetSlugContent';
+
+import Layout from '../components/layout';
+import CtaButton from '../components/buttons/CtaButton';
+import { FiArrowLeft } from 'react-icons/fi';
 
 const ProjectTemplate = () => {
   const { slug } = useParams();

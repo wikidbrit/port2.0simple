@@ -1,5 +1,5 @@
 import React from 'react';
-import MainCta from '../../components/buttons/MainCta';
+import MainCta from '../../buttons/MainCta';
 
 const CtaBox = () => {
   return (

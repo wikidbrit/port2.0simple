@@ -1,6 +1,6 @@
 import React from 'react';
-import LookingForWork from './subcomponents/LookingForWork';
-import CtaButtons from './subcomponents/CtaButtons';
+import LookingForWork from '../../buttons/LookingForWork';
+import CtaButtons from '../../buttons/CtaButtons';
 
 const TitleCard = () => {
   return (
