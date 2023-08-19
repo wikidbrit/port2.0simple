@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { GoArrowUpRight } from 'react-icons/go';
-
-const ProjectButton = ({ text }) => {
+const ProjectButton = ({ text, icon }) => {
   return (
-    <div className="raised-button h-full p-4 relative">
-      <div className="rounded-full p-2 h-fit w-fit absolute right-3 top-3">
-        <GoArrowUpRight color="#4B99FE" size={'1.2rem'} />
+    <button className="raised-button h-full p-4 relative rounded-xl">
+      <div className="rounded-full p-2 h-fit w-fit absolute right-2 top-2">
+        {icon}
       </div>
-      <p className="text-xl text-neoGrey absolute bottom-3 left-3">{text}</p>
-    </div>
+      <p className="text-3xl title text-neoGrey absolute bottom-4 left-4">
+        {text}
+      </p>
+    </button>
   );
 };
 export default ProjectButton;
