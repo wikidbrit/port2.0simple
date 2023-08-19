@@ -6,6 +6,7 @@ import useGetContent from '../hooks/useGetContent';
 
 import ProjectCard from '../components/cards/ProjectCard';
 import ProjectButton from '../components/buttons/ProjectButton';
+import Popup from 'reactjs-popup';
 
 import { BiUserCircle } from 'react-icons/bi';
 import { TbChecklist } from 'react-icons/tb';
@@ -25,10 +26,18 @@ const Projects = () => {
         />
       </Link>
       <div className="flex flex-col row-span-1 gap-6">
-        <ProjectButton
-          text={'About me'}
-          icon={<BiUserCircle color="#4B99FE" size={'2rem'} />}
-        />
+        <Popup
+          modal
+          nested
+          trigger={
+            <ProjectButton
+              text={'About me'}
+              icon={<BiUserCircle color="#4B99FE" size={'2rem'} />}
+            />
+          }
+        >
+          <div>This is the about me popup</div>
+        </Popup>
         <ProjectButton
           text={'My Skillset'}
           icon={<TbChecklist color="#4B99FE" size={'2rem'} />}
