@@ -7,6 +7,7 @@ import useGetContent from '../hooks/useGetContent';
 import ProjectCard from '../components/cards/ProjectCard';
 import ProjectButton from '../components/buttons/ProjectButton';
 import Popup from 'reactjs-popup';
+import ModalContainer from '../components/containers/ModalContainer';
 
 import { BiUserCircle } from 'react-icons/bi';
 import { TbChecklist } from 'react-icons/tb';
@@ -15,6 +16,8 @@ const Projects = () => {
   const { data, firstProject, remainingProjects } = useGetContent();
 
   if (!data) return <div>Loading</div>;
+
+  const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
 
   return (
     <div className="grid grid-cols-4 gap-6 pt-20">
@@ -35,8 +38,11 @@ const Projects = () => {
               icon={<BiUserCircle color="#4B99FE" size={'2rem'} />}
             />
           }
+          {...{ overlayStyle }}
         >
-          <div>This is the about me popup</div>
+          <ModalContainer title={'About me'}>
+            <p>My name is paul and I like cats</p>
+          </ModalContainer>
         </Popup>
         <ProjectButton
           text={'My Skillset'}
