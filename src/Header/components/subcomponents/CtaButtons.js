@@ -8,7 +8,7 @@ const CtaButtons = () => {
   return (
     <div className="flex flex-row space-x-4">
       <CtaButton
-        icon={<MdMailOutline color="#00B4D6" size={'1.2rem'} />}
+        icon={<MdMailOutline color="#4B99FE" size={'1.2rem'} />}
         text={'Contact'}
       />
       <a
@@ -17,12 +17,12 @@ const CtaButtons = () => {
         rel="noreferrer"
       >
         <CtaButton
-          icon={<AiOutlineLinkedin color="#00B4D6" size={'1.2rem'} />}
+          icon={<AiOutlineLinkedin color="#4B99FE" size={'1.2rem'} />}
           text={'LinkedIn'}
         />
       </a>
       <CtaButton
-        icon={<MdOutlineFileOpen color="#00B4D6" size={'1.2rem'} />}
+        icon={<MdOutlineFileOpen color="#4B99FE" size={'1.2rem'} />}
         text={'Resume'}
       />
     </div>

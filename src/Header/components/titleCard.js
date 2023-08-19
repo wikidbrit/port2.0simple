@@ -8,8 +8,8 @@ const TitleCard = () => {
       <LookingForWork />
       <div className="text-[4rem] w-[90%] -space-y-4 font-medium">
         <p className="text-neoGrey">Hey, I'm Paul</p>
-        <p className="text-eBlue">a UI/UX Designer and </p>
-        <p className="text-eBlue">Front End Developer.</p>
+        <p className="blue-gradient">a UI/UX Designer and </p>
+        <p className="blue-gradient">Front End Developer.</p>
       </div>
       <CtaButtons />
       <p className="text-neoGrey leading-7">
