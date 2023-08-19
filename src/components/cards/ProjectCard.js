@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { FiArrowUpRight } from 'react-icons/fi';
 import { ImArrowUpRight2 } from 'react-icons/im';
 
 const ProjectCard = ({ title, subTitle, image }) => {

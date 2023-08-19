@@ -1,11 +1,9 @@
 import React from 'react';
-import LookingForWork from '../../buttons/LookingForWork';
 import CtaButtons from '../../buttons/CtaButtons';
 
 const TitleCard = () => {
   return (
     <div className="text-pWhite space-y-12">
-      {/* <LookingForWork /> */}
       <div className="text-[5.25rem] -space-y-6 font-medium title">
         <p className="text-neoGrey">Hey, I'm Paul</p>
         <p className="blue-gradient">a UI/UX Designer and </p>
