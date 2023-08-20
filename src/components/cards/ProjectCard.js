@@ -1,10 +1,19 @@
 import React from 'react';
+import classNames from 'classnames';
+
+import ThemeContext from '../../context/ThemeContext';
 
 import { TbCircleArrowUpRight } from 'react-icons/tb';
 
 const ProjectCard = ({ title, subTitle, image }) => {
+  const theme = React.useContext(ThemeContext);
   return (
-    <div className="p-6 raised space-y-6 rounded-xl relative">
+    <div
+      className={classNames(
+        theme === 'dark' ? 'raised-dark' : 'raised',
+        'p-6  space-y-6 rounded-xl relative'
+      )}
+    >
       <div className="flex flex-row justify-between">
         <div className="space-y-2 text-neoGrey">
           <p className="text-2xl ">{title}</p>

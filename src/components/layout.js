@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   return (
     <div
       className={classNames(
-        theme === 'dark' ? 'bg-darkNeoBackground' : 'bg-neoBackground',
+        theme === 'dark' ? 'bg-darkNeoForeground' : 'bg-neoBackground',
         'h-[100%]  relative '
       )}
     >
