@@ -3,7 +3,7 @@ import CtaButtons from '../../buttons/CtaButtons';
 
 const TitleCard = () => {
   return (
-    <div className="text-pWhite space-y-12 pt-6">
+    <div className="text-pWhite space-y-12">
       <div className="text-[4.8rem] pb-6 -space-y-7 font-medium title">
         <p className="text-neoGrey">Hey, I'm Paul</p>
         <p className="blue-gradient">a UI/UX Designer and </p>

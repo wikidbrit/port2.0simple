@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import Popup from 'reactjs-popup';
-import CtaButton from '../components/buttons/CtaButton';
+import NavButton from '../components/buttons/NavButton';
 
 import ThemeContext from '../context/ThemeContext';
 import ModalContainer from '../components/containers/ModalContainer';
@@ -13,14 +13,57 @@ const NavBar = ({ handleChange, theme }) => {
 
   const themeColor = useContext(ThemeContext);
 
-  const handleScroll = () => {
-    const element = document.getElementById('Projects');
-    element.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <div className="w-full flex flex-row justify-between items-center">
-      <div
+    <div className="w-[14.2rem] right-0 h-full fixed pt-28 px-14 text-center">
+      <div className="flex flex-col space-y-10">
+        <ul className="flex flex-col space-y-5 justify-end">
+          <Popup
+            modal
+            nested
+            trigger={
+              <NavButton
+                text="About"
+                theme={theme}
+                className="text-neoGrey"
+              ></NavButton>
+            }
+            {...{ overlayStyle }}
+          >
+            <ModalContainer title={'About me'}>
+              <p>My name is paul and I like cats</p>
+            </ModalContainer>
+          </Popup>
+
+          <li className="text-neoGrey">
+            <NavButton
+              text={'Projects'}
+              theme={theme}
+              to={'/#Projects'}
+            ></NavButton>
+          </li>
+          <li>
+            <Popup
+              modal
+              nested
+              trigger={<NavButton theme={theme} text="Contact" />}
+              {...{ overlayStyle }}
+            >
+              <ModalContainer title={'Contact Me'}>
+                <p>pflemingonline@gmail.com</p>
+              </ModalContainer>
+            </Popup>
+          </li>
+        </ul>
+        <div
+          className={classNames(
+            themeColor === 'dark' ? 'raised-dark' : 'raised',
+            'p-1 h-8 rounded-lg w-fit'
+          )}
+        >
+          <DarkModeToggle handleChange={handleChange} />
+        </div>
+      </div>
+      {/* <div
         className={classNames(
           themeColor === 'dark' ? 'raised-dark' : 'raised',
           'p-1 h-8 rounded-lg'
@@ -51,7 +94,7 @@ const NavBar = ({ handleChange, theme }) => {
             <Popup
               modal
               nested
-              trigger={<CtaButton theme={theme} text="Contact" />}
+              trigger={<NavButton theme={theme} text="Contact" />}
               {...{ overlayStyle }}
             >
               <ModalContainer title={'Contact Me'}>
@@ -60,7 +103,7 @@ const NavBar = ({ handleChange, theme }) => {
             </Popup>
           </li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };
