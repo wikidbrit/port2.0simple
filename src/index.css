@@ -37,7 +37,9 @@ code {
 .raised {
   border: #E8E7E7 1px solid;
   background: linear-gradient(135deg, #E8EBEB 0%, #FAFAFA 100%);
-  box-shadow:  11px 11px 22px #dfdede,-11px -11px 22px #f9f9f9; }
+  box-shadow:    9px 9px 18px #d6dadd,
+  -9px -9px 18px #fcffff;
+}
 
 
 .raised:active {
@@ -50,8 +52,8 @@ code {
 .raised-dark {
   border: #1D1E1E 1px solid;
   background: linear-gradient(132deg, #1D1E1E 0%, rgba(29, 30, 30, 0.00) 100%);
-  box-shadow:    8px 8px 20px #181919,
-                  -8px -8px 20px #222323;
+  box-shadow:    5px 5px 19px #121313,
+  -5px -5px 19px #282929;
 }
 
 
