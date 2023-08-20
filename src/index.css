@@ -38,12 +38,8 @@ code {
   background: linear-gradient(135deg, #E8EBEB 0%, #FAFAFA 100%);
   box-shadow:  11px 11px 22px #dfdede,-11px -11px 22px #f9f9f9; }
 
-.raised-button {
-background: linear-gradient(135deg, #E8EBEB 0%, #FAFAFA 100%);
-box-shadow: 4px 4px 4px 0px rgba(190, 190, 190, 0.50), -4px -4px 4px 0px rgba(255, 255, 255, 0.50);
-}
 
-.raised-button:active {
+.raised:active {
 
   fill: linear-gradient(135deg, #E8E7E7 0%, #FAFAFA 100%);
   box-shadow: 2px 2px 2px 0px rgba(190, 190, 190, 0.50), -2px -2px 2px 0px rgba(255, 255, 255, 0.50);

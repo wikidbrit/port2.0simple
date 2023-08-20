@@ -2,10 +2,7 @@ import React from 'react';
 
 const ProjectButton = ({ text, icon, onClick }) => {
   return (
-    <button
-      onClick={onClick}
-      className="raised-button h-full p-4 relative rounded-xl"
-    >
+    <button onClick={onClick} className="raised h-full p-4 relative rounded-xl">
       <div className="rounded-full p-2 h-fit w-fit absolute right-2 top-2">
         {icon}
       </div>

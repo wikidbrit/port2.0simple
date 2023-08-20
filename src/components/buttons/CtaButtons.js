@@ -4,7 +4,7 @@ import Popup from 'reactjs-popup';
 import ModalContainer from '../containers/ModalContainer';
 
 import CtaButton from './CtaButton';
-import { TbBrandLinkedin, TbMail, TbFileLike } from 'react-icons/tb';
+import { TbBrandLinkedin, TbMessage2Share, TbFileLike } from 'react-icons/tb';
 
 const CtaButtons = () => {
   const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
@@ -16,7 +16,7 @@ const CtaButtons = () => {
         nested
         trigger={
           <CtaButton
-            icon={<TbMail color="#2EB2EC" size={'1.6rem'} />}
+            icon={<TbMessage2Share size={'1.6rem'} />}
             text={'Contact'}
           />
         }
@@ -33,14 +33,11 @@ const CtaButtons = () => {
         rel="noreferrer"
       >
         <CtaButton
-          icon={<TbBrandLinkedin color="#2EB2EC" size={'1.6rem'} />}
+          icon={<TbBrandLinkedin size={'1.6rem'} />}
           text={'LinkedIn'}
         />
       </a>
-      <CtaButton
-        icon={<TbFileLike color="#2EB2EC" size={'1.6rem'} />}
-        text={'Resume'}
-      />
+      <CtaButton icon={<TbFileLike size={'1.6rem'} />} text={'Resume'} />
     </div>
   );
 };
