@@ -18,7 +18,7 @@ const Projects = () => {
   if (!data) return <div>Loading</div>;
 
   return (
-    <div className="grid grid-cols-4 gap-4 pt-20">
+    <div className="grid grid-cols-4 gap-4 pt-20" id="Projects">
       <Link to={`./project/${firstProject.slug}`} className="col-span-3">
         <ProjectCard
           title={firstProject.title}

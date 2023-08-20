@@ -17,6 +17,11 @@ const NavBar = ({ handleChange, theme }) => {
     return themeColor === 'dark' ? '#1D1E1E' : '#E9EDF0';
   }, [themeColor]);
 
+  const handleScroll = () => {
+    const element = document.getElementById('Projects');
+    element.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="w-full flex flex-row justify-between items-center">
       <div
@@ -47,11 +52,21 @@ const NavBar = ({ handleChange, theme }) => {
 
       <div className="flex flex-row space-x-8 items-center">
         <ul className="flex space-x-12 items-center">
+          <Popup
+            modal
+            nested
+            trigger={<button className="text-neoGrey">About</button>}
+            {...{ overlayStyle }}
+          >
+            <ModalContainer title={'About me'}>
+              <p>My name is paul and I like cats</p>
+            </ModalContainer>
+          </Popup>
+
           <li className="text-neoGrey">
-            <a>About</a>
-          </li>
-          <li className="text-neoGrey">
-            <a>Projects</a>
+            <button onClick={handleScroll} href={'#Projects'}>
+              Projects
+            </button>
           </li>
           <li>
             <Popup
