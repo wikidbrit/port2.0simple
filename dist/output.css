@@ -861,6 +861,11 @@ video {
   border-color: rgb(21 128 61 / var(--tw-border-opacity));
 }
 
+.bg-darkNeoBackground {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 30 30 / var(--tw-bg-opacity));
+}
+
 .bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
@@ -874,11 +879,6 @@ video {
 .bg-pDark {
   --tw-bg-opacity: 1;
   background-color: rgb(33 34 36 / var(--tw-bg-opacity));
-}
-
-.bg-zinc-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -1041,9 +1041,4 @@ video {
 .hover\:text-neoMiddleBlue:hover {
   --tw-text-opacity: 1;
   color: rgb(46 178 236 / var(--tw-text-opacity));
-}
-
-:is(.dark .dark\:bg-zinc-600) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(82 82 91 / var(--tw-bg-opacity));
 }

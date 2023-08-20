@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import Popup from 'reactjs-popup';
 import ModalContainer from '../containers/ModalContainer';
 
+import ThemeContext from '../../context/ThemeContext';
 import CtaButton from './CtaButton';
 import { TbBrandLinkedin, TbMessage2Share, TbFileLike } from 'react-icons/tb';
 
 const CtaButtons = () => {
   const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
+  const theme = useContext(ThemeContext);
 
   return (
     <div className="flex flex-row space-x-4">
@@ -16,6 +18,7 @@ const CtaButtons = () => {
         nested
         trigger={
           <CtaButton
+            theme={theme}
             icon={<TbMessage2Share size={'1.6rem'} />}
             text={'Contact'}
           />
@@ -33,11 +36,16 @@ const CtaButtons = () => {
         rel="noreferrer"
       >
         <CtaButton
+          theme={theme}
           icon={<TbBrandLinkedin size={'1.6rem'} />}
           text={'LinkedIn'}
         />
       </a>
-      <CtaButton icon={<TbFileLike size={'1.6rem'} />} text={'Resume'} />
+      <CtaButton
+        theme={theme}
+        icon={<TbFileLike size={'1.6rem'} />}
+        text={'Resume'}
+      />
     </div>
   );
 };

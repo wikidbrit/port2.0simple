@@ -6,6 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        darkNeoBackground: '#1D1E1E',
+        darkNeoForeground: '#1D1E1E',
         neoMiddleBlue: '#2EB2EC',
         neoBackground: '#E9EDF0',
         neoLightBlue: '#0ECDD8',

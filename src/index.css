@@ -43,17 +43,23 @@ code {
 .raised:active {
   border: #2EB2EC 1px solid;
   fill: linear-gradient(135deg, #E8E7E7 0%, #FAFAFA 100%);
-  box-shadow: 2px 2px 2px 0px rgba(190, 190, 190, 0.50), -2px -2px 2px 0px rgba(255, 255, 255, 0.50);
+  box-shadow: 2px 2px 2px 0px rgba(190, 190, 190, 0.50), 
+  -2px -2px 2px 0px rgba(255, 255, 255, 0.50);
 }
 
 .raised-dark {
-  box-shadow:  8px 8px 16px #37373d,
-             -8px -8px 16px #47474d;
+  border: #1D1E1E 1px solid;
+  background: linear-gradient(132deg, #1D1E1E 0%, rgba(29, 30, 30, 0.00) 100%);
+  box-shadow:    8px 8px 20px #181919,
+                  -8px -8px 20px #222323;
 }
 
+
 .raised-dark:active {
-  box-shadow: inset 8px 8px 16px #37373d,
-            inset -8px -8px 16px #47474d;
+  border: #2EB2EC 1px solid;
+  background: linear-gradient(132deg, #1D1E1E 0%, rgba(29, 30, 30, 0.00) 100%);
+   box-shadow:5px 5px 10px #181919,
+   -5px -5px 10px #222323;       
 }
 
 .inset {

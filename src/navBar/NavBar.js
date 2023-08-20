@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useMemo, useContext } from 'react';
 
 import Switch from 'react-switch';
 import Popup from 'reactjs-popup';
 import CtaButton from '../components/buttons/CtaButton';
 import { TbSun, TbMoon } from 'react-icons/tb';
 
+import ThemeContext from '../context/ThemeContext';
 import ModalContainer from '../components/containers/ModalContainer';
 
 const NavBar = ({ handleChange, theme }) => {
   const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
+
+  const themeColor = useContext(ThemeContext);
+  const handleColor = useMemo(() => {
+    return themeColor === 'dark' ? '#1D1E1E' : '#E9EDF0';
+  }, [themeColor]);
+
+  const shadowStyle = useMemo(() => {
+    return themeColor === 'dark'
+      ? '8px 8px 20px #181919, -8px -8px 20px #222323'
+      : '11px 11px 22px #dfdede,-11px -11px 22px #f9f9f9';
+  });
 
   return (
     <div className="w-full flex flex-row justify-between items-center">
@@ -16,10 +28,11 @@ const NavBar = ({ handleChange, theme }) => {
         borderRadius={5}
         height={22}
         width={50}
-        boxShadow="3px 3px 3px 0px rgba(190, 190, 190, 0.65), -3px -3px 3px 0px rgba(255, 255, 255, 0.65)"
+        boxShadow={shadowStyle}
         onChange={handleChange}
         checked={theme === 'dark'}
-        offHandleColor="#E9EDF0"
+        offHandleColor={handleColor}
+        onHandleColor={handleColor}
         offColor="#2EB2EC"
         onColor="#2EB2EC"
         uncheckedIcon={
