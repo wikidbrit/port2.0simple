@@ -35,7 +35,7 @@ const useGetContent = () => {
         headers: {
           'Content-Type': 'application/json',
           // Authenticate the request
-          Authorization: 'Bearer g5t46S71zrX4Y63FfKqfW7lZYn-OMjb3zqc6UxKmO-k',
+          Authorization: `Bearer ${process.env.REACT_APP_CONTENTFUL_API_KEY}`,
         },
         // send the GraphQL query
         body: JSON.stringify({ query }),
