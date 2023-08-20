@@ -10,7 +10,7 @@ const Layout = ({ children, handleChange }) => {
     <div
       className={classNames(
         theme === 'dark' ? 'bg-darkNeoForeground' : 'bg-neoBackground',
-        'h-[100%] min-h-screen'
+        'h-[100%] min-h-screen relative'
       )}
     >
       <NavBar handleChange={handleChange} theme={theme} />

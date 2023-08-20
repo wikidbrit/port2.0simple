@@ -22,7 +22,7 @@ const NavBar = ({ handleChange, theme }) => {
             nested
             trigger={
               <NavButton
-                text="About"
+                text={'About'}
                 theme={theme}
                 className="text-neoGrey"
               ></NavButton>
@@ -63,47 +63,6 @@ const NavBar = ({ handleChange, theme }) => {
           <DarkModeToggle handleChange={handleChange} />
         </div>
       </div>
-      {/* <div
-        className={classNames(
-          themeColor === 'dark' ? 'raised-dark' : 'raised',
-          'p-1 h-8 rounded-lg'
-        )}
-      >
-        <DarkModeToggle handleChange={handleChange} />
-      </div>
-
-      <div className="flex flex-row space-x-8 items-center">
-        <ul className="flex space-x-12 items-center">
-          <Popup
-            modal
-            nested
-            trigger={<button className="text-neoGrey">About</button>}
-            {...{ overlayStyle }}
-          >
-            <ModalContainer title={'About me'}>
-              <p>My name is paul and I like cats</p>
-            </ModalContainer>
-          </Popup>
-
-          <li className="text-neoGrey">
-            <button onClick={handleScroll} href={'#Projects'}>
-              Projects
-            </button>
-          </li>
-          <li>
-            <Popup
-              modal
-              nested
-              trigger={<NavButton theme={theme} text="Contact" />}
-              {...{ overlayStyle }}
-            >
-              <ModalContainer title={'Contact Me'}>
-                <p>pflemingonline@gmail.com</p>
-              </ModalContainer>
-            </Popup>
-          </li>
-        </ul>
-      </div> */}
     </div>
   );
 };
