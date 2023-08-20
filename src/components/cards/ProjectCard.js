@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { ImArrowUpRight2 } from 'react-icons/im';
+import { TbCircleArrowUpRight } from 'react-icons/tb';
 
 const ProjectCard = ({ title, subTitle, image }) => {
   return (
     <div className="p-6 raised space-y-6 rounded-xl relative">
       <div className="flex flex-row justify-between">
         <div className="space-y-2 text-neoGrey">
-          <p className="text-3xl title">{title}</p>
+          <p className="text-2xl ">{title}</p>
           <p>{subTitle}</p>
         </div>
         <div className=" rounded-full p-2 h-fit absolute right-2 top-2">
-          <ImArrowUpRight2 color="#4B99FE" size={'1.7rem'} />
+          <TbCircleArrowUpRight color="#4B99FE" size={'1.6rem'} />
         </div>
       </div>
 

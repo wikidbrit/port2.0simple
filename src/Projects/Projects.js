@@ -9,8 +9,7 @@ import ProjectButton from '../components/buttons/ProjectButton';
 import Popup from 'reactjs-popup';
 import ModalContainer from '../components/containers/ModalContainer';
 
-import { BiUserCircle } from 'react-icons/bi';
-import { TbChecklist } from 'react-icons/tb';
+import { TbChecklist, TbUserShare } from 'react-icons/tb';
 
 const Projects = () => {
   const { data, firstProject, remainingProjects } = useGetContent();
@@ -35,7 +34,7 @@ const Projects = () => {
           trigger={
             <ProjectButton
               text={'About me'}
-              icon={<BiUserCircle color="#4B99FE" size={'2rem'} />}
+              icon={<TbUserShare color="#4B99FE" size={'1.6rem'} />}
             />
           }
           {...{ overlayStyle }}
@@ -46,7 +45,7 @@ const Projects = () => {
         </Popup>
         <ProjectButton
           text={'My Skillset'}
-          icon={<TbChecklist color="#4B99FE" size={'2rem'} />}
+          icon={<TbChecklist color="#4B99FE" size={'1.6rem'} />}
         />
       </div>
 
