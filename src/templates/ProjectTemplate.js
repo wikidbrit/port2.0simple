@@ -5,17 +5,30 @@ import useGetSlugContent from '../hooks/useGetSlugContent';
 
 import CtaButton from '../components/buttons/CtaButton';
 import { FiArrowLeft } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 const ProjectTemplate = () => {
   const { slug } = useParams();
   const { data } = useGetSlugContent({ slug });
 
   if (!data) {
-    return <div>Loading</div>;
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div></div>
+      </motion.div>
+    );
   }
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <Link to="/">
         <button className="fixed left-20 mt-7">
           <CtaButton icon={<FiArrowLeft />} text={'Go Back'} />
@@ -27,7 +40,7 @@ const ProjectTemplate = () => {
         <img key={index} alt="test" src={item.url}></img>
       ))}
       <p className="text-pText">{data[0].conclusion}</p>
-    </div>
+    </motion.div>
   );
 };
 export default ProjectTemplate;
