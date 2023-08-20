@@ -22,7 +22,6 @@ function App() {
         <div className="fadeIn">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/template" element={<ProjectTemplate />} />
             <Route path="*" element={<FourZeroFour />} />
             <Route path="project/:slug" element={<ProjectTemplate />} />
           </Routes>
