@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Header from '../components/Header/Header';
 import Projects from '../Projects/Projects';
 import Contact from '../components/contact/Contact';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const scrollToElement = () => {
@@ -17,9 +18,15 @@ const Home = () => {
 
   return (
     <>
-      <Header />
-      <Projects />
-      <Contact />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Header />
+        <Projects />
+        <Contact />
+      </motion.div>
     </>
   );
 };
