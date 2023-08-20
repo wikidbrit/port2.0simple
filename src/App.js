@@ -5,6 +5,10 @@ import './App.css';
 import Home from './pages/Home';
 import ProjectTemplate from './templates/ProjectTemplate';
 import FourZeroFour from './pages/FourZeroFour';
+import Layout from './components/layout';
+import useLocalStorage from './hooks/useLocalStorage';
+
+import ThemeContext from './context/ThemeContext';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -15,19 +19,31 @@ function App() {
     }, 1000);
   }, []);
 
+  const [theme, setTheme] = useLocalStorage('theme', 'light');
+
+  const handleChange = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
   return (
     <>
-      {loading && <div className="h-screen">Loading</div>}
-      {!loading && (
-        <div className="fadeIn">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/template" element={<ProjectTemplate />} />
-            <Route path="*" element={<FourZeroFour />} />
-            <Route path="project/:slug" element={<ProjectTemplate />} />
-          </Routes>
-        </div>
-      )}
+      <ThemeContext.Provider value={theme}>
+        {loading && <div className="h-screen">Loading</div>}
+        {!loading && (
+          <div className="fadeIn">
+            <Layout handleChange={handleChange}>
+              <Routes>
+                <Route
+                  path="/"
+                  element={<Home handleChange={handleChange} theme={theme} />}
+                />
+                <Route path="*" element={<FourZeroFour />} />
+                <Route path="project/:slug" element={<ProjectTemplate />} />
+              </Routes>
+            </Layout>
+          </div>
+        )}
+      </ThemeContext.Provider>
     </>
   );
 }
