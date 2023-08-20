@@ -18,7 +18,7 @@ const Projects = () => {
   if (!data) return <div>Loading</div>;
 
   return (
-    <div className="grid grid-cols-4 gap-6 pt-20">
+    <div className="grid grid-cols-4 gap-4 pt-20">
       <Link to={`./project/${firstProject.slug}`} className="col-span-3">
         <ProjectCard
           title={firstProject.title}
@@ -27,7 +27,7 @@ const Projects = () => {
         />
       </Link>
 
-      <div className="flex flex-col row-span-1 gap-6">
+      <div className="flex flex-col row-span-1 gap-4">
         {/* About Section */}
         <Popup
           modal

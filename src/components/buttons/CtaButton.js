@@ -1,10 +1,14 @@
+import classNames from 'classnames';
 import React from 'react';
 
-const CtaButton = ({ icon, text, onClick }) => {
+const CtaButton = ({ icon, text, onClick, theme }) => {
   return (
     <button
       onClick={onClick}
-      className="text-neoGrey px-5 py-3 rounded-md raised flex flex-row items-center space-x-4 hover:px-8 duration-200 hover:text-neoMiddleBlue transition-all"
+      className={classNames(
+        theme === 'dark' ? 'raised-dark' : 'raised',
+        'text-neoGrey px-5 py-3 rounded-md flex flex-row items-center space-x-4 hover:px-8 duration-200 hover:text-neoMiddleBlue transition-all'
+      )}
     >
       <div>{icon}</div>
       {text && <p className="pr-3">{text}</p>}

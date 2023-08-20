@@ -10,7 +10,7 @@ const CtaButtons = () => {
   const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
 
   return (
-    <div className="flex flex-row space-x-5">
+    <div className="flex flex-row space-x-4">
       <Popup
         modal
         nested
