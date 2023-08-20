@@ -18,7 +18,7 @@ const ProjectCard = ({ title, subTitle, image }) => {
       <img
         src={image}
         alt="testing"
-        className="object-cover h-[25rem] w-full rounded-lg"
+        className="object-cover h-[15.5rem] w-full rounded-lg"
       ></img>
     </div>
   );
