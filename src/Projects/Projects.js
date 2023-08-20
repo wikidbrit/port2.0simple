@@ -34,7 +34,7 @@ const Projects = () => {
           trigger={
             <ProjectButton
               text={'About me'}
-              icon={<TbUserShare color="#4B99FE" size={'1.6rem'} />}
+              icon={<TbUserShare color="#2EB2EC" size={'1.6rem'} />}
             />
           }
           {...{ overlayStyle }}
@@ -45,7 +45,7 @@ const Projects = () => {
         </Popup>
         <ProjectButton
           text={'My Skillset'}
-          icon={<TbChecklist color="#4B99FE" size={'1.6rem'} />}
+          icon={<TbChecklist color="#2EB2EC" size={'1.6rem'} />}
         />
       </div>
 

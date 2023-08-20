@@ -11,7 +11,7 @@ const ProjectCard = ({ title, subTitle, image }) => {
           <p>{subTitle}</p>
         </div>
         <div className=" rounded-full p-2 h-fit absolute right-2 top-2">
-          <TbCircleArrowUpRight color="#4B99FE" size={'1.6rem'} />
+          <TbCircleArrowUpRight color="#2EB2EC" size={'1.6rem'} />
         </div>
       </div>
 

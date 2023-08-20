@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        neoMiddleBlue: '#2EB2EC',
         neoBackground: '#E9EDF0',
         neoLightBlue: '#0ECDD8',
         neoDarkBlue: '#4B99FE',

@@ -6,16 +6,16 @@ import { TbBrandLinkedin, TbMail, TbFileLike } from 'react-icons/tb';
 const CtaButtons = () => {
   return (
     <div className="flex flex-row space-x-5">
-      <CtaButton icon={<TbMail color="#4B99FE" size={'1.6rem'} />} />
+      <CtaButton icon={<TbMail color="#2EB2EC" size={'1.6rem'} />} />
       <a
         href="https://www.linkedin.com/in/pflemingonline/"
         target="blank"
         rel="noreferrer"
       >
-        <CtaButton icon={<TbBrandLinkedin color="#4B99FE" size={'1.6rem'} />} />
+        <CtaButton icon={<TbBrandLinkedin color="#2EB2EC" size={'1.6rem'} />} />
       </a>
       <CtaButton
-        icon={<TbFileLike color="#4B99FE" size={'1.6rem'} />}
+        icon={<TbFileLike color="#2EB2EC" size={'1.6rem'} />}
         text={'Resume'}
       />
     </div>
