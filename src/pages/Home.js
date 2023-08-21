@@ -19,6 +19,7 @@ const Home = () => {
   return (
     <>
       <motion.div
+        className="space-y-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}

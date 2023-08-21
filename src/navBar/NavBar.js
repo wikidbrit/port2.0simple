@@ -16,7 +16,7 @@ const NavBar = ({ handleChange, theme }) => {
   const themeColor = useContext(ThemeContext);
 
   return (
-    <div className="w-[14.2rem] right-0 h-full fixed pt-28 px-14 text-center">
+    <div className="w-[14.2rem] right-0 h-full fixed pt-[10rem] px-14 text-center">
       <div className="flex flex-col space-y-8">
         <ul className="flex flex-col space-y-3 justify-end">
           <Popup
@@ -62,7 +62,7 @@ const NavBar = ({ handleChange, theme }) => {
           <div
             className={classNames(
               themeColor === 'dark' ? 'raised-dark' : 'raised',
-              'p-1 h-8 rounded-md w-fit'
+              'p-[2px] h-7 rounded-full w-fit'
             )}
           >
             <DarkModeToggle handleChange={handleChange} />

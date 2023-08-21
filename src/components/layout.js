@@ -14,7 +14,9 @@ const Layout = ({ children, handleChange }) => {
       )}
     >
       <NavBar handleChange={handleChange} theme={theme} />
-      <div className=" pt-20 pb-20 px-[14.2rem] space-y-16">{children}</div>
+      <div className=" pt-[8.2rem] pb-20 px-[14.2rem] space-y-16">
+        {children}
+      </div>
     </div>
   );
 };
