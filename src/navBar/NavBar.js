@@ -9,9 +9,11 @@ import classNames from 'classnames';
 import DarkModeToggle from './components/DarkModeToggle';
 
 import { TbUserShare, TbBriefcase, TbMessageShare } from 'react-icons/tb';
+import AboutMeModal from '../components/modals/AboutMeModal';
 
 const NavBar = ({ handleChange, theme }) => {
   const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
+  const contentStyle = { background: '#2EB2EC', width: '50%' };
 
   const themeColor = useContext(ThemeContext);
 
@@ -28,10 +30,10 @@ const NavBar = ({ handleChange, theme }) => {
                 theme={theme}
               ></NavButton>
             }
-            {...{ overlayStyle }}
+            {...{ overlayStyle, contentStyle }}
           >
-            <ModalContainer title={'About me'}>
-              <p>My name is paul and I like cats</p>
+            <ModalContainer>
+              <AboutMeModal />
             </ModalContainer>
           </Popup>
 

@@ -10,6 +10,7 @@ import Popup from 'reactjs-popup';
 import ModalContainer from '../components/containers/ModalContainer';
 
 import { TbChecklist, TbUserShare } from 'react-icons/tb';
+import AboutMeModal from '../components/modals/AboutMeModal';
 
 const Projects = () => {
   const { data, firstProject, remainingProjects } = useGetContent();
@@ -41,7 +42,7 @@ const Projects = () => {
           {...{ overlayStyle }}
         >
           <ModalContainer title={'About me'}>
-            <p>My name is paul and I like cats</p>
+            <AboutMeModal />
           </ModalContainer>
         </Popup>
         {/* Skillset Section */}
