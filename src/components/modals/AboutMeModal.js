@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PersonalContent from './components/PersonalContent';
 import ProfessionalContent from './components/ProfessionalContent';
 import SwitchButton from './components/SwitchButton';
 import image from '../../images/try.png';
 import { TbCircleX } from 'react-icons/tb';
+import ThemeContext from '../../context/ThemeContext';
+import classNames from 'classnames';
 
 const AboutMeModal = ({ close }) => {
   const [professionalToggle, setProfessionalToggle] = useState(false);
   const [personalToggle, setPersonalToggle] = useState(true);
+  const theme = useContext(ThemeContext);
 
   const handleClick = () => {
     setProfessionalToggle(!professionalToggle);
@@ -15,11 +18,19 @@ const AboutMeModal = ({ close }) => {
   };
 
   return (
-    <div className="text-neoGrey space-y-6 p-6 rounded-lg bg-neoBackground">
+    <div
+      className={classNames(
+        theme === 'dark' ? 'bg-darkNeoForeground' : 'bg-neoBackground',
+        'text-neoGrey space-y-6 p-6 rounded-lg '
+      )}
+    >
       <div className="space-y-2 flex flex-row justify-between items-center">
         <div className="flex flex-row space-x-6">
           <img
-            className=" raised rounded-full border-[2px] object-cover w-[72px] h-[72px]"
+            className={classNames(
+              theme === 'dark' ? 'raised-dark' : 'raised',
+              'rounded-full border-[2px] object-cover w-[72px] h-[72px]'
+            )}
             src={image}
             alt="Paul Fleming with a grey background"
           ></img>
@@ -29,7 +40,10 @@ const AboutMeModal = ({ close }) => {
           </div>
         </div>
         <button
-          className="raised p-2 rounded-full hover:text-neoMiddleBlue absolute right-7 top-6"
+          className={classNames(
+            theme === 'dark' ? 'raised-dark' : 'raised',
+            'p-2 rounded-full hover:text-neoMiddleBlue absolute right-7 top-6'
+          )}
           onClick={close}
         >
           <TbCircleX size={'1.5rem'} />
@@ -59,7 +73,10 @@ const AboutMeModal = ({ close }) => {
       </div>
       <div>
         <button
-          className="raised px-8 py-3 rounded-lg mx-auto flex"
+          className={classNames(
+            theme === 'dark' ? 'raised-dark' : 'raised',
+            'px-8 py-3 rounded-lg mx-auto flex'
+          )}
           onClick={close}
         >
           Close

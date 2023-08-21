@@ -32,7 +32,6 @@ const ProfessionalContent = () => {
         command over **HTML** and **CSS**, working towards designs to not only
         dazzle but function flawlessly across devices.
       </ReactMarkdown>
-      <ReactMarkdown className="leading-7">---</ReactMarkdown>
     </div>
   );
 };
