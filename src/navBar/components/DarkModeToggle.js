@@ -16,7 +16,7 @@ const DarkModeToggle = ({ handleChange }) => {
     <Switch
       borderRadius={5}
       height={22}
-      width={50}
+      width={43}
       boxShadow={false}
       onChange={handleChange}
       checked={theme === 'dark'}

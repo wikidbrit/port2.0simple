@@ -8,6 +8,8 @@ import ModalContainer from '../components/containers/ModalContainer';
 import classNames from 'classnames';
 import DarkModeToggle from './components/DarkModeToggle';
 
+import { TbUserShare, TbBriefcase, TbMessageShare } from 'react-icons/tb';
+
 const NavBar = ({ handleChange, theme }) => {
   const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
 
@@ -15,16 +17,15 @@ const NavBar = ({ handleChange, theme }) => {
 
   return (
     <div className="w-[14.2rem] right-0 h-full fixed pt-28 px-14 text-center">
-      <div className="flex flex-col space-y-10">
-        <ul className="flex flex-col space-y-5 justify-end">
+      <div className="flex flex-col space-y-8">
+        <ul className="flex flex-col space-y-3 justify-end">
           <Popup
             modal
             nested
             trigger={
               <NavButton
-                text={'About'}
+                icon={<TbUserShare size={'1.2rem'} />}
                 theme={theme}
-                className="text-neoGrey"
               ></NavButton>
             }
             {...{ overlayStyle }}
@@ -36,7 +37,7 @@ const NavBar = ({ handleChange, theme }) => {
 
           <li className="text-neoGrey">
             <NavButton
-              text={'Projects'}
+              icon={<TbBriefcase size={'1.2rem'} />}
               theme={theme}
               to={'/#Projects'}
             ></NavButton>
@@ -45,7 +46,12 @@ const NavBar = ({ handleChange, theme }) => {
             <Popup
               modal
               nested
-              trigger={<NavButton theme={theme} text="Contact" />}
+              trigger={
+                <NavButton
+                  theme={theme}
+                  icon={<TbMessageShare size={'1.2rem'} />}
+                />
+              }
               {...{ overlayStyle }}
             >
               <ModalContainer title={'Contact Me'}>
@@ -53,15 +59,15 @@ const NavBar = ({ handleChange, theme }) => {
               </ModalContainer>
             </Popup>
           </li>
+          <div
+            className={classNames(
+              themeColor === 'dark' ? 'raised-dark' : 'raised',
+              'p-1 h-8 rounded-md w-fit'
+            )}
+          >
+            <DarkModeToggle handleChange={handleChange} />
+          </div>
         </ul>
-        <div
-          className={classNames(
-            themeColor === 'dark' ? 'raised-dark' : 'raised',
-            'p-1 h-8 rounded-lg w-fit'
-          )}
-        >
-          <DarkModeToggle handleChange={handleChange} />
-        </div>
       </div>
     </div>
   );

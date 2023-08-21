@@ -19,7 +19,7 @@ const CtaButtons = () => {
         trigger={
           <CtaButton
             theme={theme}
-            icon={<TbMessage2Share size={'1.6rem'} />}
+            icon={<TbMessage2Share size={'1.2rem'} />}
             text={'Contact'}
           />
         }
@@ -37,13 +37,13 @@ const CtaButtons = () => {
       >
         <CtaButton
           theme={theme}
-          icon={<TbBrandLinkedin size={'1.6rem'} />}
+          icon={<TbBrandLinkedin size={'1.2rem'} />}
           text={'LinkedIn'}
         />
       </a>
       <CtaButton
         theme={theme}
-        icon={<TbFileLike size={'1.6rem'} />}
+        icon={<TbFileLike size={'1.2rem'} />}
         text={'Resume'}
       />
     </div>
