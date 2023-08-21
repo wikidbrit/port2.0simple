@@ -3,8 +3,9 @@ import PersonalContent from './components/PersonalContent';
 import ProfessionalContent from './components/ProfessionalContent';
 import SwitchButton from './components/SwitchButton';
 import image from '../../images/try.png';
+import { TbCircleX } from 'react-icons/tb';
 
-const AboutMeModal = () => {
+const AboutMeModal = ({ close }) => {
   const [professionalToggle, setProfessionalToggle] = useState(true);
   const [personalToggle, setPersonalToggle] = useState(false);
 
@@ -14,8 +15,8 @@ const AboutMeModal = () => {
   };
 
   return (
-    <div className="text-neoGrey space-y-6 p-6">
-      <div className="space-y-2">
+    <div className="text-neoGrey space-y-6 p-6 rounded-lg bg-neoBackground">
+      <div className="space-y-2 flex flex-row justify-between items-center">
         <div className="flex flex-row space-x-6">
           <img
             className=" raised rounded-full border-[2px] object-cover w-[72px] h-[72px]"
@@ -27,6 +28,12 @@ const AboutMeModal = () => {
             <p className="text-sm">Paul Fleming</p>
           </div>
         </div>
+        <button
+          className="raised p-2 rounded-full hover:text-neoMiddleBlue absolute right-7 top-6"
+          onClick={close}
+        >
+          <TbCircleX size={'1.5rem'} />
+        </button>
       </div>
 
       <div className="flex flex-row space-x-2 w-full">
@@ -43,11 +50,21 @@ const AboutMeModal = () => {
           setToggle={() => handleClick}
         />
       </div>
-      {personalToggle & !professionalToggle ? (
-        <ProfessionalContent />
-      ) : (
-        <PersonalContent />
-      )}
+      <div>
+        {personalToggle & !professionalToggle ? (
+          <ProfessionalContent />
+        ) : (
+          <PersonalContent />
+        )}
+      </div>
+      <div>
+        <button
+          className="raised px-8 py-3 rounded-lg mx-auto flex"
+          onClick={close}
+        >
+          Close
+        </button>
+      </div>
     </div>
   );
 };

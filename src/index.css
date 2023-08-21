@@ -44,6 +44,20 @@ code {
     monospace;
 }
 
+.blockquote {
+  width: 6em;
+  padding-left: 1em;
+  border-left: 0.3em #aacedd solid;
+}
+
+.blockquote:hover span {
+  display: none
+}
+
+.blockquote:hover:before {
+  content: "Step by Step, Ferociously!"
+}
+
 .title {
   font-family: Muli-Bold, sans-serif;
 }

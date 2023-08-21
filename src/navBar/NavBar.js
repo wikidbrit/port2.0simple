@@ -13,7 +13,11 @@ import AboutMeModal from '../components/modals/AboutMeModal';
 
 const NavBar = ({ handleChange, theme }) => {
   const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
-  const contentStyle = { background: '#2EB2EC', width: '50%' };
+  const contentStyle = {
+    background: '#2EB2EC',
+    width: '50%',
+    borderRadius: '2rem',
+  };
 
   const themeColor = useContext(ThemeContext);
 
@@ -32,9 +36,7 @@ const NavBar = ({ handleChange, theme }) => {
             }
             {...{ overlayStyle, contentStyle }}
           >
-            <ModalContainer>
-              <AboutMeModal />
-            </ModalContainer>
+            {(close) => <AboutMeModal close={close} />}
           </Popup>
 
           <li className="text-neoGrey">
