@@ -3,9 +3,9 @@ import PersonalContent from './components/PersonalContent';
 import ProfessionalContent from './components/ProfessionalContent';
 import SwitchButton from './components/SwitchButton';
 import image from '../../images/try.png';
-import { TbCircleX } from 'react-icons/tb';
 import ThemeContext from '../../context/ThemeContext';
 import classNames from 'classnames';
+import ModalHeader from './components/ModalHeader';
 
 const AboutMeModal = ({ close }) => {
   const [professionalToggle, setProfessionalToggle] = useState(false);
@@ -24,32 +24,14 @@ const AboutMeModal = ({ close }) => {
         'text-neoGrey space-y-6 p-6 rounded-lg '
       )}
     >
-      <div className="space-y-2 flex flex-row justify-between items-center">
-        <div className="flex flex-row space-x-6">
-          <img
-            className={classNames(
-              theme === 'dark' ? 'raised-dark' : 'raised',
-              'rounded-full border-[2px] object-cover w-[72px] h-[72px]'
-            )}
-            src={image}
-            alt="Paul Fleming with a grey background"
-          ></img>
-          <div className="flex flex-col justify-center text-left">
-            <p className="text-2xl font-bold">About me</p>
-            <p className="text-sm">Paul Fleming</p>
-          </div>
-        </div>
-        <button
-          className={classNames(
-            theme === 'dark' ? 'raised-dark' : 'raised',
-            'p-2 rounded-full hover:text-neoMiddleBlue absolute right-7 top-6'
-          )}
-          onClick={close}
-        >
-          <TbCircleX size={'1.5rem'} />
-        </button>
-      </div>
-
+      <ModalHeader
+        theme={theme}
+        close={close}
+        title={'About me'}
+        subTitle={'My name is Paul Fleming'}
+        image={image}
+        altImage={'Profile picture of Paul Fleming'}
+      />
       <div className="flex flex-row space-x-2 w-full py-5">
         <SwitchButton
           title={'Professional'}
