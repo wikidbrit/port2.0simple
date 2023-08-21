@@ -6,8 +6,8 @@ import image from '../../images/try.png';
 import { TbCircleX } from 'react-icons/tb';
 
 const AboutMeModal = ({ close }) => {
-  const [professionalToggle, setProfessionalToggle] = useState(true);
-  const [personalToggle, setPersonalToggle] = useState(false);
+  const [professionalToggle, setProfessionalToggle] = useState(false);
+  const [personalToggle, setPersonalToggle] = useState(true);
 
   const handleClick = () => {
     setProfessionalToggle(!professionalToggle);
@@ -36,7 +36,7 @@ const AboutMeModal = ({ close }) => {
         </button>
       </div>
 
-      <div className="flex flex-row space-x-2 w-full">
+      <div className="flex flex-row space-x-2 w-full py-5">
         <SwitchButton
           title={'Professional'}
           subTitle={'My professional experience.'}

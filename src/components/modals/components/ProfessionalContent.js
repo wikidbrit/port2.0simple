@@ -13,8 +13,8 @@ const ProfessionalContent = () => {
         digital and print applications. With a deep understanding of the **Adobe
         Creative Suite** and **Figma**, I craft visually captivating experiences
         that leave a lasting impact. My journey has encompassed various facets
-        of design, from brand development and UX / UI design to the meticulous
-        creation of design systems.
+        of design, from **brand development** and **UX / UI design** to the
+        meticulous creation of **design systems**.
       </ReactMarkdown>
       <ReactMarkdown className="leading-7">
         My expertise extends to collaborating closely with stakeholders,
