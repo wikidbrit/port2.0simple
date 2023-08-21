@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Header from '../components/Header/Header';
 import Projects from '../Projects/Projects';
 import Contact from '../components/contact/Contact';
-import { motion, useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const scrollToElement = () => {

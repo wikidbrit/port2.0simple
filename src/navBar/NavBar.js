@@ -4,14 +4,20 @@ import Popup from 'reactjs-popup';
 import NavButton from '../components/buttons/NavButton';
 
 import ThemeContext from '../context/ThemeContext';
-import ModalContainer from '../components/containers/ModalContainer';
 import classNames from 'classnames';
 import DarkModeToggle from './components/DarkModeToggle';
 
 import { TbUserShare, TbBriefcase, TbMessageShare } from 'react-icons/tb';
+import AboutMeModal from '../components/modals/AboutMeModal';
+import ContactMeModal from '../components/modals/ContactMeModal';
 
 const NavBar = ({ handleChange, theme }) => {
   const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
+  const contentStyle = {
+    background: '#2EB2EC',
+    width: '50%',
+    borderRadius: '2rem',
+  };
 
   const themeColor = useContext(ThemeContext);
 
@@ -28,15 +34,14 @@ const NavBar = ({ handleChange, theme }) => {
                 theme={theme}
               ></NavButton>
             }
-            {...{ overlayStyle }}
+            {...{ overlayStyle, contentStyle }}
           >
-            <ModalContainer title={'About me'}>
-              <p>My name is paul and I like cats</p>
-            </ModalContainer>
+            {(close) => <AboutMeModal close={close} />}
           </Popup>
 
           <li className="text-neoGrey">
             <NavButton
+              hash
               icon={<TbBriefcase size={'1.2rem'} />}
               theme={theme}
               to={'/#Projects'}
@@ -52,11 +57,9 @@ const NavBar = ({ handleChange, theme }) => {
                   icon={<TbMessageShare size={'1.2rem'} />}
                 />
               }
-              {...{ overlayStyle }}
+              {...{ overlayStyle, contentStyle }}
             >
-              <ModalContainer title={'Contact Me'}>
-                <p>pflemingonline@gmail.com</p>
-              </ModalContainer>
+              {(close) => <ContactMeModal close={close} />}
             </Popup>
           </li>
           <div

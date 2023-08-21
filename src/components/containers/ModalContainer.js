@@ -2,7 +2,7 @@ import React from 'react';
 
 const ModalContainer = ({ title, children }) => {
   return (
-    <div className="p-5 bg-neoBackground rounded-lg">
+    <div className="">
       <p>{title}</p>
       <div>{children}</div>
     </div>

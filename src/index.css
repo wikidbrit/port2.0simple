@@ -44,6 +44,34 @@ code {
     monospace;
 }
 
+.blockquote {
+  width: 6em;
+  padding-left: 1em;
+  border-left: 0.3em #aacedd solid;
+}
+
+.blockquote:hover span {
+  display: none
+}
+
+.blockquote:hover:before {
+  content: "Step by Step, Ferociously!"
+}
+
+.blockquote2 {
+  width: 6em;
+  padding-left: 1em;
+  border-left: 0.3em #aacedd solid;
+}
+
+.blockquote2:hover span {
+  display: none
+}
+
+.blockquote2:hover:before {
+  content: "Star Trek: The Original Series, Is There in Truth No Beauty?"
+}
+
 .title {
   font-family: Muli-Bold, sans-serif;
 }
