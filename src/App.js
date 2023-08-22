@@ -9,7 +9,7 @@ import Layout from './components/layout';
 import useLocalStorage from './hooks/useLocalStorage';
 
 import ThemeContext from './context/ThemeContext';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -34,14 +34,18 @@ function App() {
           <div className="fadeIn">
             <Layout handleChange={handleChange}>
               <AnimatePresence mode="wait">
-                <Routes>
-                  <Route
-                    path="/"
-                    element={<Home handleChange={handleChange} theme={theme} />}
-                  />
-                  <Route path="*" element={<FourZeroFour />} />
-                  <Route path="project/:slug" element={<ProjectTemplate />} />
-                </Routes>
+                <motion.div>
+                  <Routes>
+                    <Route
+                      path="/"
+                      element={
+                        <Home handleChange={handleChange} theme={theme} />
+                      }
+                    />
+                    <Route path="*" element={<FourZeroFour />} />
+                    <Route path="project/:slug" element={<ProjectTemplate />} />
+                  </Routes>
+                </motion.div>
               </AnimatePresence>
             </Layout>
           </div>

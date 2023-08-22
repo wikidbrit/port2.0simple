@@ -1,15 +1,18 @@
-import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { useParams } from 'react-router-dom';
 
 import useGetSlugContent from '../hooks/useGetSlugContent';
 
-import CtaButton from '../components/buttons/CtaButton';
 import { FiArrowLeft } from 'react-icons/fi';
 import { motion } from 'framer-motion';
+import NavButton from '../components/buttons/NavButton';
+import ThemeContext from '../context/ThemeContext';
 
 const ProjectTemplate = () => {
   const { slug } = useParams();
   const { data } = useGetSlugContent({ slug });
+
+  const theme = useContext(ThemeContext);
 
   if (!data) {
     return (
@@ -31,13 +34,16 @@ const ProjectTemplate = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1, ease: [0.87, 0, 0.13, 1] }}
     >
-      <Link to="/">
-        <button className="fixed left-20 mt-7">
-          <CtaButton icon={<FiArrowLeft />} text={'Go Back'} />
-        </button>
-      </Link>
-      <p className="text-[4.2rem] text-pWhite">{data[0].title}</p>
-      <p className="text-pText">{data[0].openingText}</p>
+      <NavButton
+        hash
+        icon={<FiArrowLeft />}
+        theme={theme}
+        text="Back"
+        to={'/#Projects'}
+      />
+
+      <p className="text-neoGrey text-[4.2rem] ">{data[0].title}</p>
+      <p className="text-neoGrey">{data[0].openingText}</p>
       {data[0].contentImageCollection.items.map((item, index) => (
         <img key={index} alt="test" src={item.url}></img>
       ))}
