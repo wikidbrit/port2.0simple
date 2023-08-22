@@ -30,7 +30,7 @@ const NavBar = ({ handleChange, theme, hero, template }) => {
     <div
       className={classNames(
         hero ? 'flex-col space-y-10' : 'flex-row space-x-20',
-        'items-center  mx-auto flex w-fit duration-200 justify-between rounded-full p-2'
+        'items-center mx-auto flex w-fit duration-200 justify-between rounded-full p-2'
       )}
     >
       <div
