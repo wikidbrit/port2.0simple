@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { TitleCard } from "./components";
 import classNames from "classnames";
 import NavBar from "../../navBar/NavBar";
+import ThemeContext from "../../context/ThemeContext";
 
 const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -17,6 +18,8 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const theme = useContext(ThemeContext);
   return (
     <div className="relative">
       <div
@@ -27,7 +30,7 @@ const Header = () => {
           "fixed top-4 -translate-x-20 duration-300",
         )}
       >
-        <NavBar hero />
+        <NavBar hero theme={theme} />
       </div>
       <TitleCard />
     </div>

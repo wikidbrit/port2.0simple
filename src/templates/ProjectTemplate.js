@@ -58,7 +58,7 @@ const ProjectTemplate = () => {
           "fixed top-4 -translate-x-20 duration-300",
         )}
       >
-        <NavBar scrollPosition={scrollPosition} template hero />
+        <NavBar scrollPosition={scrollPosition} template hero theme={theme} />
       </div>
       <NavButton hash icon={<FiArrowLeft />} theme={theme} to={"/#Projects"} />
 
