@@ -43,7 +43,10 @@ function App() {
                       }
                     />
                     <Route path="*" element={<FourZeroFour />} />
-                    <Route path="project/:slug" element={<ProjectTemplate />} />
+                    <Route
+                      path="project/:slug"
+                      element={<ProjectTemplate handleChange={handleChange} />}
+                    />
                   </Routes>
                 </motion.div>
               </AnimatePresence>

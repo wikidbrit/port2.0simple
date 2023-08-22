@@ -4,7 +4,7 @@ import classNames from "classnames";
 import NavBar from "../../navBar/NavBar";
 import ThemeContext from "../../context/ThemeContext";
 
-const Header = () => {
+const Header = ({ handleChange }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.scrollY;
@@ -30,7 +30,7 @@ const Header = () => {
           "fixed top-4 -translate-x-20 duration-300",
         )}
       >
-        <NavBar hero theme={theme} />
+        <NavBar hero theme={theme} handleChange={handleChange} />
       </div>
       <TitleCard />
     </div>

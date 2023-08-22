@@ -4,7 +4,7 @@ import Projects from "../Projects/Projects";
 import Contact from "../components/contact/Contact";
 import { motion } from "framer-motion";
 
-const Home = () => {
+const Home = ({ handleChange }) => {
   const scrollToElement = () => {
     const element = document.getElementById("target-element");
     if (element) {
@@ -25,7 +25,7 @@ const Home = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: [0.87, 0, 0.13, 1] }}
       >
-        <Header />
+        <Header handleChange={handleChange} />
         <Projects />
         <Contact />
       </motion.div>
