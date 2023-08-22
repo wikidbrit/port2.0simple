@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import './App.css';
+import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
 
-import Home from './pages/Home';
-import ProjectTemplate from './templates/ProjectTemplate';
-import FourZeroFour from './pages/FourZeroFour';
-import Layout from './components/layout';
-import useLocalStorage from './hooks/useLocalStorage';
+import Home from "./pages/Home";
+import ProjectTemplate from "./templates/ProjectTemplate";
+import FourZeroFour from "./pages/FourZeroFour";
+import Layout from "./components/layout";
+import useLocalStorage from "./hooks/useLocalStorage";
 
-import ThemeContext from './context/ThemeContext';
-import { AnimatePresence, motion } from 'framer-motion';
+import ThemeContext from "./context/ThemeContext";
+import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -20,10 +20,10 @@ function App() {
     }, 1000);
   }, []);
 
-  const [theme, setTheme] = useLocalStorage('theme', 'light');
+  const [theme, setTheme] = useLocalStorage("theme", "light");
 
   const handleChange = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (

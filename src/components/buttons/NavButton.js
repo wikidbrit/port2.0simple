@@ -1,7 +1,7 @@
-import classNames from 'classnames';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import classNames from "classnames";
+import React from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const NavButton = ({ icon, text, onClick, theme, to, hash }) => {
   if (hash) {
@@ -10,12 +10,12 @@ const NavButton = ({ icon, text, onClick, theme, to, hash }) => {
         to={to}
         onClick={onClick}
         className={classNames(
-          theme === 'dark' ? 'raised-dark' : 'raised',
-          'text-neoGrey py-3 px-3 rounded-full w-fit flex flex-row items-center space-x-4 duration-200 hover:text-neoMiddleBlue transition-all group'
+          theme === "dark" ? "raised-dark" : "raised",
+          "group flex w-fit flex-row items-center space-x-4 rounded-full px-3 py-3 text-neoGrey transition-all duration-200 hover:text-neoMiddleBlue",
         )}
       >
         <div className="mx-auto">{icon}</div>
-        {text && <p className="pr-3 w-full">{text}</p>}
+        {text && <p className="w-full pr-3">{text}</p>}
       </HashLink>
     );
   }
@@ -24,13 +24,13 @@ const NavButton = ({ icon, text, onClick, theme, to, hash }) => {
       to={to}
       onClick={onClick}
       className={classNames(
-        theme === 'dark' ? 'raised-dark' : 'raised',
-        'text-neoGrey py-3 px-3 rounded-full w-fit flex flex-row items-center space-x-4 duration-200 hover:text-neoMiddleBlue transition-all group'
+        theme === "dark" ? "raised-dark" : "raised",
+        "group flex w-fit flex-row items-center space-x-4 rounded-full px-3 py-3 text-neoGrey transition-all duration-200 hover:text-neoMiddleBlue",
       )}
     >
-      {' '}
+      {" "}
       <div className="mx-auto group-hover:animate-pulse">{icon}</div>
-      {text && <p className="pr-3 w-full">{text}</p>}
+      {text && <p className="w-full pr-3">{text}</p>}
     </Link>
   );
 };

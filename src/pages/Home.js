@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
-import Header from '../components/Header/Header';
-import Projects from '../Projects/Projects';
-import Contact from '../components/contact/Contact';
-import { motion } from 'framer-motion';
+import React, { useEffect } from "react";
+import Header from "../components/Header/Header";
+import Projects from "../Projects/Projects";
+import Contact from "../components/contact/Contact";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const scrollToElement = () => {
-    const element = document.getElementById('target-element');
+    const element = document.getElementById("target-element");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 

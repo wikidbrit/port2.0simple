@@ -1,27 +1,27 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 
-import Popup from 'reactjs-popup';
-import NavButton from '../components/buttons/NavButton';
+import Popup from "reactjs-popup";
+import NavButton from "../components/buttons/NavButton";
 
-import ThemeContext from '../context/ThemeContext';
-import classNames from 'classnames';
-import DarkModeToggle from './components/DarkModeToggle';
+import ThemeContext from "../context/ThemeContext";
+import classNames from "classnames";
+import DarkModeToggle from "./components/DarkModeToggle";
 
-import { TbUserShare, TbBriefcase, TbMessageShare } from 'react-icons/tb';
-import AboutMeModal from '../components/modals/AboutMeModal';
-import ContactMeModal from '../components/modals/ContactMeModal';
-import { FiArrowLeft } from 'react-icons/fi';
+import { TbUserShare, TbBriefcase, TbMessageShare } from "react-icons/tb";
+import AboutMeModal from "../components/modals/AboutMeModal";
+import ContactMeModal from "../components/modals/ContactMeModal";
+import { FiArrowLeft } from "react-icons/fi";
 
 const NavBar = ({ handleChange, theme, hero, template }) => {
-  const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
+  const overlayStyle = { background: "rgba(0,0,0,0.5)" };
   const contentStyle = {
-    background: '#2EB2EC',
-    borderRadius: '2rem',
+    background: "#2EB2EC",
+    borderRadius: "2rem",
   };
 
   const contactContentStyle = {
-    background: '#2EB2EC',
-    borderRadius: '2rem',
+    background: "#2EB2EC",
+    borderRadius: "2rem",
   };
 
   const themeColor = useContext(ThemeContext);
@@ -29,14 +29,14 @@ const NavBar = ({ handleChange, theme, hero, template }) => {
   return (
     <div
       className={classNames(
-        hero ? 'flex-col space-y-10' : 'flex-row space-x-20',
-        'items-center mx-auto flex w-fit duration-200 justify-between rounded-full p-2'
+        hero ? "flex-col space-y-10" : "flex-row space-x-20",
+        "mx-auto flex w-fit items-center justify-between rounded-full p-2 duration-200",
       )}
     >
       <div
         className={classNames(
-          themeColor === 'dark' ? 'raised-dark' : 'raised',
-          'p-[2px] h-7 rounded-full w-fit flex items-center'
+          themeColor === "dark" ? "raised-dark" : "raised",
+          "flex h-7 w-fit items-center rounded-full p-[2px]",
         )}
       >
         <DarkModeToggle handleChange={handleChange} />
@@ -44,8 +44,8 @@ const NavBar = ({ handleChange, theme, hero, template }) => {
 
       <ul
         className={classNames(
-          hero ? 'flex-col space-y-4' : 'flex-row space-x-4',
-          'flex items-center'
+          hero ? "flex-col space-y-4" : "flex-row space-x-4",
+          "flex items-center",
         )}
       >
         <Popup
@@ -53,7 +53,7 @@ const NavBar = ({ handleChange, theme, hero, template }) => {
           nested
           trigger={
             <NavButton
-              icon={<TbUserShare size={'1.2rem'} />}
+              icon={<TbUserShare size={"1.2rem"} />}
               theme={theme}
             ></NavButton>
           }
@@ -65,9 +65,9 @@ const NavBar = ({ handleChange, theme, hero, template }) => {
         <li className="text-neoGrey">
           <NavButton
             hash
-            icon={<TbBriefcase size={'1.2rem'} />}
+            icon={<TbBriefcase size={"1.2rem"} />}
             theme={theme}
-            to={'/#Projects'}
+            to={"/#Projects"}
           ></NavButton>
         </li>
         <li>
@@ -77,7 +77,7 @@ const NavBar = ({ handleChange, theme, hero, template }) => {
             trigger={
               <NavButton
                 theme={theme}
-                icon={<TbMessageShare size={'1.2rem'} />}
+                icon={<TbMessageShare size={"1.2rem"} />}
               />
             }
             {...{ overlayStyle, contactContentStyle }}
@@ -90,7 +90,7 @@ const NavBar = ({ handleChange, theme, hero, template }) => {
             hash
             icon={<FiArrowLeft />}
             theme={theme}
-            to={'/#Projects'}
+            to={"/#Projects"}
           />
         )}
       </ul>

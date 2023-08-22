@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from "react-markdown";
 
 const ProfessionalContent = () => {
   return (
     <div className="space-y-6">
-      <div className="mx-6 blockquote flex w-full font-bold">
+      <div className="blockquote mx-6 flex w-full font-bold">
         <span className="">Gradatim Ferociter!</span>
       </div>
       <ReactMarkdown className="leading-7">

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const useGetSlugContent = ({ slug }) => {
   const [data, setData] = useState(null);
@@ -28,9 +28,9 @@ const useGetSlugContent = ({ slug }) => {
   useEffect(() => {
     window
       .fetch(`https://graphql.contentful.com/content/v1/spaces/qatwxfj3hbc4/`, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
           // Authenticate the request
           Authorization: `Bearer ${process.env.REACT_APP_CONTENTFUL_API_KEY}`,
         },
@@ -49,7 +49,7 @@ const useGetSlugContent = ({ slug }) => {
   }, [query]);
 
   if (!data) {
-    return 'loading';
+    return "loading";
   }
 
   return { data };

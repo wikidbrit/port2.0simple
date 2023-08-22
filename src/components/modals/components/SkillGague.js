@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react';
-import * as d3 from 'd3';
-import classNames from 'classnames';
+import React, { useState, useEffect, useContext } from "react";
+import * as d3 from "d3";
+import classNames from "classnames";
 
-import ThemeContext from '../../../context/ThemeContext';
+import ThemeContext from "../../../context/ThemeContext";
 
 const SkillGague = ({ icon, value = 0, min = 0, max = 100, offset }) => {
   const theme = useContext(ThemeContext);
@@ -50,28 +50,28 @@ const SkillGague = ({ icon, value = 0, min = 0, max = 100, offset }) => {
   const colorScale = d3
     .scaleLinear()
     .domain([0, 1])
-    .range(['#0ECDD8', '#4B99FE']);
+    .range(["#0ECDD8", "#4B99FE"]);
 
   const gradientSteps = colorScale.ticks(10).map((value) => colorScale(value));
 
   return (
     <div
       className={classNames(
-        theme === 'dark' ? 'raised-dark' : 'raised',
-        'rounded-full relative w-fit h-fit p-4'
+        theme === "dark" ? "raised-dark" : "raised",
+        "relative h-fit w-fit rounded-full p-4",
       )}
     >
       <div
         className={classNames(
-          theme === 'dark' ? 'inset-dark' : 'inset',
-          'rounded-full flex items-center'
+          theme === "dark" ? "inset-dark" : "inset",
+          "flex items-center rounded-full",
         )}
       >
-        <div className="absolute top-0 left-0">
+        <div className="absolute left-0 top-0">
           <svg
-            style={{ overflow: 'visible' }}
+            style={{ overflow: "visible" }}
             width="5.1em"
-            viewBox={[-1, -1, 2, 1].join(' ')}
+            viewBox={[-1, -1, 2, 1].join(" ")}
           >
             <defs>
               <linearGradient
@@ -96,14 +96,14 @@ const SkillGague = ({ icon, value = 0, min = 0, max = 100, offset }) => {
         </div>
         <div
           className={classNames(
-            theme === 'dark' ? 'raised-dark' : 'raised',
-            ' rounded-full w-12 h-12 m-15 flex items-center'
+            theme === "dark" ? "raised-dark" : "raised",
+            " m-15 flex h-12 w-12 items-center rounded-full",
           )}
         >
           <div
             className={classNames(
-              theme === 'dark' ? 'inset-dark' : 'inset',
-              'mx-auto inset rounded-full p-2  m-1'
+              theme === "dark" ? "inset-dark" : "inset",
+              "inset m-1 mx-auto rounded-full  p-2",
             )}
           >
             {icon}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const useLocalStorage = (key, defaultValue) => {
   const [value, setValue] = useState(() => {
@@ -6,7 +6,7 @@ const useLocalStorage = (key, defaultValue) => {
 
     try {
       currentValue = JSON.parse(
-        localStorage.getItem(key) || String(defaultValue)
+        localStorage.getItem(key) || String(defaultValue),
       );
     } catch (error) {
       currentValue = defaultValue;

@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import ModalHeader from './components/ModalHeader';
-import classNames from 'classnames';
+import React, { useContext } from "react";
+import ModalHeader from "./components/ModalHeader";
+import classNames from "classnames";
 
-import ThemeContext from '../../context/ThemeContext';
+import ThemeContext from "../../context/ThemeContext";
 
 import {
   TbChecklist,
@@ -13,35 +13,35 @@ import {
   TbBrandFigma,
   TbBrandGithub,
   TbBrandGatsby,
-} from 'react-icons/tb';
+} from "react-icons/tb";
 
 import {
   SiAdobeindesign,
   SiAdobephotoshop,
   SiAdobeillustrator,
   SiAdobeaftereffects,
-} from 'react-icons/si';
+} from "react-icons/si";
 
-import SkillGague from './components/SkillGague';
+import SkillGague from "./components/SkillGague";
 
 const SkillsModal = ({ close }) => {
   const theme = useContext(ThemeContext);
 
-  const gitHubColor = theme === 'dark' ? '#FFFFFF' : '#000000';
+  const gitHubColor = theme === "dark" ? "#FFFFFF" : "#000000";
   return (
     <div
       className={classNames(
-        theme === 'dark' ? 'bg-darkNeoForeground' : 'bg-neoBackground',
-        'text-neoGrey space-y-6 p-6 rounded-lg w-[40rem]'
+        theme === "dark" ? "bg-darkNeoForeground" : "bg-neoBackground",
+        "w-[40rem] space-y-6 rounded-lg p-6 text-neoGrey",
       )}
     >
       <ModalHeader
         theme={theme}
         close={close}
-        title={'My skillset'}
-        subTitle={'I know stuff, all sorts of stuff.'}
+        title={"My skillset"}
+        subTitle={"I know stuff, all sorts of stuff."}
         icon={
-          <TbChecklist className="mx-auto text-neoMiddleBlue" size={'1.8rem'} />
+          <TbChecklist className="mx-auto text-neoMiddleBlue" size={"1.8rem"} />
         }
       />
       <div className="space-y-2">
@@ -56,29 +56,29 @@ const SkillsModal = ({ close }) => {
       <div className="grid grid-cols-6 gap-4">
         <SkillGague
           offset
-          icon={<TbBrandHtml5 color="#F16528" size={'2rem'} />}
+          icon={<TbBrandHtml5 color="#F16528" size={"2rem"} />}
           value={69}
         />
         <SkillGague
           offset
-          icon={<TbBrandCss3 color="#264DE4" size={'2rem'} />}
+          icon={<TbBrandCss3 color="#264DE4" size={"2rem"} />}
           value={73}
         />
         <SkillGague
           offset
-          icon={<TbBrandJavascript color="#FFD000" size={'2rem'} />}
+          icon={<TbBrandJavascript color="#FFD000" size={"2rem"} />}
           value={60}
         />
         <SkillGague
-          icon={<TbBrandTypescript color="#007ACC" size={'2rem'} />}
+          icon={<TbBrandTypescript color="#007ACC" size={"2rem"} />}
           value={50}
         />
         <SkillGague
-          icon={<TbBrandGithub color={gitHubColor} size={'2rem'} />}
+          icon={<TbBrandGithub color={gitHubColor} size={"2rem"} />}
           value={66}
         />
         <SkillGague
-          icon={<TbBrandGatsby color="#663399" size={'2rem'} />}
+          icon={<TbBrandGatsby color="#663399" size={"2rem"} />}
           value={56}
         />
       </div>
@@ -92,24 +92,24 @@ const SkillsModal = ({ close }) => {
       </div>
       <div className="grid grid-cols-6 gap-4">
         <SkillGague
-          icon={<TbBrandFigma color="#5552FE" size={'2rem'} />}
+          icon={<TbBrandFigma color="#5552FE" size={"2rem"} />}
           value={66}
         />
         <SkillGague
-          icon={<SiAdobeillustrator color="#FF9A00" size={'1.7rem'} />}
+          icon={<SiAdobeillustrator color="#FF9A00" size={"1.7rem"} />}
           value={68}
         />
         <SkillGague
-          icon={<SiAdobephotoshop color="#31A8FF" size={'1.7rem'} />}
+          icon={<SiAdobephotoshop color="#31A8FF" size={"1.7rem"} />}
           value={62}
         />
 
         <SkillGague
-          icon={<SiAdobeindesign color="#FF3366" size={'1.7rem'} />}
+          icon={<SiAdobeindesign color="#FF3366" size={"1.7rem"} />}
           value={52}
         />
         <SkillGague
-          icon={<SiAdobeaftereffects color="#9999FF" size={'1.7rem'} />}
+          icon={<SiAdobeaftereffects color="#9999FF" size={"1.7rem"} />}
           value={42}
         />
       </div>
@@ -122,8 +122,8 @@ const SkillsModal = ({ close }) => {
       <div>
         <button
           className={classNames(
-            theme === 'dark' ? 'raised-dark' : 'raised',
-            'px-8 py-3 rounded-lg mx-auto flex'
+            theme === "dark" ? "raised-dark" : "raised",
+            "mx-auto flex rounded-lg px-8 py-3",
           )}
           onClick={close}
         >

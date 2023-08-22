@@ -1,7 +1,7 @@
-import classNames from 'classnames';
-import React, { useContext, useEffect, useState } from 'react';
-import ThemeContext from '../context/ThemeContext';
-import NavBar from '../navBar/NavBar';
+import classNames from "classnames";
+import React, { useContext, useEffect, useState } from "react";
+import ThemeContext from "../context/ThemeContext";
+import NavBar from "../navBar/NavBar";
 
 const Layout = ({ children, handleChange }) => {
   const theme = useContext(ThemeContext);
@@ -13,27 +13,27 @@ const Layout = ({ children, handleChange }) => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <div
       className={classNames(
-        theme === 'dark' ? 'bg-darkNeoForeground' : 'bg-neoBackground',
-        'h-[100%] min-h-screen relative '
+        theme === "dark" ? "bg-darkNeoForeground" : "bg-neoBackground",
+        "relative h-[100%] min-h-screen ",
       )}
     >
-      <div className="mx-auto max-w-[1280px] pt-48 px-20">
+      <div className="mx-auto max-w-[1280px] px-20 pt-48">
         <div
           className={classNames(
             scrollPosition >= 200
-              ? 'opacity-0 pointer-events-none'
-              : 'opacity-1 pointer-events-auto',
-            'duration-300 transition-opacity ease-in-out fixed top-0 left-0 w-full z-50'
+              ? "pointer-events-none opacity-0"
+              : "opacity-1 pointer-events-auto",
+            "fixed left-0 top-0 z-50 w-full transition-opacity duration-300 ease-in-out",
           )}
         >
           <NavBar handleChange={handleChange} theme={theme} />

@@ -1,13 +1,13 @@
-import classNames from 'classnames';
-import React from 'react';
+import classNames from "classnames";
+import React from "react";
 
 const CtaButton = ({ icon, text, onClick, theme }) => {
   return (
     <button
       onClick={onClick}
       className={classNames(
-        theme === 'dark' ? 'raised-dark' : 'raised',
-        'text-neoGrey px-5 py-3 rounded-md flex flex-row items-center space-x-4 hover:px-8 duration-200 hover:text-neoMiddleBlue transition-all'
+        theme === "dark" ? "raised-dark" : "raised",
+        "flex flex-row items-center space-x-4 rounded-md px-5 py-3 text-neoGrey transition-all duration-200 hover:px-8 hover:text-neoMiddleBlue",
       )}
     >
       <div>{icon}</div>

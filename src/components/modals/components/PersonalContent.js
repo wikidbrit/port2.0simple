@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from "react-markdown";
 
 const PersonalContent = () => {
   return (
     <div className="space-y-6">
-      <div className="mx-6 blockquote2 flex w-full font-bold">
+      <div className="blockquote2 mx-6 flex w-full font-bold">
         <span className="">{`"Infinite diversity in infinite combination."`}</span>
       </div>
 

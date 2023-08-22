@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const useGetContent = () => {
   const [data, setData] = useState(null);
@@ -31,9 +31,9 @@ const useGetContent = () => {
   useEffect(() => {
     window
       .fetch(`https://graphql.contentful.com/content/v1/spaces/qatwxfj3hbc4/`, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
           // Authenticate the request
           Authorization: `Bearer ${process.env.REACT_APP_CONTENTFUL_API_KEY}`,
         },
@@ -54,7 +54,7 @@ const useGetContent = () => {
   }, [query]);
 
   if (!data) {
-    return 'loading';
+    return "loading";
   }
 
   return { data, firstProject, remainingProjects };

@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import classNames from 'classnames';
+import React, { useContext } from "react";
+import classNames from "classnames";
 
-import ThemeContext from '../../../context/ThemeContext';
+import ThemeContext from "../../../context/ThemeContext";
 
-import { NetlifyForm, Honeypot } from 'react-netlify-forms';
+import { NetlifyForm, Honeypot } from "react-netlify-forms";
 
 const Form = ({ close }) => {
   const theme = useContext(ThemeContext);
@@ -24,10 +24,10 @@ const Form = ({ close }) => {
               <label htmlFor="name">Name:</label>
               <input
                 className={classNames(
-                  theme === 'dark'
-                    ? 'bg-darkNeoBackground'
-                    : 'bg-neoBackground',
-                  'rounded-lg p-1 border-neoGrey border-[1px] focus:ring-neoMiddleBlue focus:border-neoMiddleBlue focus:outline-none focus:ring-2'
+                  theme === "dark"
+                    ? "bg-darkNeoBackground"
+                    : "bg-neoBackground",
+                  "rounded-lg border-[1px] border-neoGrey p-1 focus:border-neoMiddleBlue focus:outline-none focus:ring-2 focus:ring-neoMiddleBlue",
                 )}
                 type="text"
                 name="name"
@@ -40,10 +40,10 @@ const Form = ({ close }) => {
               <label htmlFor="Email">Email:</label>
               <input
                 className={classNames(
-                  theme === 'dark'
-                    ? 'bg-darkNeoBackground'
-                    : 'bg-neoBackground',
-                  'rounded-lg p-1 border-neoGrey border-[1px] focus:ring-neoMiddleBlue focus:border-neoMiddleBlue focus:outline-none focus:ring-2'
+                  theme === "dark"
+                    ? "bg-darkNeoBackground"
+                    : "bg-neoBackground",
+                  "rounded-lg border-[1px] border-neoGrey p-1 focus:border-neoMiddleBlue focus:outline-none focus:ring-2 focus:ring-neoMiddleBlue",
                 )}
                 type="text"
                 name="email"
@@ -56,10 +56,10 @@ const Form = ({ close }) => {
               <label htmlFor="message">Message:</label>
               <textarea
                 className={classNames(
-                  theme === 'dark'
-                    ? 'bg-darkNeoBackground'
-                    : 'bg-neoBackground',
-                  'rounded-lg p-1 border-neoGrey border-[1px] focus:ring-neoMiddleBlue focus:border-neoMiddleBlue focus:outline-none focus:ring-2'
+                  theme === "dark"
+                    ? "bg-darkNeoBackground"
+                    : "bg-neoBackground",
+                  "rounded-lg border-[1px] border-neoGrey p-1 focus:border-neoMiddleBlue focus:outline-none focus:ring-2 focus:ring-neoMiddleBlue",
                 )}
                 type="text"
                 name="message"
@@ -73,16 +73,16 @@ const Form = ({ close }) => {
               <button
                 type="submit"
                 className={classNames(
-                  theme === 'dark' ? 'raised-dark' : 'raised',
-                  'px-8 py-3 rounded-lg flex'
+                  theme === "dark" ? "raised-dark" : "raised",
+                  "flex rounded-lg px-8 py-3",
                 )}
               >
                 Submit
               </button>
               <button
                 className={classNames(
-                  theme === 'dark' ? 'raised-dark' : 'raised',
-                  'px-8 py-3 rounded-lg flex'
+                  theme === "dark" ? "raised-dark" : "raised",
+                  "flex rounded-lg px-8 py-3",
                 )}
                 onClick={close}
               >

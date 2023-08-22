@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-import useGetSlugContent from '../hooks/useGetSlugContent';
+import useGetSlugContent from "../hooks/useGetSlugContent";
 
-import { FiArrowLeft } from 'react-icons/fi';
-import { motion } from 'framer-motion';
-import NavButton from '../components/buttons/NavButton';
-import ThemeContext from '../context/ThemeContext';
-import classNames from 'classnames';
-import NavBar from '../navBar/NavBar';
+import { FiArrowLeft } from "react-icons/fi";
+import { motion } from "framer-motion";
+import NavButton from "../components/buttons/NavButton";
+import ThemeContext from "../context/ThemeContext";
+import classNames from "classnames";
+import NavBar from "../navBar/NavBar";
 
 const ProjectTemplate = () => {
   const { slug } = useParams();
@@ -23,10 +23,10 @@ const ProjectTemplate = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -53,16 +53,16 @@ const ProjectTemplate = () => {
       <div
         className={classNames(
           scrollPosition >= 200
-            ? 'opacity-1 pointer-events-auto '
-            : 'opacity-0 pointer-events-none',
-          'fixed -translate-x-20 duration-300 top-4'
+            ? "opacity-1 pointer-events-auto "
+            : "pointer-events-none opacity-0",
+          "fixed top-4 -translate-x-20 duration-300",
         )}
       >
         <NavBar scrollPosition={scrollPosition} template hero />
       </div>
-      <NavButton hash icon={<FiArrowLeft />} theme={theme} to={'/#Projects'} />
+      <NavButton hash icon={<FiArrowLeft />} theme={theme} to={"/#Projects"} />
 
-      <p className="text-neoGrey text-[4.2rem] ">{data[0].title}</p>
+      <p className="text-[4.2rem] text-neoGrey ">{data[0].title}</p>
       <p className="text-neoGrey">{data[0].openingText}</p>
       {data[0].contentImageCollection.items.map((item, index) => (
         <img key={index} alt="test" src={item.url}></img>
