@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import Popup from 'reactjs-popup';
-import ModalContainer from '../containers/ModalContainer';
+import ContactMeModal from '../modals/ContactMeModal';
 
 import ThemeContext from '../../context/ThemeContext';
 import CtaButton from './CtaButton';
@@ -9,6 +9,12 @@ import { TbBrandLinkedin, TbMessage2Share, TbFileLike } from 'react-icons/tb';
 
 const CtaButtons = () => {
   const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
+  const contentStyle = {
+    background: '#2EB2EC',
+    width: '50%',
+    borderRadius: '2rem',
+  };
+
   const theme = useContext(ThemeContext);
 
   return (
@@ -23,11 +29,9 @@ const CtaButtons = () => {
             text={'Contact'}
           />
         }
-        {...{ overlayStyle }}
+        {...{ overlayStyle, contentStyle }}
       >
-        <ModalContainer title={'Contact Me'}>
-          <p>pflemingonline@gmail.com</p>
-        </ModalContainer>
+        {(close) => <ContactMeModal close={close} />}
       </Popup>
 
       <a

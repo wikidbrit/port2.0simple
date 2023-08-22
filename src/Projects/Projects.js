@@ -7,14 +7,19 @@ import useGetContent from '../hooks/useGetContent';
 import ProjectCard from '../components/cards/ProjectCard';
 import ProjectButton from '../components/buttons/ProjectButton';
 import Popup from 'reactjs-popup';
-import ModalContainer from '../components/containers/ModalContainer';
 
 import { TbChecklist, TbUserShare } from 'react-icons/tb';
 import AboutMeModal from '../components/modals/AboutMeModal';
+import SkillsModal from '../components/modals/SkillsModal';
 
 const Projects = () => {
   const { data, firstProject, remainingProjects } = useGetContent();
   const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
+  const contentStyle = {
+    background: '#2EB2EC',
+    width: '50%',
+    borderRadius: '2rem',
+  };
 
   if (!data) return <div>Loading</div>;
 
@@ -39,11 +44,9 @@ const Projects = () => {
               icon={<TbUserShare color="#2EB2EC" size={'1.6rem'} />}
             />
           }
-          {...{ overlayStyle }}
+          {...{ overlayStyle, contentStyle }}
         >
-          <ModalContainer title={'About me'}>
-            <AboutMeModal />
-          </ModalContainer>
+          {(close) => <AboutMeModal close={close} />}
         </Popup>
         {/* Skillset Section */}
         <Popup
@@ -55,11 +58,9 @@ const Projects = () => {
               icon={<TbChecklist color="#2EB2EC" size={'1.6rem'} />}
             />
           }
-          {...{ overlayStyle }}
+          {...{ overlayStyle, contentStyle }}
         >
-          <ModalContainer title={'Skillset'}>
-            <p>I know stuff i tell you what</p>
-          </ModalContainer>
+          {(close) => <SkillsModal close={close} />}
         </Popup>
       </div>
 
