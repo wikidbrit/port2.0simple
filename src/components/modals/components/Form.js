@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import classNames from 'classnames';
+
+import ThemeContext from '../../../context/ThemeContext';
 
 import { NetlifyForm, Honeypot } from 'react-netlify-forms';
 
-const Form = () => {
+const Form = ({ close }) => {
+  const theme = useContext(ThemeContext);
+
   return (
-    <div className="w-full">
+    <div>
       <NetlifyForm name="Contact" action="/thanks" honeypotName="bot-field">
         {({ handleChange, success, error }) => (
           <div className="space-y-6">
@@ -49,9 +54,18 @@ const Form = () => {
                 required
               />
             </div>
-            <div>
+            <div className="flex flex-row justify-between">
               <button type="submit" className="raised px-6 py-3 rounded-lg">
                 Submit
+              </button>
+              <button
+                className={classNames(
+                  theme === 'dark' ? 'raised-dark' : 'raised',
+                  'px-8 py-3 rounded-lg flex'
+                )}
+                onClick={close}
+              >
+                Close
               </button>
             </div>
           </div>

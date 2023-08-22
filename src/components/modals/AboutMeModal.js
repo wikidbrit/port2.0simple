@@ -21,7 +21,7 @@ const AboutMeModal = ({ close }) => {
     <div
       className={classNames(
         theme === 'dark' ? 'bg-darkNeoForeground' : 'bg-neoBackground',
-        'text-neoGrey space-y-6 p-6 rounded-lg '
+        'text-neoGrey space-y-6 p-6 rounded-lg w-[40rem]'
       )}
     >
       <ModalHeader

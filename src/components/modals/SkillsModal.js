@@ -30,7 +30,7 @@ const SkillsModal = ({ close }) => {
     <div
       className={classNames(
         theme === 'dark' ? 'bg-darkNeoForeground' : 'bg-neoBackground',
-        'text-neoGrey space-y-6 p-6 rounded-lg '
+        'text-neoGrey space-y-6 p-6 rounded-lg w-[40rem]'
       )}
     >
       <ModalHeader
@@ -44,7 +44,7 @@ const SkillsModal = ({ close }) => {
       />
       <div className="space-y-2">
         <p className="font-bold">Programming</p>
-        <p className="w-4/5 leading-7">
+        <p className="w-full leading-7">
           I recently graduated from Hyper Island with qualifications in Front
           End Development and 2 years at the fintech app Alwy working in the
           front end.
@@ -82,9 +82,10 @@ const SkillsModal = ({ close }) => {
       </div>
       <div className="space-y-2">
         <p className="font-bold">Design</p>
-        <p className="w-4/5 leading-7">
-          I have a bachelor's degree in graphic design from Full Sail University
-          in the USA and have worked with digital design for 10 years.
+        <p className="w-full leading-7">
+          I have a bachelor's degree in Digital Art and Design from Full Sail
+          University in the USA, and have worked with digital design for 10
+          years.
         </p>
       </div>
       <div className="grid grid-cols-6 gap-4">
@@ -110,7 +111,7 @@ const SkillsModal = ({ close }) => {
           value={42}
         />
       </div>
-      <p className="w-4/5 leading-7">
+      <p className="w-full leading-7">
         I bring a unique blend of creative and technical skills to the each and
         every project. I can see the practicalities in design before
         implimentation in the code identifying potential issues before they

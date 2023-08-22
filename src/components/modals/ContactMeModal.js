@@ -14,7 +14,7 @@ const ContactMeModal = ({ close }) => {
     <div
       className={classNames(
         theme === 'dark' ? 'bg-darkNeoForeground' : 'bg-neoBackground',
-        'text-neoGrey space-y-6 p-6 rounded-lg '
+        'text-neoGrey space-y-6 p-6 rounded-lg w-[30rem]'
       )}
     >
       <ModalHeader
@@ -33,7 +33,7 @@ const ContactMeModal = ({ close }) => {
         I encourage you to reach out to collaborate on your next project, or
         just to say hi!
       </p>
-      <Form />
+      <Form close={close} />
     </div>
   );
 };
