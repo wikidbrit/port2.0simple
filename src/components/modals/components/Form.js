@@ -23,7 +23,12 @@ const Form = ({ close }) => {
             <div className="flex flex-col">
               <label htmlFor="name">Name:</label>
               <input
-                className="rounded-lg p-1 border-neoGrey border-[1px] focus:ring-neoMiddleBlue focus:border-neoMiddleBlue focus:outline-none focus:ring-2"
+                className={classNames(
+                  theme === 'dark'
+                    ? 'bg-darkNeoBackground'
+                    : 'bg-neoBackground',
+                  'rounded-lg p-1 border-neoGrey border-[1px] focus:ring-neoMiddleBlue focus:border-neoMiddleBlue focus:outline-none focus:ring-2'
+                )}
                 type="text"
                 name="name"
                 id="name"
@@ -34,7 +39,12 @@ const Form = ({ close }) => {
             <div className="flex flex-col">
               <label htmlFor="Email">Email:</label>
               <input
-                className="rounded-lg p-1 border-neoGrey border-[1px] focus:ring-neoMiddleBlue focus:border-neoMiddleBlue focus:outline-none focus:ring-2"
+                className={classNames(
+                  theme === 'dark'
+                    ? 'bg-darkNeoBackground'
+                    : 'bg-neoBackground',
+                  'rounded-lg p-1 border-neoGrey border-[1px] focus:ring-neoMiddleBlue focus:border-neoMiddleBlue focus:outline-none focus:ring-2'
+                )}
                 type="text"
                 name="email"
                 id="email"
@@ -45,7 +55,12 @@ const Form = ({ close }) => {
             <div className="flex flex-col">
               <label htmlFor="message">Message:</label>
               <textarea
-                className="rounded-lg p-1 border-neoGrey border-[1px]  focus:ring-neoMiddleBlue focus:border-neoMiddleBlue focus:outline-none focus:ring-2"
+                className={classNames(
+                  theme === 'dark'
+                    ? 'bg-darkNeoBackground'
+                    : 'bg-neoBackground',
+                  'rounded-lg p-1 border-neoGrey border-[1px] focus:ring-neoMiddleBlue focus:border-neoMiddleBlue focus:outline-none focus:ring-2'
+                )}
                 type="text"
                 name="message"
                 id="message"
@@ -55,7 +70,13 @@ const Form = ({ close }) => {
               />
             </div>
             <div className="flex flex-row justify-between">
-              <button type="submit" className="raised px-6 py-3 rounded-lg">
+              <button
+                type="submit"
+                className={classNames(
+                  theme === 'dark' ? 'raised-dark' : 'raised',
+                  'px-8 py-3 rounded-lg flex'
+                )}
+              >
                 Submit
               </button>
               <button

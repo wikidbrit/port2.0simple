@@ -26,6 +26,8 @@ import SkillGague from './components/SkillGague';
 
 const SkillsModal = ({ close }) => {
   const theme = useContext(ThemeContext);
+
+  const gitHubColor = theme === 'dark' ? '#FFFFFF' : '#000000';
   return (
     <div
       className={classNames(
@@ -72,7 +74,7 @@ const SkillsModal = ({ close }) => {
           value={50}
         />
         <SkillGague
-          icon={<TbBrandGithub color="#000000" size={'2rem'} />}
+          icon={<TbBrandGithub color={gitHubColor} size={'2rem'} />}
           value={66}
         />
         <SkillGague

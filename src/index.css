@@ -111,6 +111,11 @@ code {
 box-shadow: 4px 4px 4px 0px rgba(190, 190, 190, 0.50) inset, -4px -4px 4px 0px rgba(255, 255, 255, 0.50) inset;
 }
 
+.inset-dark {
+  fill: linear-gradient(135deg, #1D1E1E 0%, rgba(29, 30, 30, 0.00) 100%);
+  box-shadow:   inset 5px 5px 19px #121313,
+    inset -5px -5px 19px #282929;}
+
 .blue-gradient {
   background: linear-gradient(135deg, #0ECDD8 0%, #4B99FE 100%);
 background-clip: text;
@@ -151,3 +156,5 @@ background-clip: text;
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+/* CSS For gague */

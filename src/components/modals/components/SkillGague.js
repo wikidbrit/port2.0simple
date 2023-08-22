@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import * as d3 from 'd3';
 import classNames from 'classnames';
 
+import ThemeContext from '../../../context/ThemeContext';
+
 const SkillGague = ({ icon, value = 0, min = 0, max = 100, offset }) => {
+  const theme = useContext(ThemeContext);
+
   const [count, setCount] = useState(25);
   const incrementAmount = value / 300;
 
@@ -51,8 +55,18 @@ const SkillGague = ({ icon, value = 0, min = 0, max = 100, offset }) => {
   const gradientSteps = colorScale.ticks(10).map((value) => colorScale(value));
 
   return (
-    <div className="rounded-full relative w-fit h-fit raised p-4">
-      <div className="inset rounded-full flex items-center">
+    <div
+      className={classNames(
+        theme === 'dark' ? 'raised-dark' : 'raised',
+        'rounded-full relative w-fit h-fit p-4'
+      )}
+    >
+      <div
+        className={classNames(
+          theme === 'dark' ? 'inset-dark' : 'inset',
+          'rounded-full flex items-center'
+        )}
+      >
         <div className="absolute top-0 left-0">
           <svg
             style={{ overflow: 'visible' }}
@@ -80,8 +94,18 @@ const SkillGague = ({ icon, value = 0, min = 0, max = 100, offset }) => {
             <path d={filledArc} fill="url(#Gauge__gradient)" />
           </svg>
         </div>
-        <div className="raised rounded-full w-12 h-12 m-15 flex items-center">
-          <div className={classNames('mx-auto inset rounded-full p-2  m-1 ')}>
+        <div
+          className={classNames(
+            theme === 'dark' ? 'raised-dark' : 'raised',
+            ' rounded-full w-12 h-12 m-15 flex items-center'
+          )}
+        >
+          <div
+            className={classNames(
+              theme === 'dark' ? 'inset-dark' : 'inset',
+              'mx-auto inset rounded-full p-2  m-1'
+            )}
+          >
             {icon}
           </div>
         </div>
