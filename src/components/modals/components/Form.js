@@ -7,7 +7,7 @@ const Form = () => {
     <div className="w-full">
       <NetlifyForm name="Contact" action="/thanks" honeypotName="bot-field">
         {({ handleChange, success, error }) => (
-          <div className="space-y-3">
+          <div className="space-y-6">
             <Honeypot />
             {success && <p>Thanks for reaching out!</p>}
             {error && (

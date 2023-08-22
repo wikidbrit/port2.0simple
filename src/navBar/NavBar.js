@@ -15,7 +15,13 @@ const NavBar = ({ handleChange, theme }) => {
   const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
   const contentStyle = {
     background: '#2EB2EC',
-    width: '50%',
+    width: '45rem',
+    borderRadius: '2rem',
+  };
+
+  const contactContentStyle = {
+    background: '#2EB2EC',
+    width: '30rem',
     borderRadius: '2rem',
   };
 
@@ -57,7 +63,7 @@ const NavBar = ({ handleChange, theme }) => {
                   icon={<TbMessageShare size={'1.2rem'} />}
                 />
               }
-              {...{ overlayStyle, contentStyle }}
+              {...{ overlayStyle, contactContentStyle }}
             >
               {(close) => <ContactMeModal close={close} />}
             </Popup>

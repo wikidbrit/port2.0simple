@@ -17,7 +17,7 @@ const Projects = () => {
   const overlayStyle = { background: 'rgba(0,0,0,0.5)' };
   const contentStyle = {
     background: '#2EB2EC',
-    width: '50%',
+    width: '45rem',
     borderRadius: '2rem',
   };
 

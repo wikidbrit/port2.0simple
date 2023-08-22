@@ -29,10 +29,11 @@ const ContactMeModal = ({ close }) => {
         title={'Contact Me'}
         subTitle={'Get in touch with me.'}
       />
-      <div className="flex flex-row space-x-4 items-center">
-        <Form />
-        <p className="text-center w-full text-[7rem]">💬</p>
-      </div>
+      <p className="leading-7">
+        I encourage you to reach out to collaborate on your next project, or
+        just to say hi!
+      </p>
+      <Form />
     </div>
   );
 };
