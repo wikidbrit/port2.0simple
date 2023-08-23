@@ -1,9 +1,8 @@
 import classNames from "classnames";
 import React, { useContext, useEffect, useState } from "react";
 import ThemeContext from "../context/ThemeContext";
-import NavBar from "../navBar/NavBar";
 
-const Layout = ({ children, handleChange }) => {
+const Layout = ({ children }) => {
   const theme = useContext(ThemeContext);
 
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -27,18 +26,8 @@ const Layout = ({ children, handleChange }) => {
         "relative h-[100%] min-h-screen ",
       )}
     >
-      <div className="mx-auto max-w-[1280px] px-20 pt-48">
-        <div
-          className={classNames(
-            scrollPosition >= 200
-              ? "pointer-events-none opacity-0"
-              : "opacity-1 pointer-events-auto",
-            "fixed left-0 top-0 z-50 w-full transition-opacity duration-300 ease-in-out",
-          )}
-        >
-          <NavBar handleChange={handleChange} theme={theme} />
-        </div>
-        {children}
+      <div className="fiexd left-0 top-0 z-50">
+        <div>{children}</div>
       </div>
     </div>
   );
