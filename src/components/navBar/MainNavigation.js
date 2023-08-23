@@ -5,6 +5,7 @@ import { HashLink } from "react-router-hash-link";
 import Popup from "reactjs-popup";
 import AboutMeModal from "../modals/AboutMeModal";
 import classNames from "classnames";
+import MainButton from "../buttons/MainButton";
 
 const MainNavigation = () => {
   const theme = useContext(ThemeContext);
@@ -17,13 +18,11 @@ const MainNavigation = () => {
   return (
     <div
       className={classNames(
-        theme === "dark"
-          ? "border-water-900 from-bgBlueDark to-bgBlueLight"
-          : "border-steel-200 from-steel-100 to-steel-300",
-        "fixed z-50 mx-auto w-full border-b-[2px]  bg-gradient-to-r shadow-sm",
+        theme === "dark" ? "" : "",
+        "z-50 mx-auto w-full tracking-wide shadow-sm",
       )}
     >
-      <div className="mx-auto flex w-full max-w-[1280px] flex-row items-center justify-between px-10 py-2">
+      <div className="mx-auto flex w-full max-w-[1400px] flex-row items-center justify-between py-2">
         <div>
           <div className="w-16 duration-300">
             {theme === "dark" && (
@@ -42,8 +41,8 @@ const MainNavigation = () => {
         <div>
           <ul
             className={classNames(
-              theme === "dark" ? "text-steel-50" : "text-water-900",
-              "flex flex-row space-x-8 text-sm",
+              theme === "dark" ? "text-steel-400" : "text-water-900",
+              "flex flex-row space-x-16 text-sm",
             )}
           >
             <li>
@@ -67,9 +66,7 @@ const MainNavigation = () => {
         </div>
 
         <div>
-          <button className="new-button px-5 py-3 font-medium text-steel-50 duration-200 hover:-translate-y-[2px]">
-            <p className=" shadow-sm">Contact</p>
-          </button>
+          <MainButton text={"Contact"} />
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
 import Footer from "./Footer/Footer";
 import MainNavigation from "./navBar/MainNavigation";
@@ -7,19 +7,19 @@ import MainNavigation from "./navBar/MainNavigation";
 const Layout = ({ children, handleChange }) => {
   const theme = useContext(ThemeContext);
 
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.scrollY;
-    setScrollPosition(position);
-  };
+  // const [scrollPosition, setScrollPosition] = useState(0);
+  // const handleScroll = () => {
+  //   const position = window.scrollY;
+  //   setScrollPosition(position);
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <div
