@@ -20,7 +20,7 @@ function App() {
     }, 1000);
   }, []);
 
-  const [theme, setTheme] = useLocalStorage("theme", "light");
+  const [theme, setTheme] = useLocalStorage("theme", "dark");
 
   const handleChange = () => {
     setTheme(theme === "light" ? "dark" : "light");

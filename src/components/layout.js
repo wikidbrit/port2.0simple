@@ -22,13 +22,13 @@ const Layout = ({ children }) => {
   return (
     <div
       className={classNames(
-        theme === "dark" ? "bg-darkNeoForeground" : "bg-neoBackground",
-        "relative h-[100%] min-h-screen ",
+        theme === "dark"
+          ? "from-bgBlueDark to-bgBlueLight"
+          : "from-steel-100 to-steel-300",
+        "h-100% relative left-0 top-0 z-50 min-h-screen w-screen bg-gradient-to-r",
       )}
     >
-      <div className="fiexd left-0 top-0 z-50">
-        <div>{children}</div>
-      </div>
+      <div className="mx-auto max-w-[1280px] p-10">{children}</div>
     </div>
   );
 };
