@@ -18,9 +18,9 @@ const MainNavigation = () => {
     <div
       className={classNames(
         theme === "dark"
-          ? "from-bgBlueDark to-bgBlueLight"
-          : "from-steel-100 to-steel-300",
-        "fixed z-50 mx-auto w-full border-b-[2px] border-water-900 bg-gradient-to-r shadow-md",
+          ? "border-water-900 from-bgBlueDark to-bgBlueLight"
+          : "border-steel-200 from-steel-100 to-steel-300",
+        "fixed z-50 mx-auto w-full border-b-[2px]  bg-gradient-to-r shadow-sm",
       )}
     >
       <div className="mx-auto flex w-full max-w-[1280px] flex-row items-center justify-between px-10 py-2">
@@ -42,7 +42,7 @@ const MainNavigation = () => {
         <div>
           <ul
             className={classNames(
-              theme === "dark" ? "text-steel-50" : "text-water-800",
+              theme === "dark" ? "text-steel-50" : "text-water-900",
               "flex flex-row space-x-8 text-sm",
             )}
           >
@@ -67,8 +67,8 @@ const MainNavigation = () => {
         </div>
 
         <div>
-          <button className="new-button px-5 py-3 font-medium text-steel-50">
-            Contact
+          <button className="new-button px-5 py-3 font-medium text-steel-50 duration-200 hover:-translate-y-[2px]">
+            <p className=" shadow-sm">Contact</p>
           </button>
         </div>
       </div>
