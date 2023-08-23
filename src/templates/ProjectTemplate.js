@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 import NavButton from "../components/buttons/NavButton";
 import ThemeContext from "../context/ThemeContext";
 import classNames from "classnames";
-import NavBar from "../navBar/NavBar";
 
 const ProjectTemplate = ({ handleChange }) => {
   const { slug } = useParams();
@@ -57,15 +56,7 @@ const ProjectTemplate = ({ handleChange }) => {
             : "pointer-events-none opacity-0",
           "fixed top-4 -translate-x-20 duration-300",
         )}
-      >
-        <NavBar
-          scrollPosition={scrollPosition}
-          template
-          hero
-          theme={theme}
-          handleChange={handleChange}
-        />
-      </div>
+      ></div>
       <NavButton hash icon={<FiArrowLeft />} theme={theme} to={"/#Projects"} />
 
       <p className="text-[4.2rem] text-neoGrey ">{data[0].title}</p>

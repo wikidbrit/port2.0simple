@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import ThemeContext from "../../context/ThemeContext";
 import { PaulLogoDark, PaulLogoLight } from "../../assets/svgs";
 import classNames from "classnames";
-import AlternatingToggle from "../../navBar/components/AlternatingToggle";
+import { TbPhone, TbMessage2Share, TbMapPin } from "react-icons/tb";
+import AlternatingToggle from "../buttons/AlternatingToggle";
 
 const Footer = ({ handleChange }) => {
   const theme = useContext(ThemeContext);
@@ -29,10 +30,32 @@ const Footer = ({ handleChange }) => {
             "text-sm ",
           )}
         >
-          <ul className="space-y-2">
-            <li>pflemingonline@gmail.com</li>
-            <li>073 953 94 69</li>
-            <li>Stockholm, Sweden</li>
+          <ul className="space-y-4">
+            <li className="flex flex-row items-center space-x-2">
+              <div className=" text-lightWater">
+                <TbMessage2Share size={"1.2rem"} />
+              </div>
+
+              <a
+                href="mailto:pflemingonline@gmail.com?Subject=Contacting from pafleming.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                pflemingonline@gmail.com
+              </a>
+            </li>
+            <li className="flex flex-row items-center space-x-2">
+              <div className=" text-lightWater">
+                <TbPhone size={"1.2rem"} />
+              </div>
+              <p>073 953 94 69</p>
+            </li>
+            <li className="flex flex-row items-center space-x-2">
+              <div className=" text-lightWater">
+                <TbMapPin size={"1.2rem"} />
+              </div>
+              <p>Stockholm, Sweden</p>
+            </li>
           </ul>
         </div>
       </div>

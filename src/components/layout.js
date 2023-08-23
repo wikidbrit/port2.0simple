@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import React, { useContext, useEffect, useState } from "react";
 import ThemeContext from "../context/ThemeContext";
-import AlternatingToggle from "../navBar/components/AlternatingToggle";
 import Footer from "./Footer/Footer";
+import MainNavigation from "./navBar/MainNavigation";
 
 const Layout = ({ children, handleChange }) => {
   const theme = useContext(ThemeContext);
@@ -27,9 +27,10 @@ const Layout = ({ children, handleChange }) => {
         theme === "dark"
           ? "from-bgBlueDark to-bgBlueLight"
           : "from-steel-100 to-steel-300",
-        "h-100% relative left-0 top-0 z-50 min-h-screen w-screen bg-gradient-to-r",
+        "h-100% left-0 top-0 z-50 min-h-screen w-screen bg-gradient-to-br",
       )}
     >
+      <MainNavigation />
       <div className="mx-auto max-w-[1280px] p-10">
         {children} <Footer handleChange={handleChange} />
       </div>

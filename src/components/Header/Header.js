@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { TitleCard } from "./components";
 import classNames from "classnames";
-import NavBar from "../../navBar/NavBar";
 import ThemeContext from "../../context/ThemeContext";
 
 const Header = ({ handleChange }) => {
@@ -21,7 +20,7 @@ const Header = ({ handleChange }) => {
 
   const theme = useContext(ThemeContext);
   return (
-    <div className="relative">
+    <div className="relative" id="home">
       <div
         className={classNames(
           scrollPosition >= 200
@@ -29,9 +28,7 @@ const Header = ({ handleChange }) => {
             : "pointer-events-none opacity-0",
           "fixed top-4 -translate-x-20 duration-300",
         )}
-      >
-        <NavBar hero theme={theme} handleChange={handleChange} />
-      </div>
+      ></div>
       <TitleCard />
     </div>
   );

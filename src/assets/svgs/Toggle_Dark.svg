@@ -6,7 +6,7 @@
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="76.7891" height="41.2553" rx="20.6277" fill="#022A31" />
+      <rect width="76.7891" height="41.2553" rx="20.6277" fill="#022A31" shape-rendering="optimizeQuality" />
       <rect
         x="2.71606"
         y="2.46301"
@@ -16,6 +16,7 @@
         fill="#2E95D9"
         stroke="#073F74"
         stroke-width="2"
+        shape-rendering="optimizeQuality" 
       />
       <g filter="url(#filter0_i_1647_431)">
         <rect
@@ -25,6 +26,7 @@
           height="33.5345"
           rx="16.7673"
           fill="url(#paint0_linear_1647_431)"
+          shape-rendering="optimizeQuality" 
         />
       </g>
       <rect
@@ -34,21 +36,24 @@
         height="32.5345"
         rx="16.2673"
         stroke="#1FC7DD"
+        shape-rendering="optimizeQuality" 
       />
       <path
         d="M25.2386 12.5419V14.5161M30.8224 14.8547L29.4265 16.2507M33.1353 20.4386H31.1611M30.8224 26.0225L29.4265 24.6266M25.2386 26.3612V28.3354M21.0506 24.6266L19.6547 26.0225M19.316 20.4386H17.3418M21.0506 16.2507L19.6547 14.8547M28.5289 20.4386C28.5289 21.3113 28.1822 22.1482 27.5652 22.7652C26.9481 23.3823 26.1112 23.729 25.2386 23.729C24.3659 23.729 23.529 23.3823 22.912 22.7652C22.2949 22.1482 21.9482 21.3113 21.9482 20.4386C21.9482 19.566 22.2949 18.7291 22.912 18.112C23.529 17.495 24.3659 17.1483 25.2386 17.1483C26.1112 17.1483 26.9481 17.495 27.5652 18.112C28.1822 18.7291 28.5289 19.566 28.5289 20.4386Z"
         stroke="white"
         stroke-opacity="0.5"
-        stroke-width="1.5"
+        stroke-width="1.6"
         stroke-linecap="round"
         stroke-linejoin="round"
+        shape-rendering="optimizeQuality" 
       />
       <path
         d="M62.5548 22.4719C61.7303 22.8156 60.8457 22.992 59.9524 22.9908C56.2173 22.9908 53.1898 19.9632 53.1898 16.2281C53.1898 15.3056 53.3743 14.4268 53.7086 13.6257C52.4764 14.1398 51.4238 15.0069 50.6835 16.118C49.9432 17.2291 49.5482 18.5344 49.5483 19.8695C49.5483 23.6046 52.5759 26.6322 56.311 26.6322C57.6461 26.6323 58.9514 26.2373 60.0625 25.497C61.1736 24.7567 62.0407 23.7041 62.5548 22.4719Z"
         stroke="white"
-        stroke-width="1.5"
+        stroke-width="1.6"
         stroke-linecap="round"
         stroke-linejoin="round"
+        shape-rendering="optimizeQuality" 
       />
       <defs>
         <filter
