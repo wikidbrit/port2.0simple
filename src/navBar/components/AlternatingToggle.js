@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import ThemeContext from "../../context/ThemeContext";
 import { ToggleDark, ToggleLight } from "../../assets/svgs";
 
-const NewToggle = ({ handleChange }) => {
+const AlternatingToggle = ({ handleChange }) => {
   const theme = useContext(ThemeContext);
 
   return (
@@ -21,4 +21,4 @@ const NewToggle = ({ handleChange }) => {
     </button>
   );
 };
-export default NewToggle;
+export default AlternatingToggle;
