@@ -47,7 +47,7 @@ const TopCode = () => {
   return (
     <div className=" flex h-32 translate-x-5  flex-col place-content-center space-y-2 opacity-40">
       <motion.p
-        className="text-xs tracking-normal tracking-wide text-green-300"
+        className="text-xs tracking-wide text-green-300"
         variants={sentence}
         initial="hidden"
         animate="visible"
