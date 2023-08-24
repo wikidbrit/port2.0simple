@@ -28,6 +28,9 @@ module.exports = {
       10: "2.5rem",
     },
     extend: {
+      fontSize: {
+        xxs: ".65rem",
+      },
       colors: {
         water: {
           DEFAULT: "#4B99FE",
