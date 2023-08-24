@@ -28,14 +28,14 @@ const TitleArea = () => {
             className={classNames(
               theme === "dark"
                 ? "from-steel-400 to-steel-100 "
-                : "from-steel-400 to-steel-600",
+                : "from-steel-400 to-steel-700",
               "bg-gradient-to-r bg-clip-text font-black text-transparent",
             )}
           >
             DESI
             <span
               className={classNames(
-                theme === "dark" ? "text-water-300" : "text-water-500",
+                theme === "dark" ? "text-steel-200" : "text-steel-600",
                 "relative",
               )}
             >
@@ -55,7 +55,7 @@ const TitleArea = () => {
             className={classNames(
               theme === "dark"
                 ? "from-steel-400 to-steel-100 "
-                : "from-steel-400 to-steel-600",
+                : "from-steel-400 to-steel-700",
               "flex bg-gradient-to-l bg-clip-text font-black text-transparent",
             )}
           >
