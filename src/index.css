@@ -164,6 +164,13 @@ body {
 
 /* CSS For gague */
 
+.blue-gradient {
+  background: var(
+    --blue-gradient,
+    linear-gradient(135deg, #0ecdd8 0%, #4b99fe 100%)
+  );
+}
+
 .new-button {
   border-radius: 0.5rem;
   border: 0.2px solid #3c64b1;
