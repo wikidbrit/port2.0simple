@@ -67,7 +67,7 @@ const TopCode = () => {
       >
         {textLines.map((line, index) => (
           <React.Fragment key={index}>
-            <span className="ml-0 leading-4 tracking-wide">
+            <span className="pl-0 leading-4 tracking-wide">
               {line.split("").map((char, index) => (
                 <motion.span key={index} variants={letter}>
                   {char}

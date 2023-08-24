@@ -31,11 +31,11 @@ const TitleArea = () => {
         <div className="flex flex-col space-y-3">
           <TopCode />
           <p className="flex bg-gradient-to-l from-steel-400 to-steel-100 bg-clip-text font-black text-transparent">
-            <span className="pr-10 font-mono font-extralight text-green-300">
+            <span className="pr-10 font-mono font-extralight text-green-300 opacity-40">
               {"{ "}
             </span>
             CODE
-            <span className="pl-10 font-mono font-extralight text-green-300">
+            <span className="pl-10 font-mono font-extralight text-green-300 opacity-40">
               {" }"}
             </span>
           </p>

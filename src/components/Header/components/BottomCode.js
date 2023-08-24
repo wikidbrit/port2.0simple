@@ -53,7 +53,7 @@ const BottomCode = () => {
       >
         {textLines.map((line, index) => (
           <React.Fragment key={index}>
-            <span className="ml-8 leading-4 tracking-wide">
+            <span className="pl-8 leading-4 tracking-wide">
               {line.split("").map((char, charIndex) => (
                 <motion.span key={charIndex} variants={letter}>
                   {char}
