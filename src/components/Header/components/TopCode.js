@@ -37,7 +37,7 @@ const TopCode = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimationKey(animationKey + 1);
-    }, 8000); // Adjust the delay in milliseconds here
+    }, 7000); // Adjust the delay in milliseconds here
 
     return () => {
       clearTimeout(timer);

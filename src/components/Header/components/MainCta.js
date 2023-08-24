@@ -14,7 +14,7 @@ const MainCta = () => {
       <div>
         <MainButton text={"Get to know me"} />
       </div>
-      <div className="animate-bounce pt-6 text-lightWater">
+      <div className="pt-6 text-lightWater">
         <TbCircleChevronsDown size={"1.5rem"} />
       </div>
     </div>

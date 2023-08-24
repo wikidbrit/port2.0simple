@@ -13,7 +13,7 @@ const TitleArea = () => {
         <BGDarkmode />
       </div>
       <div className="flex h-full flex-row place-content-center items-center justify-between px-20 text-8xl tracking-wider ">
-        <div className="flex flex-col space-y-3">
+        <div className="flex flex-col">
           <TopShards />
           <p className="bg-gradient-to-r from-steel-400 to-steel-100 bg-clip-text font-black text-transparent">
             DESI
