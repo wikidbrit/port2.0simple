@@ -10,6 +10,7 @@ import useLocalStorage from "./hooks/useLocalStorage";
 
 import ThemeContext from "./context/ThemeContext";
 import { AnimatePresence, motion } from "framer-motion";
+import SplashPage from "./components/SplashPage/SplashPage";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -17,10 +18,10 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 4000);
   }, []);
 
-  const [theme, setTheme] = useLocalStorage("theme", "light");
+  const [theme, setTheme] = useLocalStorage("theme", "dark");
 
   const handleChange = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -29,11 +30,11 @@ function App() {
   return (
     <>
       <ThemeContext.Provider value={theme}>
-        {loading && <div className="h-screen">Loading</div>}
-        {!loading && (
-          <div className="fadeIn">
-            <Layout handleChange={handleChange}>
-              <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait">
+          {loading && <SplashPage />}
+          {!loading && (
+            <div className="fadeIn">
+              <Layout handleChange={handleChange}>
                 <motion.div>
                   <Routes>
                     <Route
@@ -49,10 +50,10 @@ function App() {
                     />
                   </Routes>
                 </motion.div>
-              </AnimatePresence>
-            </Layout>
-          </div>
-        )}
+              </Layout>
+            </div>
+          )}
+        </AnimatePresence>
       </ThemeContext.Provider>
     </>
   );

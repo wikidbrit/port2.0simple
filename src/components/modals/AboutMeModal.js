@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import PersonalContent from "./components/PersonalContent";
 import ProfessionalContent from "./components/ProfessionalContent";
 import SwitchButton from "./components/SwitchButton";
-import image from "../../images/try.png";
+import image from "../../assets/images/try.png";
 import ThemeContext from "../../context/ThemeContext";
 import classNames from "classnames";
 import ModalHeader from "./components/ModalHeader";
