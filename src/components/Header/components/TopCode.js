@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import ThemeContext from "../../../context/ThemeContext";
+import classNames from "classnames";
 
 const line1 = "const myPortfolio => ({children: React.ReactElement}) = {";
 
@@ -32,6 +34,7 @@ const letter = {
 };
 
 const TopCode = () => {
+  const theme = useContext(ThemeContext);
   const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
@@ -45,9 +48,17 @@ const TopCode = () => {
   }, [animationKey]);
 
   return (
-    <div className=" flex h-32 translate-x-5  flex-col place-content-center space-y-2 opacity-40">
+    <div
+      className={classNames(
+        theme === "dark" ? "opacity-40" : "opacity-60",
+        "flex h-32 translate-x-5  flex-col place-content-center space-y-2",
+      )}
+    >
       <motion.p
-        className="text-xs tracking-wide text-green-300"
+        className={classNames(
+          theme === "dark" ? "text-green-300" : "text-green-700",
+          "text-xs tracking-wide",
+        )}
         variants={sentence}
         initial="hidden"
         animate="visible"
@@ -60,7 +71,10 @@ const TopCode = () => {
       </motion.p>
       <motion.p
         key={animationKey}
-        className="ml-8 text-xs tracking-wide text-green-300"
+        className={classNames(
+          theme === "dark" ? "text-green-300" : "text-green-700",
+          "ml-8 text-xs tracking-wide",
+        )}
         variants={sentence}
         initial="hidden"
         animate="visible"

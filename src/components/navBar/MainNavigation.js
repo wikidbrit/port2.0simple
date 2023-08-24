@@ -19,7 +19,7 @@ const MainNavigation = () => {
     <div
       className={classNames(
         theme === "dark" ? "" : "",
-        "z-50 mx-auto w-full tracking-wide shadow-sm",
+        "z-50 mx-auto w-full px-5 tracking-wide shadow-sm",
       )}
     >
       <div className="mx-auto flex w-full max-w-[1400px] flex-row items-center justify-between py-2">

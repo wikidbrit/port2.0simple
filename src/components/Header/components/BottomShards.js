@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   ShardBottomBig,
   ShardBottomMedium,
@@ -6,8 +6,12 @@ import {
 } from "../../../assets/svgs";
 
 import { motion, useTime, useTransform } from "framer-motion";
+import classNames from "classnames";
+import ThemeContext from "../../../context/ThemeContext";
 
 const BottomShards = () => {
+  const theme = useContext(ThemeContext);
+
   const time = useTime();
   const rotate1 = useTransform(time, [0, 16000], [0, 360], { clamp: false });
   const rotate2 = useTransform(time, [0, 20000], [0, -360], { clamp: false });
@@ -60,7 +64,9 @@ const BottomShards = () => {
         className="w-12 cursor-pointer"
         style={{ rotate: rotate3 }}
       >
-        <ShardBottomBig />
+        <ShardBottomBig
+          color={classNames(theme === "dark" ? "#D9D9D9" : "#666666")}
+        />
       </motion.div>
     </div>
   );

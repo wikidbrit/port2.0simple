@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import classNames from "classnames";
+import ThemeContext from "../../../context/ThemeContext";
 
 const textLines = [
   "useEffect(()\u00A0=>\u00A0{",
@@ -30,6 +32,7 @@ const letter = {
 };
 
 const BottomCode = () => {
+  const theme = useContext(ThemeContext);
   const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
@@ -43,9 +46,17 @@ const BottomCode = () => {
   }, [animationKey]);
 
   return (
-    <div className="flex h-32 translate-x-5 flex-col place-content-center opacity-40">
+    <div
+      className={classNames(
+        theme === "dark" ? "opacity-40" : "opacity-60",
+        "flex h-32 translate-x-5  flex-col place-content-center space-y-2",
+      )}
+    >
       <motion.p
-        className="text-xs tracking-wide text-green-300"
+        className={classNames(
+          theme === "dark" ? "text-green-300" : "text-green-700",
+          "text-xs tracking-wide",
+        )}
         key={animationKey} // This is important to reset the animation
         variants={sentence}
         initial="hidden"

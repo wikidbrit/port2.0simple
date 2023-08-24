@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion, useTime, useTransform } from "framer-motion";
 
 import {
@@ -7,8 +7,12 @@ import {
   ShardTopSmall1,
   ShardTopSmall2,
 } from "../../../assets/svgs";
+import ThemeContext from "../../../context/ThemeContext";
+import classNames from "classnames";
 
 const TopShards = () => {
+  const theme = useContext(ThemeContext);
+
   const time = useTime();
   const rotate1 = useTransform(time, [0, 16000], [0, 360], { clamp: false });
   const rotate2 = useTransform(time, [0, 20000], [0, -360], { clamp: false });
@@ -45,7 +49,9 @@ const TopShards = () => {
         className="w-6 cursor-pointer"
         style={{ rotate: rotate2 }}
       >
-        <ShardTopBig />
+        <ShardTopBig
+          color={classNames(theme === "dark" ? "#D9D9D9" : "#666666")}
+        />
       </motion.div>
       <motion.div
         drag
@@ -77,7 +83,9 @@ const TopShards = () => {
         className="w-6 cursor-pointer"
         style={{ rotate: rotate2 }}
       >
-        <ShardTopSmall1 />
+        <ShardTopSmall1
+          color={classNames(theme === "dark" ? "#D9D9D9" : "#666666")}
+        />
       </motion.div>
     </div>
   );
