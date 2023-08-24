@@ -45,7 +45,7 @@ const BottomCode = () => {
   return (
     <div className="flex h-32 translate-x-5 flex-col place-content-center opacity-40">
       <motion.p
-        className="text-xs tracking-normal text-green-300"
+        className="text-xs tracking-wide text-green-300"
         key={animationKey} // This is important to reset the animation
         variants={sentence}
         initial="hidden"
@@ -53,7 +53,7 @@ const BottomCode = () => {
       >
         {textLines.map((line, index) => (
           <React.Fragment key={index}>
-            <span className="ml-8 leading-4">
+            <span className="ml-8 leading-4 tracking-wide">
               {line.split("").map((char, charIndex) => (
                 <motion.span key={charIndex} variants={letter}>
                   {char}

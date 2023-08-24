@@ -45,9 +45,9 @@ const TopCode = () => {
   }, [animationKey]);
 
   return (
-    <div className=" flex h-32 translate-x-5 flex-col place-content-center space-y-2 opacity-40">
+    <div className=" flex h-32 translate-x-5  flex-col place-content-center space-y-2 opacity-40">
       <motion.p
-        className="text-xs tracking-normal text-green-300"
+        className="text-xs tracking-normal tracking-wide text-green-300"
         variants={sentence}
         initial="hidden"
         animate="visible"
@@ -60,14 +60,14 @@ const TopCode = () => {
       </motion.p>
       <motion.p
         key={animationKey}
-        className="ml-8 text-xs tracking-normal text-green-300"
+        className="ml-8 text-xs tracking-wide text-green-300"
         variants={sentence}
         initial="hidden"
         animate="visible"
       >
         {textLines.map((line, index) => (
           <React.Fragment key={index}>
-            <span className="ml-0 leading-4">
+            <span className="ml-0 leading-4 tracking-wide">
               {line.split("").map((char, index) => (
                 <motion.span key={index} variants={letter}>
                   {char}
