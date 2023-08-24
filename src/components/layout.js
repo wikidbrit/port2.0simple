@@ -31,9 +31,7 @@ const Layout = ({ children, handleChange }) => {
       )}
     >
       <MainNavigation />
-      <div className="mx-auto max-w-[1280px] p-10">
-        {children} <Footer handleChange={handleChange} />
-      </div>
+      <div className="mx-auto max-w-[1280px] p-10">{children}</div>
     </div>
   );
 };
