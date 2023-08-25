@@ -19,6 +19,7 @@ const Home = ({ handleChange }) => {
   return (
     <>
       <motion.div
+        key={2}
         className="space-y-20"
         exit={{ opacity: 0 }}
         initial={{ opacity: 0 }}

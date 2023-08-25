@@ -6,7 +6,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #000b19 0%, #001633 100%);
+  /* background: linear-gradient(135deg, #000b19 0%, #001633 100%); */
 }
 
 body::-webkit-scrollbar {

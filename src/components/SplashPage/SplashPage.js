@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 const SplashPage = () => {
   return (
     <motion.div
-      exit={{ opacity: 0, scale: 0.95 }}
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
+      key={1}
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: [0.87, 0, 0.13, 1] }}
       className="flex h-screen w-screen flex-row place-content-center items-center space-x-5 bg-gradient-to-br from-bgBlueDark to-bgBlueLight text-7xl font-black text-steel-500"
     >

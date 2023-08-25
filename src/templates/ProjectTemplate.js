@@ -17,6 +17,7 @@ const ProjectTemplate = ({ handleChange }) => {
   if (!data) {
     return (
       <motion.div
+        key={3}
         exit={{ opacity: 0 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -29,6 +30,7 @@ const ProjectTemplate = ({ handleChange }) => {
 
   return (
     <motion.div
+      key={4}
       className=""
       exit={{ opacity: 0 }}
       initial={{ opacity: 0 }}

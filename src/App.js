@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 
 import Home from "./pages/Home";
@@ -15,6 +15,7 @@ import SplashPage from "./components/SplashPage/SplashPage";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     setTimeout(() => {
@@ -32,27 +33,24 @@ function App() {
     <ErrorBoundary fallback={<div>Something went wrong</div>}>
       <ThemeContext.Provider value={theme}>
         <AnimatePresence mode="wait">
-          {loading && <SplashPage />}
-          {!loading && (
-            <div className="fadeIn">
-              <Layout handleChange={handleChange}>
-                <motion.div>
-                  <Routes>
-                    <Route
-                      path="/"
-                      element={
-                        <Home handleChange={handleChange} theme={theme} />
-                      }
-                    />
-                    <Route path="*" element={<FourZeroFour />} />
-                    <Route
-                      path="project/:slug"
-                      element={<ProjectTemplate handleChange={handleChange} />}
-                    />
-                  </Routes>
-                </motion.div>
-              </Layout>
-            </div>
+          {loading ? (
+            <SplashPage />
+          ) : (
+            <Layout handleChange={handleChange}>
+              <motion.div key={location.pathname}>
+                <Routes>
+                  <Route
+                    path="/"
+                    element={<Home handleChange={handleChange} theme={theme} />}
+                  />
+                  <Route path="*" element={<FourZeroFour />} />
+                  <Route
+                    path="project/:slug"
+                    element={<ProjectTemplate handleChange={handleChange} />}
+                  />
+                </Routes>
+              </motion.div>
+            </Layout>
           )}
         </AnimatePresence>
       </ThemeContext.Provider>
