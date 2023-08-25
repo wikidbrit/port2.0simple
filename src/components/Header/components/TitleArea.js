@@ -11,16 +11,7 @@ import classNames from "classnames";
 const TitleArea = () => {
   const theme = useContext(ThemeContext);
   return (
-    <div className="h-[720px] w-full">
-      <div
-        className={classNames(
-          theme === "dark" ? "opacity-30" : "opacity-100",
-          "absolute w-full",
-        )}
-      >
-        {theme === "dark" && <BGDarkmode />}
-        {theme === "light" && <BGLightmode />}
-      </div>
+    <div className="h-[65vh] w-full">
       <div className="flex h-full flex-row place-content-center items-center justify-between px-20 text-8xl tracking-wider ">
         <div className="flex flex-col">
           <TopShards />

@@ -18,7 +18,7 @@ const TopShards = () => {
   const rotate2 = useTransform(time, [0, 20000], [0, -360], { clamp: false });
 
   return (
-    <div className="flex h-32 flex-row justify-between ">
+    <div className="flex h-32 transform-gpu flex-row justify-between">
       <motion.div
         drag
         dragConstraints={{

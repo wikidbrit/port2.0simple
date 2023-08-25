@@ -8,8 +8,12 @@ const Header = ({ handleChange }) => {
   // const theme = useContext(ThemeContext);
   return (
     <div className="relative" id="home">
-      <TitleArea />
-      <MainCta />
+      <div className="z-0">
+        <TitleArea />
+      </div>
+      <div className="z-50">
+        <MainCta />
+      </div>
     </div>
   );
 };
