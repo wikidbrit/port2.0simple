@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { BGDarkmode, BGLightmode } from "../../../assets/svgs";
 import TitleAreaSelectionBox from "./TitleAreaSelectionBox";
 import TopCode from "./TopCode";
 import BottomCode from "./BottomCode";
