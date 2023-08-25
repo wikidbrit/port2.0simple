@@ -26,7 +26,7 @@ const BottomShards = () => {
         animate={{ y: -2, x: -60, scale: 1.4 }}
         transition={{ ease: "easeOut", duration: 2, delay: 0.5 }}
         className="w-12 cursor-pointer"
-        style={{ rotate: rotate1 }}
+        style={{ rotate: rotate1, willChange: "transform" }}
       >
         <div className="relative h-16 w-16">
           <img
@@ -48,7 +48,7 @@ const BottomShards = () => {
         animate={{ y: 0, x: -20, scale: 0.8 }}
         transition={{ ease: "easeOut", duration: 2, delay: 0.8 }}
         className="w-12 cursor-pointer"
-        style={{ rotate: rotate2 }}
+        style={{ rotate: rotate2, willChange: "transform" }}
       >
         <div className="relative h-16 w-16">
           {theme === "dark" ? (
@@ -78,7 +78,7 @@ const BottomShards = () => {
         animate={{ y: 25, x: 0, scale: 1.8 }}
         transition={{ ease: "easeOut", duration: 3, delay: 1.2 }}
         className="w-12 cursor-pointer"
-        style={{ rotate: rotate2 }}
+        style={{ rotate: rotate2, willChange: "transform" }}
       >
         <div className="relative h-20 w-20">
           <img

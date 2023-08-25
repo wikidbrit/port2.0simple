@@ -61,6 +61,7 @@ const BottomCode = () => {
         variants={sentence}
         initial="hidden"
         animate="visible"
+        style={{ willChange: "opacity" }}
       >
         {textLines.map((line, index) => (
           <React.Fragment key={index}>

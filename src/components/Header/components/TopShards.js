@@ -19,7 +19,7 @@ const TopShards = () => {
         animate={{ y: 0, x: -90, scale: 1.4 }}
         transition={{ ease: "easeOut", duration: 2, delay: 0.2 }}
         className="cursor-pointer"
-        style={{ rotate: rotate1 }}
+        style={{ rotate: rotate1, willChange: "transform" }}
       >
         <div className="relative h-16 w-16">
           <img
@@ -34,7 +34,7 @@ const TopShards = () => {
         animate={{ y: -80, x: -60, scale: 4.4 }}
         transition={{ ease: "easeOut", duration: 2, delay: 0.5 }}
         className="w-6 cursor-pointer"
-        style={{ rotate: rotate2 }}
+        style={{ rotate: rotate2, willChange: "transform" }}
       >
         <div className="relative h-8 w-8">
           {theme === "dark" ? (
@@ -57,7 +57,7 @@ const TopShards = () => {
         animate={{ y: -30, x: 10, scale: 1.8 }}
         transition={{ ease: "easeOut", duration: 2, delay: 0.8 }}
         className="w-6 cursor-pointer"
-        style={{ rotate: rotate1 }}
+        style={{ rotate: rotate1, willChange: "transform" }}
       >
         <div className="relative h-8 w-8">
           <img
@@ -72,7 +72,7 @@ const TopShards = () => {
         animate={{ y: 20, x: 60, scale: 1.8 }}
         transition={{ ease: "easeOut", duration: 2, delay: 1 }}
         className="w-6 cursor-pointer"
-        style={{ rotate: rotate2 }}
+        style={{ rotate: rotate2, willChange: "transform" }}
       >
         <div className="relative h-8 w-8">
           {theme === "dark" ? (
