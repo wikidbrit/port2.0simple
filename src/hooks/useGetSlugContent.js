@@ -9,7 +9,7 @@ const useGetSlugContent = ({ slug }) => {
       items {
         title
         subtext
-        coverimage{
+        coverImage{
           url
         }
         openingText

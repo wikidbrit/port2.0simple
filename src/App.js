@@ -7,6 +7,7 @@ import ProjectTemplate from "./templates/ProjectTemplate";
 import FourZeroFour from "./pages/FourZeroFour";
 import Layout from "./components/layout";
 import useLocalStorage from "./hooks/useLocalStorage";
+import { ErrorBoundary } from "react-error-boundary";
 
 import ThemeContext from "./context/ThemeContext";
 import { AnimatePresence, motion } from "framer-motion";
@@ -28,7 +29,7 @@ function App() {
   };
 
   return (
-    <>
+    <ErrorBoundary fallback={<div>Something went wrong</div>}>
       <ThemeContext.Provider value={theme}>
         <AnimatePresence mode="wait">
           {loading && <SplashPage />}
@@ -55,7 +56,7 @@ function App() {
           )}
         </AnimatePresence>
       </ThemeContext.Provider>
-    </>
+    </ErrorBoundary>
   );
 }
 

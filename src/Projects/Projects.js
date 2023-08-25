@@ -13,7 +13,7 @@ import AboutMeModal from "../components/modals/AboutMeModal";
 import SkillsModal from "../components/modals/SkillsModal";
 
 const Projects = () => {
-  const { data, firstProject, remainingProjects } = useGetContent();
+  const { data, remainingProjects, firstTwoProjects } = useGetContent();
   const overlayStyle = { background: "rgba(0,0,0,0.5)" };
   const contentStyle = {
     background: "#2EB2EC",
@@ -23,16 +23,18 @@ const Projects = () => {
   if (!data) return <div>Loading</div>;
 
   return (
-    <div className="z-0 grid grid-cols-4  gap-4" id="Projects">
-      <Link to={`./project/${firstProject.slug}`} className="col-span-3">
-        <ProjectCard
-          title={firstProject.title}
-          subTitle={firstProject.subtext}
-          image={firstProject.coverimage.url}
-        />
-      </Link>
+    <div className="z-0 grid grid-cols-12  gap-4" id="Projects">
+      {firstTwoProjects?.map((item, index) => (
+        <Link key={index} to={`./project/${item.slug}`} className="col-span-5">
+          <ProjectCard
+            title={item.title}
+            subTitle={item.subtext}
+            image={item.coverImage.url}
+          />
+        </Link>
+      ))}
 
-      <div className="row-span-1 flex flex-col gap-4">
+      <div className="col-span-2 row-span-1 flex flex-col gap-4">
         {/* About Section */}
         <Popup
           modal
@@ -64,11 +66,11 @@ const Projects = () => {
       </div>
 
       {remainingProjects.map((item, index) => (
-        <Link key={index} to={`./project/${item.slug}`} className="col-span-2">
+        <Link key={index} to={`./project/${item.slug}`} className="col-span-6">
           <ProjectCard
             title={item.title}
             subTitle={item.subtext}
-            image={item.coverimage.url}
+            image={item.coverImage.url}
           />
         </Link>
       ))}

@@ -22,17 +22,17 @@ const BottomShards = () => {
           right: 50,
           bottom: 50,
         }}
-        initial={{ y: -20, x: 150, scale: 0.1 }}
+        initial={{ y: -20, x: 220, scale: 0.1 }}
         animate={{ y: -2, x: -60, scale: 1.4 }}
         transition={{ ease: "easeOut", duration: 2, delay: 0.5 }}
         className="w-12 cursor-pointer"
         style={{ rotate: rotate1, willChange: "transform" }}
       >
-        <div className="relative h-16 w-16">
+        <div className="relative h-10 w-10">
           <img
-            src={images.BottomShardMedium}
+            src={images.TopShardMedium}
             alt="A small shard dynamiclly placed"
-            className="pointer-events-none absolute left-0 right-0 mx-auto p-4"
+            className="pointer-events-none absolute left-0 right-0 top-4 mx-auto p-1"
           ></img>
         </div>
       </motion.div>
@@ -50,18 +50,18 @@ const BottomShards = () => {
         className="w-12 cursor-pointer"
         style={{ rotate: rotate2, willChange: "transform" }}
       >
-        <div className="relative h-16 w-16">
+        <div className="relative h-32 w-24">
           {theme === "dark" ? (
             <img
               src={images.BottomShardLarge}
               alt="A small shard dynamiclly placed"
-              className="pointer-events-none absolute left-0 right-0 mx-auto p-4"
+              className="pointer-events-none absolute left-0 right-0 mx-auto p-1"
             ></img>
           ) : (
             <img
               src={images.BottomShardLargeDark}
               alt="A small shard dynamiclly placed"
-              className="pointer-events-none absolute left-0 right-0 mx-auto p-4"
+              className="pointer-events-none absolute left-0 right-0 mx-auto p-1"
             ></img>
           )}
         </div>
@@ -78,9 +78,9 @@ const BottomShards = () => {
         animate={{ y: 25, x: 0, scale: 1.8 }}
         transition={{ ease: "easeOut", duration: 3, delay: 1.2 }}
         className="w-12 cursor-pointer"
-        style={{ rotate: rotate2, willChange: "transform" }}
+        style={{ rotate: rotate1, willChange: "transform" }}
       >
-        <div className="relative h-20 w-20">
+        <div className="relative h-14 w-14">
           <img
             src={images.BottomShardSmall}
             alt="A small shard dynamiclly placed"
