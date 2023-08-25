@@ -20,9 +20,9 @@ const Home = ({ handleChange }) => {
     <>
       <motion.div
         className="space-y-20"
-        exit={{ opacity: 0, scale: 0.95 }}
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: [0.87, 0, 0.13, 1] }}
       >
         <Header handleChange={handleChange} />

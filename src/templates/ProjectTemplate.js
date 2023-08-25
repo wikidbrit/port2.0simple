@@ -17,9 +17,9 @@ const ProjectTemplate = ({ handleChange }) => {
   if (!data) {
     return (
       <motion.div
-        exit={{ opacity: 0, scale: 0.9 }}
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: [0.87, 0, 0.13, 1] }}
       >
         <div></div>
@@ -30,9 +30,9 @@ const ProjectTemplate = ({ handleChange }) => {
   return (
     <motion.div
       className=""
-      exit={{ opacity: 0, scale: 0.95 }}
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: [0.87, 0, 0.13, 1] }}
     >
       <NavButton hash icon={<FiArrowLeft />} theme={theme} to={"/#Projects"} />
