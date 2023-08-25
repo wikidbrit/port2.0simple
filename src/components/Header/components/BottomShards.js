@@ -1,13 +1,9 @@
 import React, { useContext } from "react";
-import {
-  ShardBottomBig,
-  ShardBottomMedium,
-  ShardBottomSmall,
-} from "../../../assets/svgs";
 
 import { motion, useTime, useTransform } from "framer-motion";
-import classNames from "classnames";
 import ThemeContext from "../../../context/ThemeContext";
+
+import images from "../../../assets/images/Shards";
 
 const BottomShards = () => {
   const theme = useContext(ThemeContext);
@@ -15,7 +11,7 @@ const BottomShards = () => {
   const time = useTime();
   const rotate1 = useTransform(time, [0, 16000], [0, 360], { clamp: false });
   const rotate2 = useTransform(time, [0, 20000], [0, -360], { clamp: false });
-  const rotate3 = useTransform(time, [0, 22000], [0, -360], { clamp: false });
+
   return (
     <div className="flex h-32 transform-gpu flex-row items-center justify-between">
       <motion.div
@@ -32,7 +28,13 @@ const BottomShards = () => {
         className="w-12 cursor-pointer"
         style={{ rotate: rotate1 }}
       >
-        <ShardBottomMedium />
+        <div className="relative h-16 w-16">
+          <img
+            src={images.BottomShardMedium}
+            alt="A small shard dynamiclly placed"
+            className="pointer-events-none absolute left-0 right-0 mx-auto p-4"
+          ></img>
+        </div>
       </motion.div>
       <motion.div
         drag
@@ -48,7 +50,21 @@ const BottomShards = () => {
         className="w-12 cursor-pointer"
         style={{ rotate: rotate2 }}
       >
-        <ShardBottomSmall />
+        <div className="relative h-16 w-16">
+          {theme === "dark" ? (
+            <img
+              src={images.BottomShardLarge}
+              alt="A small shard dynamiclly placed"
+              className="pointer-events-none absolute left-0 right-0 mx-auto p-4"
+            ></img>
+          ) : (
+            <img
+              src={images.BottomShardLargeDark}
+              alt="A small shard dynamiclly placed"
+              className="pointer-events-none absolute left-0 right-0 mx-auto p-4"
+            ></img>
+          )}
+        </div>
       </motion.div>
       <motion.div
         drag
@@ -62,11 +78,15 @@ const BottomShards = () => {
         animate={{ y: 25, x: 0, scale: 1.8 }}
         transition={{ ease: "easeOut", duration: 3, delay: 1.2 }}
         className="w-12 cursor-pointer"
-        style={{ rotate: rotate3 }}
+        style={{ rotate: rotate2 }}
       >
-        <ShardBottomBig
-          color={classNames(theme === "dark" ? "#D9D9D9" : "#666666")}
-        />
+        <div className="relative h-20 w-20">
+          <img
+            src={images.BottomShardSmall}
+            alt="A small shard dynamiclly placed"
+            className="pointer-events-none absolute left-0 right-0 mx-auto p-4"
+          ></img>
+        </div>
       </motion.div>
     </div>
   );
