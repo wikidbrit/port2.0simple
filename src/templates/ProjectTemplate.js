@@ -9,12 +9,15 @@ import ThemeContext from "../context/ThemeContext";
 import IconButtonSmall from "../components/buttons/IconButtonSmall";
 import Footer from "../components/Footer/Footer";
 import MainButton from "../components/buttons/MainButton";
+import Popup from "reactjs-popup";
+import ImageInteraction from "./components/ImageInteraction";
 
 const ProjectTemplate = ({ handleChange }) => {
   const { slug } = useParams();
   const { data } = useGetSlugContent({ slug });
 
   const theme = useContext(ThemeContext);
+  const overlayStyle = { background: "rgba(0,0,0,0.5)" };
 
   if (!data) {
     return (
@@ -54,7 +57,22 @@ const ProjectTemplate = ({ handleChange }) => {
         </div>
 
         {data[0].contentImageCollection.items.map((item, index) => (
-          <img key={index} alt="test" src={item.url}></img>
+          <Popup
+            modal
+            nested
+            trigger={
+              <img key={index} alt={item.description} src={item.url}></img>
+            }
+            {...{ overlayStyle }}
+          >
+            {(close) => (
+              <ImageInteraction
+                close={close}
+                image={item.url}
+                description={item.description}
+              />
+            )}
+          </Popup>
         ))}
         <p className="text-pText">{data[0].conclusion}</p>
         <div>
