@@ -51,7 +51,7 @@ const Footer = ({ handleChange }) => {
           <ul className="space-y-4">
             <li className="flex flex-row items-center space-x-2">
               <div className=" text-lightWater">
-                <TbMessage2Share size={"1.2rem"} />
+                <TbMessage2Share color="#D6D6D6" size={"1.2rem"} />
               </div>
 
               <a
@@ -64,13 +64,13 @@ const Footer = ({ handleChange }) => {
             </li>
             <li className="flex flex-row items-center space-x-2">
               <div className=" text-lightWater">
-                <TbPhone size={"1.2rem"} />
+                <TbPhone color="#D6D6D6" size={"1.2rem"} />
               </div>
               <p>073 953 94 69</p>
             </li>
             <li className="flex flex-row items-center space-x-2">
               <div className=" text-lightWater">
-                <TbMapPin size={"1.2rem"} />
+                <TbMapPin color="#D6D6D6" size={"1.2rem"} />
               </div>
               <p>Stockholm, Sweden</p>
             </li>
