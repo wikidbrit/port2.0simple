@@ -21,7 +21,7 @@ const ProjectCard = ({ title, subTitle, image, type }) => {
         "relative space-y-6 overflow-hidden bg-gradient-to-br",
       )}
     >
-      <div className="blue-gradient absolute left-0 top-0 h-2 w-full"></div>
+      <div className="blue-gradient absolute left-0 top-0 h-1 w-full"></div>
       <div className="flex flex-col">
         <img
           src={image}
