@@ -4,8 +4,6 @@ import classNames from "classnames";
 import { motion } from "framer-motion";
 
 const ProjectButton = ({ text, icon, onClick, eyebrow, boxText }) => {
-  const theme = React.useContext(ThemeContext);
-
   return (
     <motion.button
       whileHover={{ scale: 1.05 }}
