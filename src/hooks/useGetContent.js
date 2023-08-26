@@ -5,6 +5,7 @@ const useGetContent = () => {
 
   const [firstProject, setFirstProject] = useState(null);
   const [remainingProjects, setRemainingProjects] = useState(null);
+  const [firstTwoProjects, setFirstTwoProjects] = useState(null);
 
   const query = `
 {
@@ -12,7 +13,7 @@ const useGetContent = () => {
     items {
       title
       subtext
-      coverimage{
+      coverImage{
         url
       }
       openingText
@@ -23,6 +24,7 @@ const useGetContent = () => {
       }
       conclusion
       slug
+      projectType
     }
   }
 }
@@ -49,6 +51,7 @@ const useGetContent = () => {
         // rerender the entire component with new data
         setData(data.portfolioCollection.items);
         setFirstProject(data.portfolioCollection.items[0]);
+        setFirstTwoProjects(data.portfolioCollection.items.slice(0, 2));
         setRemainingProjects(data.portfolioCollection.items.slice(1));
       });
   }, [query]);
@@ -57,6 +60,6 @@ const useGetContent = () => {
     return "loading";
   }
 
-  return { data, firstProject, remainingProjects };
+  return { data, firstProject, firstTwoProjects, remainingProjects };
 };
 export default useGetContent;

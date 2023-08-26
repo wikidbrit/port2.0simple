@@ -9,7 +9,7 @@ const useGetSlugContent = ({ slug }) => {
       items {
         title
         subtext
-        coverimage{
+        coverImage{
           url
         }
         openingText
@@ -20,6 +20,7 @@ const useGetSlugContent = ({ slug }) => {
         }
         conclusion
         slug
+        projectType
       }
     }
   }

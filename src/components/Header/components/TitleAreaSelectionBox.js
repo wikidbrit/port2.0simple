@@ -8,6 +8,7 @@ const TitleAreaSelectionBox = () => {
   const theme = useContext(ThemeContext);
   return (
     <motion.div
+      style={{ willChange: "transform" }}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ ease: "easeInOut", duration: 2, delay: 1.5 }}

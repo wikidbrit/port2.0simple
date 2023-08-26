@@ -6,7 +6,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #000b19 0%, #001633 100%);
+  /* background: linear-gradient(135deg, #000b19 0%, #001633 100%); */
 }
 
 body::-webkit-scrollbar {
@@ -175,7 +175,6 @@ body {
 }
 
 .new-button {
-  border-radius: 0.5rem;
   border: 0.2px solid #3c64b1;
   background: var(
     --blue-gradient,
@@ -196,7 +195,34 @@ body {
 }
 
 .new-button:active {
-  border-radius: 0.5rem;
+  border: 0.2px solid #3c64b1;
+  box-shadow:
+    1px 1px 4px 0.5px rgba(0, 0, 0, 0.25) inset,
+    0.5px 0.5px 2px 0.5px rgba(255, 255, 255, 0.15),
+    -1px -1px 2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.project-button {
+  border: 0.2px solid #3c64b1;
+  background: var(
+    --blue-gradient,
+    linear-gradient(135deg, #0ecdd8 0%, #4b99fe 100%)
+  );
+  box-shadow:
+    0px 0px 1px 0.5px rgba(0, 0, 0, 0.25) inset,
+    1px 2px 1px 0px rgba(255, 255, 255, 0.25) inset,
+    0.5px 0.5px 2px 0.5px rgba(255, 255, 255, 0.15),
+    -1px -1px 2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.project-button:hover {
+  background: var(
+    --blue-gradient,
+    linear-gradient(135deg, #0ecdd8 0%, #4b99fe 70%)
+  );
+}
+
+.project-button:active {
   border: 0.2px solid #3c64b1;
   box-shadow:
     1px 1px 4px 0.5px rgba(0, 0, 0, 0.25) inset,

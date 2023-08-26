@@ -46,9 +46,6 @@ const MainNavigation = () => {
             )}
           >
             <li>
-              <HashLink to={"/#home"}>Home</HashLink>
-            </li>
-            <li>
               <HashLink to={"/#Projects"}>Projects</HashLink>
             </li>
             <li>

@@ -62,6 +62,7 @@ const TopCode = () => {
         variants={sentence}
         initial="hidden"
         animate="visible"
+        style={{ willChange: "opacity" }}
       >
         {line1.split("").map((char, index) => (
           <motion.span key={index} variants={letter}>
@@ -78,6 +79,7 @@ const TopCode = () => {
         variants={sentence}
         initial="hidden"
         animate="visible"
+        style={{ willChange: "opacity" }}
       >
         {textLines.map((line, index) => (
           <React.Fragment key={index}>
