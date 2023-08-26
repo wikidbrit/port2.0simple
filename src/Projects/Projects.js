@@ -14,10 +14,9 @@ import SkillsModal from "../components/modals/SkillsModal";
 
 const Projects = () => {
   const { data, remainingProjects, firstTwoProjects } = useGetContent();
-  const overlayStyle = { background: "rgba(0,0,0,0.5)" };
+
   const contentStyle = {
     background: "#2EB2EC",
-    borderRadius: "2rem",
   };
 
   if (!data) return <div>Loading</div>;
@@ -48,7 +47,7 @@ const Projects = () => {
               icon={<TbUserShare color="#D6D6D6" size={"1.6rem"} />}
             />
           }
-          {...{ overlayStyle, contentStyle }}
+          {...{ contentStyle }}
         >
           {(close) => <AboutMeModal close={close} />}
         </Popup>
@@ -64,7 +63,7 @@ const Projects = () => {
               icon={<TbChecklist color="#D6D6D6" size={"1.6rem"} />}
             />
           }
-          {...{ overlayStyle, contentStyle }}
+          {...{ contentStyle }}
         >
           {(close) => <SkillsModal close={close} />}
         </Popup>

@@ -8,10 +8,8 @@ import CtaButton from "./CtaButton";
 import { TbBrandLinkedin, TbMessage2Share, TbFileLike } from "react-icons/tb";
 
 const CtaButtons = () => {
-  const overlayStyle = { background: "rgba(0,0,0,0.5)" };
   const contentStyle = {
     background: "#2EB2EC",
-    borderRadius: "2rem",
   };
 
   const theme = useContext(ThemeContext);
@@ -28,7 +26,7 @@ const CtaButtons = () => {
             text={"Contact"}
           />
         }
-        {...{ overlayStyle, contentStyle }}
+        {...{ contentStyle }}
       >
         {(close) => <ContactMeModal close={close} />}
       </Popup>

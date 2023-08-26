@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
+
 import ThemeContext from "../../context/ThemeContext";
-import { PaulLogoDark, PaulLogoLight } from "../../assets/svgs";
 import { HashLink } from "react-router-hash-link";
 import Popup from "reactjs-popup";
+
+import { PaulLogoDark, PaulLogoLight } from "../../assets/svgs";
 import AboutMeModal from "../modals/AboutMeModal";
 import classNames from "classnames";
 import MainButton from "../buttons/MainButton";
@@ -10,7 +12,7 @@ import ContactMeModal from "../modals/ContactMeModal";
 
 const MainNavigation = () => {
   const theme = useContext(ThemeContext);
-  const overlayStyle = { background: "rgba(0,0,0,0.5)" };
+
   const contentStyle = {
     background: "#2EB2EC",
     borderRadius: "2rem",
@@ -54,7 +56,7 @@ const MainNavigation = () => {
                 modal
                 nested
                 trigger={<button>About</button>}
-                {...{ overlayStyle, contentStyle }}
+                {...{ contentStyle }}
               >
                 {(close) => <AboutMeModal close={close} />}
               </Popup>
@@ -67,12 +69,7 @@ const MainNavigation = () => {
           <Popup
             modal
             nested
-            trigger={
-              <MainButton
-                text={"Contact"}
-                {...{ overlayStyle, contentStyle }}
-              />
-            }
+            trigger={<MainButton text={"Contact"} {...{ contentStyle }} />}
           >
             {(close) => <ContactMeModal close={close} />}
           </Popup>

@@ -23,10 +23,8 @@ import ContactMeModal from "../modals/ContactMeModal";
 const Footer = ({ handleChange }) => {
   const theme = useContext(ThemeContext);
 
-  const overlayStyle = { background: "rgba(0,0,0,0.5)" };
   const contentStyle = {
     background: "#2EB2EC",
-    borderRadius: "2rem",
   };
 
   return (
@@ -96,7 +94,7 @@ const Footer = ({ handleChange }) => {
                 icon={<TbUserShare color="#D6D6D6" size={"1.2rem"} />}
               />
             }
-            {...{ overlayStyle, contentStyle }}
+            {...{ contentStyle }}
           >
             {(close) => <AboutMeModal close={close} />}
           </Popup>
@@ -108,7 +106,7 @@ const Footer = ({ handleChange }) => {
                 icon={<TbMail color="#D6D6D6" size={"1.2rem"} />}
               />
             }
-            {...{ overlayStyle, contentStyle }}
+            {...{ contentStyle }}
           >
             {(close) => <ContactMeModal close={close} />}
           </Popup>
@@ -120,7 +118,7 @@ const Footer = ({ handleChange }) => {
                 icon={<TbChecklist color="#D6D6D6" size={"1.2rem"} />}
               />
             }
-            {...{ overlayStyle, contentStyle }}
+            {...{ contentStyle }}
           >
             {(close) => <SkillsModal close={close} />}
           </Popup>

@@ -18,7 +18,6 @@ const ProjectTemplate = ({ handleChange }) => {
   const { data } = useGetSlugContent({ slug });
 
   const theme = useContext(ThemeContext);
-  const overlayStyle = { background: "rgba(0,0,0,0.5)" };
 
   if (!data) {
     return (
@@ -69,7 +68,6 @@ const ProjectTemplate = ({ handleChange }) => {
             trigger={
               <img key={index} alt={item.description} src={item.url}></img>
             }
-            {...{ overlayStyle }}
           >
             {(close) => (
               <ImageInteraction
