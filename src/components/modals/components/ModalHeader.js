@@ -19,8 +19,8 @@ const ModalHeader = ({
         {image && (
           <img
             className={classNames(
-              theme === "dark" ? "raised-dark" : "raised",
-              "h-[72px] w-[72px] rounded-full border-[2px] object-cover",
+              theme === "dark" ? "" : "",
+              "h-[72px] w-[72px] rounded-full border-[2px] border-steel-600 object-cover",
             )}
             src={image}
             alt={altImage}
@@ -29,8 +29,8 @@ const ModalHeader = ({
         {icon && (
           <div
             className={classNames(
-              theme === "dark" ? "raised-dark" : "raised",
-              "flex h-[72px] w-[72px] items-center rounded-full border-[2px] object-cover",
+              theme === "dark" ? "" : "",
+              "flex h-[72px] w-[72px] items-center rounded-full border-[2px] border-steel-600 object-cover",
             )}
           >
             {icon}
