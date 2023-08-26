@@ -13,7 +13,6 @@ import ContactMeModal from "../components/modals/ContactMeModal";
 import { FiArrowLeft } from "react-icons/fi";
 
 const NavBar = ({ handleChange, theme, hero, template }) => {
-  const overlayStyle = { background: "rgba(0,0,0,0.5)" };
   const contentStyle = {
     background: "#2EB2EC",
     borderRadius: "2rem",
@@ -57,7 +56,7 @@ const NavBar = ({ handleChange, theme, hero, template }) => {
               theme={theme}
             ></NavButton>
           }
-          {...{ overlayStyle, contentStyle }}
+          {...{ contentStyle }}
         >
           {(close) => <AboutMeModal close={close} />}
         </Popup>
@@ -80,7 +79,7 @@ const NavBar = ({ handleChange, theme, hero, template }) => {
                 icon={<TbMessageShare size={"1.2rem"} />}
               />
             }
-            {...{ overlayStyle, contactContentStyle }}
+            {...{ contactContentStyle }}
           >
             {(close) => <ContactMeModal close={close} />}
           </Popup>
