@@ -22,9 +22,9 @@ const BottomShards = () => {
           right: 50,
           bottom: 50,
         }}
-        initial={{ y: -20, x: 220, scale: 0.1 }}
+        initial={{ y: -20, x: 80, scale: 0.1 }}
         animate={{ y: -2, x: -60, scale: 1.4 }}
-        transition={{ ease: "easeOut", duration: 2, delay: 0.5 }}
+        transition={{ ease: "easeOut", duration: 2, delay: 0.8 }}
         className="w-12 cursor-pointer"
         style={{ rotate: rotate1, willChange: "transform" }}
       >
@@ -46,7 +46,7 @@ const BottomShards = () => {
         }}
         initial={{ y: -20, x: 30, scale: 0.3 }}
         animate={{ y: 0, x: -20, scale: 0.8 }}
-        transition={{ ease: "easeOut", duration: 2, delay: 0.8 }}
+        transition={{ ease: "easeOut", duration: 2, delay: 0.5 }}
         className="w-12 cursor-pointer"
         style={{ rotate: rotate2, willChange: "transform" }}
       >
@@ -76,7 +76,7 @@ const BottomShards = () => {
         }}
         initial={{ y: -30, x: -10, scale: 0.1 }}
         animate={{ y: 25, x: 0, scale: 1.8 }}
-        transition={{ ease: "easeOut", duration: 3, delay: 1.2 }}
+        transition={{ ease: "easeOut", duration: 3, delay: 0.2 }}
         className="w-12 cursor-pointer"
         style={{ rotate: rotate1, willChange: "transform" }}
       >
