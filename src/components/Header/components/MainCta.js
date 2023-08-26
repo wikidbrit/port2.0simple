@@ -3,6 +3,7 @@ import MainButton from "../../buttons/MainButton";
 import { TbChevronDown } from "react-icons/tb";
 import ThemeContext from "../../../context/ThemeContext";
 import classNames from "classnames";
+import { HashLink } from "react-router-hash-link";
 
 const MainCta = () => {
   const theme = useContext(ThemeContext);
@@ -20,7 +21,9 @@ const MainCta = () => {
         </p>
       </div>
       <div>
-        <MainButton text={"Get to know me"} />
+        <HashLink to="#Projects">
+          <MainButton text={"Get to know me"} />
+        </HashLink>
       </div>
       <div
         className={classNames(

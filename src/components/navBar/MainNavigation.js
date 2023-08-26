@@ -6,6 +6,7 @@ import Popup from "reactjs-popup";
 import AboutMeModal from "../modals/AboutMeModal";
 import classNames from "classnames";
 import MainButton from "../buttons/MainButton";
+import ContactMeModal from "../modals/ContactMeModal";
 
 const MainNavigation = () => {
   const theme = useContext(ThemeContext);
@@ -63,7 +64,18 @@ const MainNavigation = () => {
         </div>
 
         <div>
-          <MainButton text={"Contact"} />
+          <Popup
+            modal
+            nested
+            trigger={
+              <MainButton
+                text={"Contact"}
+                {...{ overlayStyle, contentStyle }}
+              />
+            }
+          >
+            {(close) => <ContactMeModal close={close} />}
+          </Popup>
         </div>
       </div>
     </div>
