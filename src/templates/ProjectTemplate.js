@@ -7,7 +7,7 @@ import { FiArrowLeft } from "react-icons/fi";
 import { motion } from "framer-motion";
 import ThemeContext from "../context/ThemeContext";
 import IconButtonSmall from "../components/buttons/IconButtonSmall";
-import Footer from "../components/Footer/Footer";
+import { Footer } from "../components/Footer";
 import MainButton from "../components/buttons/MainButton";
 import Popup from "reactjs-popup";
 import ImageInteraction from "./components/ImageInteraction";
