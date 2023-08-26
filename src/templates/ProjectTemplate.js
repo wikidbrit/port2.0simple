@@ -11,6 +11,7 @@ import Footer from "../components/Footer/Footer";
 import MainButton from "../components/buttons/MainButton";
 import Popup from "reactjs-popup";
 import ImageInteraction from "./components/ImageInteraction";
+import classNames from "classnames";
 
 const ProjectTemplate = ({ handleChange }) => {
   const { slug } = useParams();
@@ -50,10 +51,15 @@ const ProjectTemplate = ({ handleChange }) => {
         parentClassName={"fixed -translate-x-20 translate-y-6"}
       />
 
-      <div className="space-y-4">
+      <div
+        className={classNames(
+          theme === "dark" ? "text-steel" : "text-steel-800",
+          "space-y-4 ",
+        )}
+      >
         <div>
-          <p className="text-[4.2rem] text-steel">{data[0].title}</p>
-          <p className="pb-20 text-steel">{data[0].openingText}</p>
+          <p className="text-[4.2rem] ">{data[0].title}</p>
+          <p className="pb-20 ">{data[0].openingText}</p>
         </div>
 
         {data[0].contentImageCollection.items.map((item, index) => (
@@ -74,7 +80,7 @@ const ProjectTemplate = ({ handleChange }) => {
             )}
           </Popup>
         ))}
-        <p className="text-pText">{data[0].conclusion}</p>
+        <p>{data[0].conclusion}</p>
         <div>
           <MainButton text={"Go Back"} to={"/#Projects"} />
         </div>
