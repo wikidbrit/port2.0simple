@@ -42,8 +42,10 @@ const Projects = () => {
           nested
           trigger={
             <ProjectButton
+              eyebrow={"Who I am"}
+              boxText={"Who I am"}
               text={"About me"}
-              icon={<TbUserShare color="#2EB2EC" size={"1.6rem"} />}
+              icon={<TbUserShare color="#D6D6D6" size={"1.6rem"} />}
             />
           }
           {...{ overlayStyle, contentStyle }}
@@ -56,8 +58,10 @@ const Projects = () => {
           nested
           trigger={
             <ProjectButton
+              boxText={"What I know"}
+              eyebrow={"What I know"}
               text={"My Skillset"}
-              icon={<TbChecklist color="#2EB2EC" size={"1.6rem"} />}
+              icon={<TbChecklist color="#D6D6D6" size={"1.6rem"} />}
             />
           }
           {...{ overlayStyle, contentStyle }}
