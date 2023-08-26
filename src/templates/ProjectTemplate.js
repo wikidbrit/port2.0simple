@@ -7,6 +7,8 @@ import { FiArrowLeft } from "react-icons/fi";
 import { motion } from "framer-motion";
 import ThemeContext from "../context/ThemeContext";
 import IconButtonSmall from "../components/buttons/IconButtonSmall";
+import Footer from "../components/Footer/Footer";
+import MainButton from "../components/buttons/MainButton";
 
 const ProjectTemplate = ({ handleChange }) => {
   const { slug } = useParams();
@@ -39,18 +41,29 @@ const ProjectTemplate = ({ handleChange }) => {
     >
       <IconButtonSmall
         hash
-        icon={<FiArrowLeft />}
+        icon={<FiArrowLeft color="D6D6D6" />}
         theme={theme}
         to={"/#Projects"}
-        className={"fixed -translate-x-20 translate-y-6"}
+        parentClassName={"fixed -translate-x-20 translate-y-6"}
       />
 
-      <p className="text-[4.2rem] text-neoGrey ">{data[0].title}</p>
-      <p className="text-neoGrey">{data[0].openingText}</p>
-      {data[0].contentImageCollection.items.map((item, index) => (
-        <img key={index} alt="test" src={item.url}></img>
-      ))}
-      <p className="text-pText">{data[0].conclusion}</p>
+      <div className="space-y-4">
+        <div>
+          <p className="text-[4.2rem] text-steel">{data[0].title}</p>
+          <p className="pb-20 text-steel">{data[0].openingText}</p>
+        </div>
+
+        {data[0].contentImageCollection.items.map((item, index) => (
+          <img key={index} alt="test" src={item.url}></img>
+        ))}
+        <p className="text-pText">{data[0].conclusion}</p>
+        <div>
+          <MainButton text={"Go Back"} to={"/#Projects"} />
+        </div>
+
+        <div className="h-20"></div>
+        <Footer handleChange={handleChange} />
+      </div>
     </motion.div>
   );
 };
