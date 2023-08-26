@@ -34,8 +34,10 @@ const ModalHeader = ({
         {icon && (
           <div
             className={classNames(
-              theme === "dark" ? "" : "",
-              "flex h-[72px] w-[72px] items-center rounded-full border-[2px] border-steel-600 object-cover",
+              theme === "dark"
+                ? " border-neoMiddleBlue"
+                : "border-neoMiddleBlue",
+              "flex h-[72px] w-[72px] items-center rounded-full border-[2px]  object-cover",
             )}
           >
             {icon}

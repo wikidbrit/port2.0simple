@@ -13,8 +13,10 @@ const ContactMeModal = ({ close }) => {
   return (
     <div
       className={classNames(
-        theme === "dark" ? "bg-darkNeoForeground" : "bg-neoBackground",
-        "w-[30rem] space-y-6 rounded-lg p-6 text-neoGrey",
+        theme === "dark"
+          ? "from-steel-800 to-steel-900 text-steel-100"
+          : "border-[1px] border-water-800 from-steel to-steel-400 text-steel-800",
+        "w-[32rem] space-y-6 rounded-lg bg-gradient-to-br p-6 text-neoGrey",
       )}
     >
       <ModalHeader
