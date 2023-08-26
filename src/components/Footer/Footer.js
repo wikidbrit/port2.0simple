@@ -88,11 +88,7 @@ const Footer = ({ handleChange }) => {
           <Popup
             modal
             nested
-            trigger={
-              <IconButtonSmall
-                icon={<TbUserShare color="#E6E6E6" size={"1.6rem"} />}
-              />
-            }
+            trigger={<IconButtonSmall icon={<TbUserShare size={"1.2rem"} />} />}
             {...{ overlayStyle, contentStyle }}
           >
             {(close) => <AboutMeModal close={close} />}
@@ -110,11 +106,7 @@ const Footer = ({ handleChange }) => {
           <Popup
             modal
             nested
-            trigger={
-              <IconButtonSmall
-                icon={<TbChecklist color="#E6E6E6" size={"1.6rem"} />}
-              />
-            }
+            trigger={<IconButtonSmall icon={<TbChecklist size={"1.2rem"} />} />}
             {...{ overlayStyle, contentStyle }}
           >
             {(close) => <SkillsModal close={close} />}
