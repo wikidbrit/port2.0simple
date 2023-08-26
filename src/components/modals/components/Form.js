@@ -4,6 +4,7 @@ import classNames from "classnames";
 import ThemeContext from "../../../context/ThemeContext";
 
 import { NetlifyForm, Honeypot } from "react-netlify-forms";
+import MainButton from "../../buttons/MainButton";
 
 const Form = ({ close }) => {
   const theme = useContext(ThemeContext);
@@ -14,10 +15,16 @@ const Form = ({ close }) => {
         {({ handleChange, success, error }) => (
           <div className="space-y-6">
             <Honeypot />
-            {success && <p>Thanks for reaching out!</p>}
+            {success && (
+              <p className="border-[2px] border-green-900 p-6">
+                Thanks for your message, I will get back to you as soon as
+                possible
+              </p>
+            )}
             {error && (
-              <p>
-                Sorry, server unavailable at the moment. Please try again later.
+              <p className="border-[2px] border-red-900 p-6">
+                Sorry, server unavailable at the moment.<br></br>Please try
+                again later.
               </p>
             )}
             <div className="flex flex-col">
@@ -27,7 +34,7 @@ const Form = ({ close }) => {
                   theme === "dark"
                     ? "bg-darkNeoBackground"
                     : "bg-neoBackground",
-                  "rounded-lg border-[1px] border-neoGrey p-1 focus:border-neoMiddleBlue focus:outline-none focus:ring-2 focus:ring-neoMiddleBlue",
+                  "border-[1px] border-neoGrey p-1 focus:border-neoMiddleBlue focus:outline-none focus:ring-2 focus:ring-neoMiddleBlue",
                 )}
                 type="text"
                 name="name"
@@ -43,7 +50,7 @@ const Form = ({ close }) => {
                   theme === "dark"
                     ? "bg-darkNeoBackground"
                     : "bg-neoBackground",
-                  "rounded-lg border-[1px] border-neoGrey p-1 focus:border-neoMiddleBlue focus:outline-none focus:ring-2 focus:ring-neoMiddleBlue",
+                  "border-[1px] border-neoGrey p-1 focus:border-neoMiddleBlue focus:outline-none focus:ring-2 focus:ring-neoMiddleBlue",
                 )}
                 type="text"
                 name="email"
@@ -59,7 +66,7 @@ const Form = ({ close }) => {
                   theme === "dark"
                     ? "bg-darkNeoBackground"
                     : "bg-neoBackground",
-                  "rounded-lg border-[1px] border-neoGrey p-1 focus:border-neoMiddleBlue focus:outline-none focus:ring-2 focus:ring-neoMiddleBlue",
+                  "border-[1px] border-neoGrey p-1 focus:border-neoMiddleBlue focus:outline-none focus:ring-2 focus:ring-neoMiddleBlue",
                 )}
                 type="text"
                 name="message"
@@ -70,24 +77,8 @@ const Form = ({ close }) => {
               />
             </div>
             <div className="flex flex-row justify-between">
-              <button
-                type="submit"
-                className={classNames(
-                  theme === "dark" ? "raised-dark" : "raised",
-                  "flex rounded-lg px-8 py-3",
-                )}
-              >
-                Submit
-              </button>
-              <button
-                className={classNames(
-                  theme === "dark" ? "raised-dark" : "raised",
-                  "flex rounded-lg px-8 py-3",
-                )}
-                onClick={close}
-              >
-                Close
-              </button>
+              <MainButton type="submit" text={"Send Message"} />
+              <MainButton onClick={close} text={"Close"} />
             </div>
           </div>
         )}

@@ -6,6 +6,7 @@ import image from "../../assets/images/try.png";
 import ThemeContext from "../../context/ThemeContext";
 import classNames from "classnames";
 import ModalHeader from "./components/ModalHeader";
+import MainButton from "../../components/buttons/MainButton";
 
 const AboutMeModal = ({ close }) => {
   const [professionalToggle, setProfessionalToggle] = useState(false);
@@ -20,8 +21,10 @@ const AboutMeModal = ({ close }) => {
   return (
     <div
       className={classNames(
-        theme === "dark" ? "bg-darkNeoForeground" : "bg-neoBackground",
-        "w-[40rem] space-y-6 rounded-lg p-6 text-neoGrey",
+        theme === "dark"
+          ? "from-steel-800 to-steel-900"
+          : "border-[1px] border-water-800 from-steel to-steel-400",
+        " w-[40rem] space-y-6 bg-gradient-to-br p-6 text-steel-300",
       )}
     >
       <ModalHeader
@@ -34,12 +37,14 @@ const AboutMeModal = ({ close }) => {
       />
       <div className="flex w-full flex-row space-x-2 py-5">
         <SwitchButton
+          theme={theme}
           title={"Professional"}
           subTitle={"My professional experience."}
           toggle={professionalToggle}
           setToggle={() => handleClick}
         />
         <SwitchButton
+          theme={theme}
           title={"Personal"}
           subTitle={"More about me."}
           toggle={personalToggle}
@@ -53,16 +58,8 @@ const AboutMeModal = ({ close }) => {
           <PersonalContent />
         )}
       </div>
-      <div>
-        <button
-          className={classNames(
-            theme === "dark" ? "raised-dark" : "raised",
-            "mx-auto flex rounded-lg px-8 py-3",
-          )}
-          onClick={close}
-        >
-          Close
-        </button>
+      <div className="flex items-center justify-center">
+        <MainButton onClick={close} text="Close"></MainButton>
       </div>
     </div>
   );

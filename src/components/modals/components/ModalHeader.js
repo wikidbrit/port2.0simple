@@ -1,7 +1,8 @@
 import React from "react";
 
 import classNames from "classnames";
-import { TbCircleX } from "react-icons/tb";
+import { TbX } from "react-icons/tb";
+import IconButtonSmall from "../../buttons/IconButtonSmall";
 
 const ModalHeader = ({
   theme,
@@ -13,13 +14,18 @@ const ModalHeader = ({
   altImage,
 }) => {
   return (
-    <div className="flex flex-row items-center justify-between space-y-2">
+    <div
+      className={classNames(
+        theme === "dark" ? "text-steel-300" : "text-steel-800",
+        "flex flex-row items-center justify-between space-y-2",
+      )}
+    >
       <div className="flex flex-row space-x-6">
         {image && (
           <img
             className={classNames(
-              theme === "dark" ? "raised-dark" : "raised",
-              "h-[72px] w-[72px] rounded-full border-[2px] object-cover",
+              theme === "dark" ? "" : "",
+              "h-[72px] w-[72px] rounded-full border-[2px] border-steel-600 object-cover",
             )}
             src={image}
             alt={altImage}
@@ -28,8 +34,10 @@ const ModalHeader = ({
         {icon && (
           <div
             className={classNames(
-              theme === "dark" ? "raised-dark" : "raised",
-              "flex h-[72px] w-[72px] items-center rounded-full border-[2px] object-cover",
+              theme === "dark"
+                ? " border-neoMiddleBlue"
+                : "border-neoMiddleBlue",
+              "flex h-[72px] w-[72px] items-center rounded-full border-[2px]  object-cover",
             )}
           >
             {icon}
@@ -41,15 +49,10 @@ const ModalHeader = ({
           <p className="text-sm">{subTitle}</p>
         </div>
       </div>
-      <button
-        className={classNames(
-          theme === "dark" ? "raised-dark" : "raised",
-          "absolute right-7 top-6 rounded-full p-2 hover:text-neoMiddleBlue",
-        )}
+      <IconButtonSmall
         onClick={close}
-      >
-        <TbCircleX size={"1.5rem"} />
-      </button>
+        icon={<TbX color="#D6D6D6" size={"1.2rem"} />}
+      />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 import ThemeContext from "../../../context/ThemeContext";
 
-const SkillGague = ({ icon, value = 0, min = 0, max = 100, offset }) => {
+const SkillGague = ({ icon, value = 0, min = 0, max = 100, offset, text }) => {
   const theme = useContext(ThemeContext);
 
   const [count, setCount] = useState(25);
@@ -41,7 +41,7 @@ const SkillGague = ({ icon, value = 0, min = 0, max = 100, offset }) => {
 
   const filledArc = d3
     .arc()
-    .innerRadius(0.65)
+    .innerRadius(0.75)
     .outerRadius(0.95)
     .startAngle(-Math.PI)
     .endAngle(angle)
@@ -57,13 +57,13 @@ const SkillGague = ({ icon, value = 0, min = 0, max = 100, offset }) => {
   return (
     <div
       className={classNames(
-        theme === "dark" ? "raised-dark" : "raised",
-        "relative h-fit w-fit rounded-full p-4",
+        theme === "dark" ? "" : "",
+        "relative flex h-[5.1rem] w-[5.1rem] place-content-center items-center rounded-full",
       )}
     >
       <div
         className={classNames(
-          theme === "dark" ? "inset-dark" : "inset",
+          theme === "dark" ? "" : "",
           "flex items-center rounded-full",
         )}
       >
@@ -96,20 +96,21 @@ const SkillGague = ({ icon, value = 0, min = 0, max = 100, offset }) => {
         </div>
         <div
           className={classNames(
-            theme === "dark" ? "raised-dark" : "raised",
-            " m-15 flex h-12 w-12 items-center rounded-full",
+            theme === "dark" ? "" : "",
+            "flex h-12 w-12 items-center rounded-full",
           )}
         >
           <div
             className={classNames(
-              theme === "dark" ? "inset-dark" : "inset",
-              "inset m-1 mx-auto rounded-full  p-2",
+              theme === "dark" ? "" : "",
+              "mx-auto rounded-full",
             )}
           >
             {icon}
           </div>
         </div>
       </div>
+      <p className="absolute top-[5.5rem] text-xs">{text}</p>
     </div>
   );
 };

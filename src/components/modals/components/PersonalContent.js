@@ -1,10 +1,18 @@
-import React from "react";
+import classNames from "classnames";
+import React, { useContext } from "react";
 
 import ReactMarkdown from "react-markdown";
+import ThemeContext from "../../../context/ThemeContext";
 
 const PersonalContent = () => {
+  const theme = useContext(ThemeContext);
   return (
-    <div className="space-y-6">
+    <div
+      className={classNames(
+        theme === "dark" ? "text-steel-300" : "text-steel-700",
+        "space-y-6",
+      )}
+    >
       <div className="blockquote2 mx-6 flex w-full font-bold">
         <span className="">{`"Infinite diversity in infinite combination."`}</span>
       </div>

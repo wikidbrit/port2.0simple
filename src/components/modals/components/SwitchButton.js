@@ -3,14 +3,15 @@ import classNames from "classnames";
 import ThemeContext from "../../../context/ThemeContext";
 
 const SwitchButton = ({ toggle, setToggle, title, subTitle }) => {
-  const commonStyles = " p-4 space-y-2 text-left rounded-md w-full";
+  const commonStyles = "border-[2px]  p-4 space-y-2 text-left w-full";
   const theme = useContext(ThemeContext);
 
   return (
     <button
       className={classNames(
-        theme === "dark" ? "raised-dark" : "raised",
+        theme === "dark" ? "text-steel-100" : "text-steel-600",
         commonStyles,
+        toggle ? "border-steel-700" : "border-neoMiddleBlue",
       )}
       onClick={setToggle()}
     >
@@ -26,14 +27,14 @@ const SwitchButton = ({ toggle, setToggle, title, subTitle }) => {
         <div
           className={classNames(
             toggle ? "border-neoGrey" : "border-neoMiddleBlue",
-            "rounded-sm border-[1px] p-[1px]",
+            "border-[1px] p-[1px]",
           )}
         >
           {" "}
           <div
             className={classNames(
               toggle ? "bg-neoGrey" : "bg-neoMiddleBlue",
-              "h-3 w-3 rounded-sm",
+              "h-3 w-3",
             )}
           ></div>
         </div>
