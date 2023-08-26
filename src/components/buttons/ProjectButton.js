@@ -12,10 +12,7 @@ const ProjectButton = ({ text, icon, onClick, eyebrow, boxText }) => {
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
       onClick={onClick}
-      className={classNames(
-        theme === "dark" ? "project-button" : "",
-        "relative h-full p-4",
-      )}
+      className={classNames("project-button relative h-full p-4")}
     >
       <p className="absolute left-4 top-4 flex w-fit bg-lightWater-400 px-2 py-1 text-xxs text-water-800 opacity-40">
         {boxText}

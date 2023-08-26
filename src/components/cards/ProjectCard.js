@@ -15,7 +15,9 @@ const ProjectCard = ({ title, subTitle, image, type }) => {
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
       className={classNames(
-        theme === "dark" ? "from-steel-800 to-steel-900" : "",
+        theme === "dark"
+          ? "from-steel-800 to-steel-900"
+          : "border-[1px] border-water-800 from-steel to-steel-400",
         "relative space-y-6 overflow-hidden bg-gradient-to-br",
       )}
     >
@@ -24,10 +26,15 @@ const ProjectCard = ({ title, subTitle, image, type }) => {
         <img
           src={image}
           alt="testing"
-          className="h-[15.5rem] w-full rounded-lg object-cover"
+          className="h-[15.5rem] w-full object-cover"
         ></img>
         <div className="flex flex-row items-end justify-between p-4">
-          <div className="space-y-1 text-neoGrey">
+          <div
+            className={classNames(
+              theme === "dark" ? "text-steel" : "text-steel-700",
+              "space-y-1 ",
+            )}
+          >
             <p className="text-xl font-medium">{title}</p>
             <p className="text-sm font-light">{subTitle}</p>
           </div>
