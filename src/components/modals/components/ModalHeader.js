@@ -14,7 +14,12 @@ const ModalHeader = ({
   altImage,
 }) => {
   return (
-    <div className="flex flex-row items-center justify-between space-y-2">
+    <div
+      className={classNames(
+        theme === "dark" ? "text-steel-300" : "text-steel-800",
+        "flex flex-row items-center justify-between space-y-2",
+      )}
+    >
       <div className="flex flex-row space-x-6">
         {image && (
           <img

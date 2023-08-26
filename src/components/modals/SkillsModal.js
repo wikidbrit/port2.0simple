@@ -33,8 +33,8 @@ const SkillsModal = ({ close }) => {
     <div
       className={classNames(
         theme === "dark"
-          ? "from-steel-800 to-steel-900"
-          : "border-[1px] border-water-800 from-steel to-steel-400",
+          ? "from-steel-800 to-steel-900 text-steel-100"
+          : "border-[1px] border-water-800 from-steel to-steel-400 text-steel-800",
         "w-[40rem] space-y-10 rounded-lg bg-gradient-to-br p-6 text-neoGrey",
       )}
     >

@@ -9,7 +9,7 @@ const SwitchButton = ({ toggle, setToggle, title, subTitle }) => {
   return (
     <button
       className={classNames(
-        theme === "dark" ? "" : "",
+        theme === "dark" ? "text-steel-100" : "text-steel-600",
         commonStyles,
         toggle ? "border-steel-700" : "border-neoMiddleBlue",
       )}
