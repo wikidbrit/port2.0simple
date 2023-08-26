@@ -24,6 +24,7 @@ const useGetContent = () => {
       }
       conclusion
       slug
+      projectType
     }
   }
 }

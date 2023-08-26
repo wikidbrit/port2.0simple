@@ -20,6 +20,7 @@ const useGetSlugContent = ({ slug }) => {
         }
         conclusion
         slug
+        projectType
       }
     }
   }

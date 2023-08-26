@@ -30,6 +30,7 @@ const Projects = () => {
             title={item.title}
             subTitle={item.subtext}
             image={item.coverImage.url}
+            type={item.projectType}
           />
         </Link>
       ))}
@@ -71,6 +72,7 @@ const Projects = () => {
             title={item.title}
             subTitle={item.subtext}
             image={item.coverImage.url}
+            type={item.projectType}
           />
         </Link>
       ))}
