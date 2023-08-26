@@ -6,6 +6,8 @@ import image from "../../assets/images/try.png";
 import ThemeContext from "../../context/ThemeContext";
 import classNames from "classnames";
 import ModalHeader from "./components/ModalHeader";
+import IconButtonSmall from "../buttons/IconButtonSmall";
+import { TbX } from "react-icons/tb";
 
 const AboutMeModal = ({ close }) => {
   const [professionalToggle, setProfessionalToggle] = useState(false);
@@ -54,6 +56,7 @@ const AboutMeModal = ({ close }) => {
         )}
       </div>
       <div>
+        <IconButtonSmall onClick={close} icon={<TbX size={"1.2rem"} />} />
         <button
           className={classNames(
             theme === "dark" ? "raised-dark" : "raised",

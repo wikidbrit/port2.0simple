@@ -1,7 +1,8 @@
 import React from "react";
 
 import classNames from "classnames";
-import { TbCircleX } from "react-icons/tb";
+import { TbX } from "react-icons/tb";
+import IconButtonSmall from "../../buttons/IconButtonSmall";
 
 const ModalHeader = ({
   theme,
@@ -41,15 +42,10 @@ const ModalHeader = ({
           <p className="text-sm">{subTitle}</p>
         </div>
       </div>
-      <button
-        className={classNames(
-          theme === "dark" ? "raised-dark" : "raised",
-          "absolute right-7 top-6 rounded-full p-2 hover:text-neoMiddleBlue",
-        )}
+      <IconButtonSmall
         onClick={close}
-      >
-        <TbCircleX size={"1.5rem"} />
-      </button>
+        icon={<TbX color="#D6D6D6" size={"1.2rem"} />}
+      />
     </div>
   );
 };
