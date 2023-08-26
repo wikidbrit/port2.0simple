@@ -7,20 +7,19 @@ import classNames from "classnames";
 const IconButtonSmall = ({ icon, onClick, to, className, parentClassName }) => {
   if (to)
     return (
-      <button className={parentClassName}>
-        <motion.button
-          layout={"position"}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ duration: 0.2, ease: "easeOut" }}
-          className={classNames(
-            className,
-            "new-button flex h-10 w-10 place-content-center items-center text-center",
-          )}
-        >
-          <HashLink to={to}>{icon}</HashLink>
-        </motion.button>
-      </button>
+      <motion.button
+        layout={true}
+        layoutId="test"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
+        className={classNames(
+          parentClassName,
+          "new-button flex h-10 w-10 place-content-center items-center text-center",
+        )}
+      >
+        <HashLink to={to}>{icon}</HashLink>
+      </motion.button>
     );
 
   return (
