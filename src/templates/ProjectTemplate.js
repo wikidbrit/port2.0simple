@@ -5,8 +5,8 @@ import useGetSlugContent from "../hooks/useGetSlugContent";
 
 import { FiArrowLeft } from "react-icons/fi";
 import { motion } from "framer-motion";
-import NavButton from "../components/buttons/NavButton";
 import ThemeContext from "../context/ThemeContext";
+import IconButtonSmall from "../components/buttons/IconButtonSmall";
 
 const ProjectTemplate = ({ handleChange }) => {
   const { slug } = useParams();
@@ -31,13 +31,19 @@ const ProjectTemplate = ({ handleChange }) => {
   return (
     <motion.div
       key={4}
-      className=""
+      className="relative"
       exit={{ opacity: 0 }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: [0.87, 0, 0.13, 1] }}
     >
-      <NavButton hash icon={<FiArrowLeft />} theme={theme} to={"/#Projects"} />
+      <IconButtonSmall
+        hash
+        icon={<FiArrowLeft />}
+        theme={theme}
+        to={"/#Projects"}
+        className={"fixed -translate-x-20 translate-y-6"}
+      />
 
       <p className="text-[4.2rem] text-neoGrey ">{data[0].title}</p>
       <p className="text-neoGrey">{data[0].openingText}</p>
