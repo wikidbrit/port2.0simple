@@ -46,7 +46,7 @@ const ProjectTemplate = ({ handleChange }) => {
       <BackButton
         layout="templateButton"
         to={"/#Projects"}
-        className={"absolute -translate-x-20 translate-y-6"}
+        className={"fixed -translate-x-20 translate-y-6"}
         icon={<FiArrowLeft color="D6D6D6" />}
       />
 
