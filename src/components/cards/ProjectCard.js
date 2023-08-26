@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import { motion } from "framer-motion";
 
 import ThemeContext from "../../context/ThemeContext";
 
@@ -9,7 +10,10 @@ import IconButtonSmall from "../buttons/IconButtonSmall";
 const ProjectCard = ({ title, subTitle, image, type }) => {
   const theme = React.useContext(ThemeContext);
   return (
-    <div
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
       className={classNames(
         theme === "dark" ? "from-steel-800 to-steel-900" : "",
         "relative space-y-6 overflow-hidden bg-gradient-to-br",
@@ -37,7 +41,7 @@ const ProjectCard = ({ title, subTitle, image, type }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default ProjectCard;
