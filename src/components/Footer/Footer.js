@@ -9,6 +9,10 @@ import {
   TbChecklist,
   TbUserShare,
   TbMessageShare,
+  TbBrandLinkedin,
+  TbFileLike,
+  TbBrandGithub,
+  TbMail,
 } from "react-icons/tb";
 import AlternatingToggle from "../buttons/AlternatingToggle";
 import IconButtonSmall from "../buttons/IconButtonSmall";
@@ -102,7 +106,7 @@ const Footer = ({ handleChange }) => {
             nested
             trigger={
               <IconButtonSmall
-                icon={<TbMessageShare color="#D6D6D6" size={"1.2rem"} />}
+                icon={<TbMail color="#D6D6D6" size={"1.2rem"} />}
               />
             }
             {...{ overlayStyle, contentStyle }}
@@ -121,8 +125,32 @@ const Footer = ({ handleChange }) => {
           >
             {(close) => <SkillsModal close={close} />}
           </Popup>
+
+          <IconButtonSmall
+            icon={<TbFileLike color="#D6D6D6" size={"1.2rem"} />}
+          />
+          <a
+            target="blank"
+            rel="noreferrer"
+            href="https://github.com/wikidbrit"
+          >
+            <IconButtonSmall
+              icon={<TbBrandGithub color="#D6D6D6" size={"1.2rem"} />}
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/pflemingonline/"
+            target="blank"
+            rel="noreferrer"
+          >
+            <IconButtonSmall
+              icon={<TbBrandLinkedin color="$D6D6D6" size={"1.3rem"} />}
+            />
+          </a>
         </div>
-        <div className="align-bottom">© Paul Fleming 2023</div>
+        <div className="self-end align-bottom text-steel-600">
+          © Paul Fleming 2023
+        </div>
       </div>
     </div>
   );

@@ -35,8 +35,8 @@ const TitleArea = () => {
           </p>
           <BottomShards />
         </div>
-        <div className="flex h-12 w-12 place-content-center items-center rounded-full border-[2px] border-steel-400">
-          <p className="text-xl tracking-normal text-steel-400">&</p>
+        <div className="flex h-12 w-12 place-content-center items-center border-[2px] border-steel-700">
+          <p className="text-xl tracking-normal text-steel-600">&</p>
         </div>
 
         <div className="flex flex-col space-y-3">

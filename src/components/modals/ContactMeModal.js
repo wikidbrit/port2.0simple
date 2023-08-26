@@ -16,7 +16,7 @@ const ContactMeModal = ({ close }) => {
         theme === "dark"
           ? "from-steel-800 to-steel-900 text-steel-100"
           : "border-[1px] border-water-800 from-steel to-steel-400 text-steel-800",
-        "w-[32rem] space-y-6 rounded-lg bg-gradient-to-br p-6 text-neoGrey",
+        "w-[32rem] space-y-6 bg-gradient-to-br p-6 text-neoGrey",
       )}
     >
       <ModalHeader

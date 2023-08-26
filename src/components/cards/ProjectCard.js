@@ -38,10 +38,10 @@ const ProjectCard = ({ title, subTitle, image, type }) => {
             <p className="text-xl font-medium">{title}</p>
             <p className="text-sm font-light">{subTitle}</p>
           </div>
-          <div className="h-fit rounded-md border-[1px] border-steel-800 px-2 py-1 text-center">
+          <div className="h-fit border-[1px] border-steel-800 px-2 py-1 text-center">
             <p className="text-xxs text-steel-700">{type}</p>
           </div>
-          <div className=" absolute right-2 top-4 h-fit rounded-full p-2">
+          <div className=" absolute right-2 top-4 h-fit  p-2">
             <IconButtonSmall
               icon={<TbArrowUpRight color="#D6D6D6" size={"1.2rem"} />}
             />

@@ -13,9 +13,14 @@ const AboutMeModal = ({ close }) => {
   const [personalToggle, setPersonalToggle] = useState(true);
   const theme = useContext(ThemeContext);
 
-  const handleClick = () => {
-    setProfessionalToggle(!professionalToggle);
-    setPersonalToggle(!personalToggle);
+  const handleProfessionalToggle = () => {
+    setProfessionalToggle(true);
+    setPersonalToggle(false);
+  };
+
+  const handlePersonalToggle = () => {
+    setProfessionalToggle(false);
+    setPersonalToggle(true);
   };
 
   return (
@@ -41,14 +46,14 @@ const AboutMeModal = ({ close }) => {
           title={"Professional"}
           subTitle={"My professional experience."}
           toggle={professionalToggle}
-          setToggle={() => handleClick}
+          setToggle={() => handlePersonalToggle}
         />
         <SwitchButton
           theme={theme}
           title={"Personal"}
           subTitle={"More about me."}
           toggle={personalToggle}
-          setToggle={() => handleClick}
+          setToggle={() => handleProfessionalToggle}
         />
       </div>
       <div>
