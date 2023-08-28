@@ -141,7 +141,7 @@ const Footer = ({ handleChange }) => {
             rel="noreferrer"
           >
             <IconButtonSmall
-              icon={<TbBrandLinkedin color="$D6D6D6" size={"1.3rem"} />}
+              icon={<TbBrandLinkedin color="#D6D6D6" size={"1.3rem"} />}
             />
           </a>
         </div>
