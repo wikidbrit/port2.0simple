@@ -10,13 +10,14 @@ import useGetBreakpoints from "../../../hooks/useGetBreakpoints";
 
 const TitleArea = () => {
   const theme = useContext(ThemeContext);
-  const { isDesktop } = useGetBreakpoints();
 
   return (
     <div className="h-[65vh] w-full">
       <div className="flex h-full flex-col place-content-center items-center justify-between space-y-2 px-0 text-6xl tracking-wider lg:flex-row lg:px-20 lg:text-8xl">
         <div className="flex flex-col">
-          {isDesktop && <TopShards />}
+          <div className="hidden lg:block">
+            <TopShards />
+          </div>
 
           <p
             className={classNames(
@@ -44,7 +45,9 @@ const TitleArea = () => {
         </div>
 
         <div className="flex flex-col space-y-3">
-          {isDesktop && <TopCode />}
+          <div className="hidden lg:block">
+            <TopCode />
+          </div>
 
           <p
             className={classNames(

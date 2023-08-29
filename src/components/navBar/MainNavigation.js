@@ -44,31 +44,30 @@ const MainNavigation = () => {
             )}
           </div>
         </div>
-        {isDesktop && (
-          <div>
-            <ul
-              className={classNames(
-                theme === "dark" ? "text-steel-400" : "text-water-900",
-                "flex flex-row space-x-16 text-sm",
-              )}
-            >
-              <li>
-                <HashLink to={"/#Projects"}>Projects</HashLink>
-              </li>
-              <li>
-                <Popup
-                  modal
-                  nested
-                  trigger={<button>About</button>}
-                  {...{ contentStyle }}
-                >
-                  {(close) => <AboutMeModal close={close} />}
-                </Popup>
-              </li>
-              <li>Resume</li>
-            </ul>
-          </div>
-        )}
+
+        <di className="hidden lg:block">
+          <ul
+            className={classNames(
+              theme === "dark" ? "text-steel-400" : "text-water-900",
+              "flex flex-row space-x-16 text-sm",
+            )}
+          >
+            <li>
+              <HashLink to={"/#Projects"}>Projects</HashLink>
+            </li>
+            <li>
+              <Popup
+                modal
+                nested
+                trigger={<button>About</button>}
+                {...{ contentStyle }}
+              >
+                {(close) => <AboutMeModal close={close} />}
+              </Popup>
+            </li>
+            <li>Resume</li>
+          </ul>
+        </di>
 
         <div>
           <Popup
