@@ -14,7 +14,7 @@ const TitleAreaSelectionBox = () => {
       transition={{ ease: "easeInOut", duration: 2, delay: 1.5 }}
       className={classNames(
         theme === "dark" ? "border-lightWater-800" : "border-lightWater-200",
-        "absolute -left-1 top-1.5 h-[6.5rem] w-[5.2rem]  border-2 ",
+        "absolute -left-1 top-1.5 h-[3.8rem] w-[3.5rem] border-2 lg:h-[6.5rem]  lg:w-[5.2rem] ",
       )}
     >
       <div
