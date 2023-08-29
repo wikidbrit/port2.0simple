@@ -43,6 +43,7 @@ const Projects = () => {
         {/* About Section */}
         <Popup
           modal
+          nested
           trigger={
             <ProjectButton
               eyebrow={"Who I am"}

@@ -29,6 +29,8 @@ const Footer = ({ handleChange }) => {
     background: "#2EB2EC",
   };
 
+  console.log(isDesktop);
+
   return (
     <div className="flex h-56 flex-row justify-between p-2 lg:h-48 lg:p-0">
       <div className="flex h-full flex-col place-content-between text-sm">
@@ -80,11 +82,9 @@ const Footer = ({ handleChange }) => {
             </li>
           </ul>
         </div>
-        {isMobile && (
-          <div className="align-bottom text-steel-600 lg:self-end">
-            © Paul Fleming 2023
-          </div>
-        )}
+        <div className="block align-bottom text-steel-600 lg:hidden lg:self-end">
+          © Paul Fleming 2023
+        </div>
       </div>
 
       <div
@@ -94,7 +94,7 @@ const Footer = ({ handleChange }) => {
         )}
       >
         {isDesktop && (
-          <div className="flex flex-row space-x-2">
+          <div className="flex hidden flex-row space-x-2 lg:block">
             <Popup
               modal
               nested
@@ -158,7 +158,7 @@ const Footer = ({ handleChange }) => {
         )}
 
         {isDesktop && (
-          <div className="self-end align-bottom text-steel-600">
+          <div className="hidden self-end align-bottom text-steel-600 lg:block">
             © Paul Fleming 2023
           </div>
         )}
