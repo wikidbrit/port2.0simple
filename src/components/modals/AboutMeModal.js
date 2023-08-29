@@ -29,7 +29,7 @@ const AboutMeModal = ({ close }) => {
         theme === "dark"
           ? "from-steel-800 to-steel-900"
           : "border-[1px] border-water-800 from-steel to-steel-400",
-        " w-[40rem] space-y-6 bg-gradient-to-br p-6 text-steel-300",
+        "h-screen w-screen space-y-6 overflow-scroll bg-gradient-to-br p-6 text-steel-300 lg:h-auto lg:w-[40rem]",
       )}
     >
       <ModalHeader

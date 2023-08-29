@@ -9,9 +9,13 @@ import AboutMeModal from "../modals/AboutMeModal";
 import classNames from "classnames";
 import MainButton from "../buttons/MainButton";
 import ContactMeModal from "../modals/ContactMeModal";
+import useGetBreakpoints from "../../hooks/useGetBreakpoints";
 
 const MainNavigation = () => {
   const theme = useContext(ThemeContext);
+  const { isDesktop } = useGetBreakpoints();
+
+  console.log(isDesktop);
 
   const contentStyle = {
     background: "#2EB2EC",
@@ -25,7 +29,7 @@ const MainNavigation = () => {
         "z-50 mx-auto w-full px-5 tracking-wide shadow-sm",
       )}
     >
-      <div className="mx-auto flex w-full max-w-[1400px] flex-row items-center justify-between py-2">
+      <div className="mx-auto flex flex-row items-center justify-between py-2 lg:w-screen lg:max-w-[1400px]">
         <div>
           <div className="w-16 duration-300">
             {theme === "dark" && (
@@ -40,30 +44,31 @@ const MainNavigation = () => {
             )}
           </div>
         </div>
-
-        <div>
-          <ul
-            className={classNames(
-              theme === "dark" ? "text-steel-400" : "text-water-900",
-              "flex flex-row space-x-16 text-sm",
-            )}
-          >
-            <li>
-              <HashLink to={"/#Projects"}>Projects</HashLink>
-            </li>
-            <li>
-              <Popup
-                modal
-                nested
-                trigger={<button>About</button>}
-                {...{ contentStyle }}
-              >
-                {(close) => <AboutMeModal close={close} />}
-              </Popup>
-            </li>
-            <li>Resume</li>
-          </ul>
-        </div>
+        {isDesktop && (
+          <div>
+            <ul
+              className={classNames(
+                theme === "dark" ? "text-steel-400" : "text-water-900",
+                "flex flex-row space-x-16 text-sm",
+              )}
+            >
+              <li>
+                <HashLink to={"/#Projects"}>Projects</HashLink>
+              </li>
+              <li>
+                <Popup
+                  modal
+                  nested
+                  trigger={<button>About</button>}
+                  {...{ contentStyle }}
+                >
+                  {(close) => <AboutMeModal close={close} />}
+                </Popup>
+              </li>
+              <li>Resume</li>
+            </ul>
+          </div>
+        )}
 
         <div>
           <Popup

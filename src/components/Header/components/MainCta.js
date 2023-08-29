@@ -13,7 +13,7 @@ const MainCta = () => {
         <p
           className={classNames(
             theme === "dark" ? "text-steel-200" : "text-steel-600",
-            "text-lg",
+            "lg:text-lg",
           )}
         >
           Elevating Brands with Design Mastery<br></br>

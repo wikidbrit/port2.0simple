@@ -37,7 +37,7 @@ const ProjectTemplate = ({ handleChange }) => {
     <motion.div
       key={4}
       layout="templateParent"
-      className="relative"
+      className="relative px-4 lg:px-0"
       exit={{ opacity: 0 }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -57,8 +57,10 @@ const ProjectTemplate = ({ handleChange }) => {
         )}
       >
         <div>
-          <p className="text-[4.2rem] ">{data[0].title}</p>
-          <p className="pb-20 ">{data[0].openingText}</p>
+          <p className="text-5xl leading-10 lg:text-[4.2rem] lg:leading-normal">
+            {data[0].title}
+          </p>
+          <p className="pb-20 pt-10 lg:pt-0">{data[0].openingText}</p>
         </div>
 
         {data[0].contentImageCollection.items.map((item, index) => (

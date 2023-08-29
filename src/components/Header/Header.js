@@ -6,6 +6,7 @@ import MainCta from "./components/MainCta";
 
 const Header = ({ handleChange }) => {
   // const theme = useContext(ThemeContext);
+
   return (
     <div className="relative" id="home">
       <div className="z-0">

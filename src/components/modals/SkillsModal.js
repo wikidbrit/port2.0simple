@@ -35,7 +35,7 @@ const SkillsModal = ({ close }) => {
         theme === "dark"
           ? "from-steel-800 to-steel-900 text-steel-100"
           : "border-[1px] border-water-800 from-steel to-steel-400 text-steel-800",
-        "w-[40rem] space-y-10 bg-gradient-to-br p-6 text-neoGrey",
+        "h-screen w-screen space-y-10 overflow-scroll bg-gradient-to-br p-6 text-neoGrey lg:h-auto lg:w-[40rem]",
       )}
     >
       <ModalHeader
@@ -56,7 +56,7 @@ const SkillsModal = ({ close }) => {
         </p>
       </div>
 
-      <div className="grid grid-cols-6 gap-2">
+      <div className="grid grid-cols-3 gap-y-10 lg:grid-cols-6 lg:gap-2 ">
         <SkillGague
           offset
           icon={<TbBrandHtml5 color="#F16528" size={"2rem"} />}
@@ -99,7 +99,7 @@ const SkillsModal = ({ close }) => {
           years.
         </p>
       </div>
-      <div className="grid grid-cols-6 gap-4">
+      <div className="grid grid-cols-3 gap-y-10 lg:grid-cols-6 lg:gap-2 ">
         <SkillGague
           icon={<TbBrandFigma color="#5552FE" size={"2rem"} />}
           value={66}

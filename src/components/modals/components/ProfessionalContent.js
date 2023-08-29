@@ -25,13 +25,6 @@ const ProfessionalContent = () => {
         meticulous creation of **design systems**.
       </ReactMarkdown>
       <ReactMarkdown className="leading-7">
-        My expertise extends to collaborating closely with stakeholders,
-        confidently presenting design strategies and solutions. I tackle
-        projects ranging from pixel-perfect print layouts to interactive digital
-        interfaces. I'm well-versed in creating accessible and responsive
-        designs while ensuring accessibility in every experience.
-      </ReactMarkdown>
-      <ReactMarkdown className="leading-7">
         Coding is another realm where I thrive. I specialize in JavaScript,
         particularly within the **React** framework, and have honed my skills in
         crafting dynamic user interfaces. My proficiency extends to static site
