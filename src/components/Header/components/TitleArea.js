@@ -6,14 +6,18 @@ import TopShards from "./TopShards";
 import BottomShards from "./BottomShards";
 import ThemeContext from "../../../context/ThemeContext";
 import classNames from "classnames";
+import useGetBreakpoints from "../../../hooks/useGetBreakpoints";
 
 const TitleArea = () => {
   const theme = useContext(ThemeContext);
+  const { isDesktop } = useGetBreakpoints();
+
   return (
     <div className="h-[65vh] w-full">
-      <div className="flex h-full flex-row place-content-center items-center justify-between px-20 text-8xl tracking-wider ">
+      <div className="flex h-full flex-col place-content-center items-center justify-between space-y-2 px-0 text-6xl tracking-wider lg:flex-row lg:px-20 lg:text-8xl">
         <div className="flex flex-col">
-          <TopShards />
+          {isDesktop && <TopShards />}
+
           <p
             className={classNames(
               theme === "dark"
@@ -40,13 +44,14 @@ const TitleArea = () => {
         </div>
 
         <div className="flex flex-col space-y-3">
-          <TopCode />
+          {isDesktop && <TopCode />}
+
           <p
             className={classNames(
               theme === "dark"
                 ? "from-steel-400 to-steel-100 "
                 : "from-steel-400 to-steel-700",
-              "flex bg-gradient-to-l bg-clip-text font-black text-transparent",
+              "mx-auto flex bg-gradient-to-l bg-clip-text font-black text-transparent",
             )}
           >
             <span

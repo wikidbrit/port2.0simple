@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
 
       <div
         style={{ zIndex: 1 }} // Higher value than background image's z-index
-        className="relative mx-auto max-w-[1280px] p-10"
+        className="relative mx-auto max-w-[1280px] pt-10 lg:p-10 lg:pt-0"
       >
         {children}
       </div>
