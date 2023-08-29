@@ -56,7 +56,7 @@ const SkillsModal = ({ close }) => {
         </p>
       </div>
 
-      <div className="grid grid-cols-6 gap-2">
+      <div className="grid grid-cols-3 gap-y-10 lg:grid-cols-6 lg:gap-2 ">
         <SkillGague
           offset
           icon={<TbBrandHtml5 color="#F16528" size={"2rem"} />}
@@ -99,7 +99,7 @@ const SkillsModal = ({ close }) => {
           years.
         </p>
       </div>
-      <div className="grid grid-cols-6 gap-4">
+      <div className="grid grid-cols-3 gap-y-10 lg:grid-cols-6 lg:gap-2 ">
         <SkillGague
           icon={<TbBrandFigma color="#5552FE" size={"2rem"} />}
           value={66}
