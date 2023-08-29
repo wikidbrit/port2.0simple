@@ -49,13 +49,13 @@ const BottomCode = () => {
     <div
       className={classNames(
         theme === "dark" ? "opacity-40" : "opacity-60",
-        "flex h-32 translate-x-5  flex-col place-content-center space-y-2",
+        "max-w-screen flex flex-col  place-content-center space-y-2 lg:h-32 lg:translate-x-5",
       )}
     >
       <motion.p
         className={classNames(
           theme === "dark" ? "text-green-300" : "text-green-700",
-          "text-xs tracking-wide",
+          "text-xxs tracking-wide lg:text-xs",
         )}
         key={animationKey} // This is important to reset the animation
         variants={sentence}

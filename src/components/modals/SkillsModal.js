@@ -35,7 +35,7 @@ const SkillsModal = ({ close }) => {
         theme === "dark"
           ? "from-steel-800 to-steel-900 text-steel-100"
           : "border-[1px] border-water-800 from-steel to-steel-400 text-steel-800",
-        "w-[40rem] space-y-10 bg-gradient-to-br p-6 text-neoGrey",
+        "h-screen w-screen space-y-10 overflow-scroll bg-gradient-to-br p-6 text-neoGrey lg:h-auto lg:w-[40rem]",
       )}
     >
       <ModalHeader

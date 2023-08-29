@@ -19,16 +19,18 @@ import Popup from "reactjs-popup";
 import SkillsModal from "../modals/SkillsModal";
 import AboutMeModal from "../modals/AboutMeModal";
 import ContactMeModal from "../modals/ContactMeModal";
+import useGetBreakpoints from "../../hooks/useGetBreakpoints";
 
 const Footer = ({ handleChange }) => {
   const theme = useContext(ThemeContext);
+  const { isDesktop, isMobile } = useGetBreakpoints();
 
   const contentStyle = {
     background: "#2EB2EC",
   };
 
   return (
-    <div className="flex h-48 flex-row justify-between">
+    <div className="flex h-56 flex-row justify-between p-2 lg:h-48 lg:p-0">
       <div className="flex h-full flex-col place-content-between text-sm">
         <div className="w-16 duration-300">
           {theme === "dark" && (
@@ -42,7 +44,8 @@ const Footer = ({ handleChange }) => {
             </div>
           )}
         </div>
-        <AlternatingToggle handleChange={handleChange} />
+        {isDesktop && <AlternatingToggle handleChange={handleChange} />}
+
         <div
           className={classNames(
             theme === "dark" ? "text-steel-100" : "text-water-900",
@@ -77,6 +80,11 @@ const Footer = ({ handleChange }) => {
             </li>
           </ul>
         </div>
+        {isMobile && (
+          <div className="align-bottom text-steel-600 lg:self-end">
+            © Paul Fleming 2023
+          </div>
+        )}
       </div>
 
       <div
@@ -85,69 +93,75 @@ const Footer = ({ handleChange }) => {
           "flex h-full flex-col place-content-between text-sm",
         )}
       >
-        <div className="flex flex-row space-x-2">
-          <Popup
-            modal
-            nested
-            trigger={
-              <IconButtonSmall
-                icon={<TbUserShare color="#D6D6D6" size={"1.2rem"} />}
-              />
-            }
-            {...{ contentStyle }}
-          >
-            {(close) => <AboutMeModal close={close} />}
-          </Popup>
-          <Popup
-            modal
-            nested
-            trigger={
-              <IconButtonSmall
-                icon={<TbMail color="#D6D6D6" size={"1.2rem"} />}
-              />
-            }
-            {...{ contentStyle }}
-          >
-            {(close) => <ContactMeModal close={close} />}
-          </Popup>
-          <Popup
-            modal
-            nested
-            trigger={
-              <IconButtonSmall
-                icon={<TbChecklist color="#D6D6D6" size={"1.2rem"} />}
-              />
-            }
-            {...{ contentStyle }}
-          >
-            {(close) => <SkillsModal close={close} />}
-          </Popup>
+        {isDesktop && (
+          <div className="flex flex-row space-x-2">
+            <Popup
+              modal
+              nested
+              trigger={
+                <IconButtonSmall
+                  icon={<TbUserShare color="#D6D6D6" size={"1.2rem"} />}
+                />
+              }
+              {...{ contentStyle }}
+            >
+              {(close) => <AboutMeModal close={close} />}
+            </Popup>
+            <Popup
+              modal
+              nested
+              lockScroll
+              trigger={
+                <IconButtonSmall
+                  icon={<TbMail color="#D6D6D6" size={"1.2rem"} />}
+                />
+              }
+              {...{ contentStyle }}
+            >
+              {(close) => <ContactMeModal close={close} />}
+            </Popup>
+            <Popup
+              modal
+              nested
+              trigger={
+                <IconButtonSmall
+                  icon={<TbChecklist color="#D6D6D6" size={"1.2rem"} />}
+                />
+              }
+              {...{ contentStyle }}
+            >
+              {(close) => <SkillsModal close={close} />}
+            </Popup>
 
-          <IconButtonSmall
-            icon={<TbFileLike color="#D6D6D6" size={"1.2rem"} />}
-          />
-          <a
-            target="blank"
-            rel="noreferrer"
-            href="https://github.com/wikidbrit"
-          >
             <IconButtonSmall
-              icon={<TbBrandGithub color="#D6D6D6" size={"1.2rem"} />}
+              icon={<TbFileLike color="#D6D6D6" size={"1.2rem"} />}
             />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/pflemingonline/"
-            target="blank"
-            rel="noreferrer"
-          >
-            <IconButtonSmall
-              icon={<TbBrandLinkedin color="#D6D6D6" size={"1.3rem"} />}
-            />
-          </a>
-        </div>
-        <div className="self-end align-bottom text-steel-600">
-          © Paul Fleming 2023
-        </div>
+            <a
+              target="blank"
+              rel="noreferrer"
+              href="https://github.com/wikidbrit"
+            >
+              <IconButtonSmall
+                icon={<TbBrandGithub color="#D6D6D6" size={"1.2rem"} />}
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/pflemingonline/"
+              target="blank"
+              rel="noreferrer"
+            >
+              <IconButtonSmall
+                icon={<TbBrandLinkedin color="#D6D6D6" size={"1.3rem"} />}
+              />
+            </a>
+          </div>
+        )}
+
+        {isDesktop && (
+          <div className="self-end align-bottom text-steel-600">
+            © Paul Fleming 2023
+          </div>
+        )}
       </div>
     </div>
   );

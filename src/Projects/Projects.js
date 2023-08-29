@@ -11,20 +11,25 @@ import Popup from "reactjs-popup";
 import { TbChecklist, TbUserShare } from "react-icons/tb";
 import AboutMeModal from "../components/modals/AboutMeModal";
 import SkillsModal from "../components/modals/SkillsModal";
+import useModalStyles from "../hooks/useModalStyles";
 
 const Projects = () => {
   const { data, remainingProjects, firstTwoProjects } = useGetContent();
-
-  const contentStyle = {
-    background: "#2EB2EC",
-  };
+  const { OVERLAY_STYLE, MODAL_STYLES } = useModalStyles();
 
   if (!data) return <div>Loading</div>;
 
   return (
-    <div className="z-0 grid grid-cols-2 gap-4 lg:grid-cols-12" id="Projects">
+    <div
+      className="z-0 grid w-full grid-cols-2 gap-4 px-4 lg:grid-cols-12 lg:px-0"
+      id="Projects"
+    >
       {firstTwoProjects?.map((item, index) => (
-        <Link key={index} to={`./project/${item.slug}`} className="col-span-5">
+        <Link
+          key={index}
+          to={`./project/${item.slug}`}
+          className="col-span-2 lg:col-span-5"
+        >
           <ProjectCard
             title={item.title}
             subTitle={item.subtext}
@@ -34,11 +39,10 @@ const Projects = () => {
         </Link>
       ))}
 
-      <div className="col-span-2 row-span-2 mx-auto flex h-56 w-56 flex-col gap-4 lg:row-span-1 lg:h-auto">
+      <div className="col-span-2 row-span-2 mx-auto flex h-56 w-56 flex-col gap-4 lg:row-span-1 lg:h-auto ">
         {/* About Section */}
         <Popup
           modal
-          nested
           trigger={
             <ProjectButton
               eyebrow={"Who I am"}
@@ -47,7 +51,7 @@ const Projects = () => {
               icon={<TbUserShare color="#D6D6D6" size={"1.6rem"} />}
             />
           }
-          {...{ contentStyle }}
+          {...{ OVERLAY_STYLE, MODAL_STYLES }}
         >
           {(close) => <AboutMeModal close={close} />}
         </Popup>
@@ -63,14 +67,18 @@ const Projects = () => {
               icon={<TbChecklist color="#D6D6D6" size={"1.6rem"} />}
             />
           }
-          {...{ contentStyle }}
+          {...{ OVERLAY_STYLE, MODAL_STYLES }}
         >
           {(close) => <SkillsModal close={close} />}
         </Popup>
       </div>
 
       {remainingProjects.map((item, index) => (
-        <Link key={index} to={`./project/${item.slug}`} className="col-span-6">
+        <Link
+          key={index}
+          to={`./project/${item.slug}`}
+          className="col-span-2 lg:col-span-6"
+        >
           <ProjectCard
             title={item.title}
             subTitle={item.subtext}
