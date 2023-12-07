@@ -23,7 +23,7 @@ import useGetBreakpoints from "../../hooks/useGetBreakpoints";
 
 const Footer = ({ handleChange }) => {
   const theme = useContext(ThemeContext);
-  const { isDesktop, isMobile } = useGetBreakpoints();
+  const { isDesktop } = useGetBreakpoints();
 
   const contentStyle = {
     background: "#2EB2EC",
@@ -94,7 +94,7 @@ const Footer = ({ handleChange }) => {
         )}
       >
         {isDesktop && (
-          <div className="flex hidden flex-row space-x-2 lg:block">
+          <div className="hidden flex-row space-x-2 lg:flex">
             <Popup
               modal
               nested

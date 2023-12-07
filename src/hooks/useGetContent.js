@@ -52,7 +52,7 @@ const useGetContent = () => {
         setData(data.portfolioCollection.items);
         setFirstProject(data.portfolioCollection.items[0]);
         setFirstTwoProjects(data.portfolioCollection.items.slice(0, 2));
-        setRemainingProjects(data.portfolioCollection.items.slice(1));
+        setRemainingProjects(data.portfolioCollection.items.slice(2));
       });
   }, [query]);
 
