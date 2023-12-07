@@ -11,7 +11,12 @@ const Form = ({ close }) => {
 
   return (
     <div>
-      <NetlifyForm name="Contact" action="/thanks" honeypotName="bot-field">
+      <NetlifyForm
+        name="Contact"
+        action="/thanks"
+        honeypotName="bot-field"
+        netlify
+      >
         {({ handleChange, success, error }) => (
           <div className="space-y-6">
             <Honeypot />
