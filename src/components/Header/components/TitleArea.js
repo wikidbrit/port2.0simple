@@ -6,7 +6,6 @@ import TopShards from "./TopShards";
 import BottomShards from "./BottomShards";
 import ThemeContext from "../../../context/ThemeContext";
 import classNames from "classnames";
-import useGetBreakpoints from "../../../hooks/useGetBreakpoints";
 
 const TitleArea = () => {
   const theme = useContext(ThemeContext);
