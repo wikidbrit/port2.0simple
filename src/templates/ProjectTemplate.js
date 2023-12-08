@@ -63,23 +63,30 @@ const ProjectTemplate = ({ handleChange }) => {
           <p className="pb-20 pt-10 lg:pt-0">{data[0].openingText}</p>
         </div>
 
-        {data[0].contentImageCollection.items.map((item, index) => (
-          <Popup
-            modal
-            nested
-            trigger={
-              <img key={index} alt={item.description} src={item.url}></img>
-            }
-          >
-            {(close) => (
-              <ImageInteraction
-                close={close}
-                image={item.url}
-                description={item.description}
-              />
-            )}
-          </Popup>
-        ))}
+        <div className="grid grid-flow-row-dense grid-cols-2 gap-4">
+          {data[0].contentImageCollection.items.map((item, index) => (
+            <Popup
+              modal
+              nested
+              trigger={
+                <img
+                  className="col-span-1 row-span-2"
+                  key={index}
+                  alt={item.description}
+                  src={item.url}
+                ></img>
+              }
+            >
+              {(close) => (
+                <ImageInteraction
+                  close={close}
+                  image={item.url}
+                  description={item.description}
+                />
+              )}
+            </Popup>
+          ))}
+        </div>
         <p>{data[0].conclusion}</p>
         <div>
           <MainButton text={"Go Back"} to={"/#Projects"} />
