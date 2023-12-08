@@ -39,7 +39,7 @@ const Projects = () => {
         </Link>
       ))}
 
-      <div className="col-span-2 row-span-2 mx-auto flex h-56 w-56 flex-col gap-4 lg:row-span-1 lg:h-auto ">
+      <div className="col-span-2 row-span-2 mx-auto flex h-56 w-56 flex-col gap-4 lg:col-span-1 lg:row-span-1 lg:h-auto ">
         {/* About Section */}
         <Popup
           modal
