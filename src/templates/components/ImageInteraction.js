@@ -4,7 +4,7 @@ import { TbX } from "react-icons/tb";
 
 const ImageInteraction = ({ image, description, close }) => {
   return (
-    <div className="relative bg-steel-800 bg-opacity-50">
+    <div className="relative bg-steel-900 bg-opacity-80 p-20">
       <IconButtonSmall
         onClick={close}
         icon={<TbX />}

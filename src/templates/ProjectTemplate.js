@@ -57,13 +57,13 @@ const ProjectTemplate = ({ handleChange }) => {
         )}
       >
         <div>
-          <p className="text-5xl leading-10 lg:text-[4.2rem] lg:leading-normal">
+          <p className="mb-8 mt-28 w-2/3 pt-4 text-5xl font-bold lg:text-[4.2rem]">
             {data[0].title}
           </p>
-          <p className="pb-20 pt-10 lg:pt-0">{data[0].openingText}</p>
+          <p className="w-1/2 pb-8 text-steel-400">{data[0].openingText}</p>
         </div>
 
-        <div className="grid grid-flow-row-dense grid-cols-2 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           {data[0].contentImageCollection.items.map((item, index) => (
             <Popup
               modal
@@ -87,7 +87,7 @@ const ProjectTemplate = ({ handleChange }) => {
             </Popup>
           ))}
         </div>
-        <p>{data[0].conclusion}</p>
+        <p className="w-1/2 pb-2 pt-8 text-steel-400">{data[0].conclusion}</p>
         <div>
           <MainButton text={"Go Back"} to={"/#Projects"} />
         </div>
