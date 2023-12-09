@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import classNames from "classnames";
 import { useParams } from "react-router-dom";
 import Popup from "reactjs-popup";
+import Masonry from "react-responsive-masonry";
 
 import useGetSlugContent from "../hooks/useGetSlugContent";
 import { motion } from "framer-motion";
@@ -56,35 +57,32 @@ const ProjectTemplate = ({ handleChange }) => {
           "space-y-4 ",
         )}
       >
-        <div className="mt-28 grid grid-flow-dense grid-cols-2 gap-4 md:grid-cols-3">
-          <div className="col-span-3">
+        <div className="mt-28">
+          <div className="">
             <p className="mb-8 text-5xl font-bold lg:text-[4.2rem]">
               {data[0].title}
             </p>
             <p className="w-2/3 pb-8 text-steel-400">{data[0].openingText}</p>
           </div>
-          {data[0].contentImageCollection.items.map((item, index) => (
-            <Popup
-              modal
-              nested
-              trigger={
-                <img
-                  className="row-span-6 rounded-lg"
-                  key={index}
-                  alt={item.description}
-                  src={item.url}
-                ></img>
-              }
-            >
-              {(close) => (
-                <ImageInteraction
-                  close={close}
-                  image={item.url}
-                  description={item.description}
-                />
-              )}
-            </Popup>
-          ))}
+          <Masonry gutter="15px">
+            {data[0].contentImageCollection.items.map((item, index) => (
+              <Popup
+                modal
+                nested
+                trigger={
+                  <img key={index} alt={item.description} src={item.url}></img>
+                }
+              >
+                {(close) => (
+                  <ImageInteraction
+                    close={close}
+                    image={item.url}
+                    description={item.description}
+                  />
+                )}
+              </Popup>
+            ))}
+          </Masonry>
         </div>
         <p className="w-1/2 pb-2 pt-8 text-steel-400">{data[0].conclusion}</p>
         <div>
