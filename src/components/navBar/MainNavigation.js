@@ -11,6 +11,8 @@ import MainButton from "../buttons/MainButton";
 import ContactMeModal from "../modals/ContactMeModal";
 import useGetBreakpoints from "../../hooks/useGetBreakpoints";
 
+import pdf from "../../pdfs/PaulFleming_Resume_v1.6.pdf";
+
 const MainNavigation = () => {
   const theme = useContext(ThemeContext);
   const { isDesktop } = useGetBreakpoints();
@@ -65,7 +67,9 @@ const MainNavigation = () => {
                 {(close) => <AboutMeModal close={close} />}
               </Popup>
             </li>
-            <li>Resume</li>
+            <li>
+              <a href={pdf}>Resume</a>
+            </li>
           </ul>
         </di>
 
