@@ -57,12 +57,13 @@ const ProjectTemplate = ({ handleChange }) => {
           "space-y-4 ",
         )}
       >
-        <div className="mt-32">
+        <div className="mb-12 mt-32">
           <div className="pt-4">
-            <p className="mb-8 text-5xl font-bold lg:text-[4.2rem]">
+            <p className="mb-8 text-5xl font-bold text-steel lg:text-[4.2rem]">
               {data[0].title}
             </p>
-            <p className="w-2/3 pb-8 text-steel-400">{data[0].openingText}</p>
+            <p className="w-2/3 text-steel-400">{data[0].openingText}</p>
+            <hr className="my-8 w-1/4 border-water-200 "></hr>
           </div>
           <Masonry gutter="16px">
             {data[0].contentImageCollection.items.map((item, index) => (
@@ -89,7 +90,8 @@ const ProjectTemplate = ({ handleChange }) => {
             ))}
           </Masonry>
         </div>
-        <p className="w-1/2 pb-2 pt-8 text-steel-400">{data[0].conclusion}</p>
+        <hr className="w-1/4 border-water-200 "></hr>
+        <p className="w-1/2 py-4 text-steel-400">{data[0].conclusion}</p>
         <div>
           <MainButton text={"Go Back"} to={"/#Projects"} />
         </div>
