@@ -56,21 +56,20 @@ const ProjectTemplate = ({ handleChange }) => {
           "space-y-4 ",
         )}
       >
-        <div>
-          <p className="mb-8 mt-28 w-2/3 pt-4 text-5xl font-bold lg:text-[4.2rem]">
-            {data[0].title}
-          </p>
-          <p className="w-1/2 pb-8 text-steel-400">{data[0].openingText}</p>
-        </div>
-
-        <div className="grid grid-cols-3 gap-4">
+        <div className="mt-28 grid grid-flow-dense grid-cols-2 gap-4 md:grid-cols-3">
+          <div className="col-span-3">
+            <p className="mb-8 text-5xl font-bold lg:text-[4.2rem]">
+              {data[0].title}
+            </p>
+            <p className="w-2/3 pb-8 text-steel-400">{data[0].openingText}</p>
+          </div>
           {data[0].contentImageCollection.items.map((item, index) => (
             <Popup
               modal
               nested
               trigger={
                 <img
-                  className="col-span-1 row-span-2"
+                  className="row-span-6 rounded-lg"
                   key={index}
                   alt={item.description}
                   src={item.url}
