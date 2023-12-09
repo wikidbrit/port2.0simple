@@ -31,7 +31,7 @@ const TopShards = () => {
       </motion.div>
       <motion.div
         initial={{ y: 60, x: 70, scale: 0.1 }}
-        animate={{ y: -80, x: -60, scale: 4.4 }}
+        animate={{ y: -80, x: -60, scale: 1.4 }}
         transition={{ ease: "easeOut", duration: 2.3 }}
         className="w-6 cursor-pointer"
         style={{ rotate: rotate2, willChange: "transform" }}

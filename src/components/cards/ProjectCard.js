@@ -35,8 +35,8 @@ const ProjectCard = ({ title, subTitle, image, type }) => {
               "space-y-1 ",
             )}
           >
-            <p className="text-xl font-medium">{title}</p>
-            <p className="text-sm font-light">{subTitle}</p>
+            <p className="text-xl font-medium text-steel">{title}</p>
+            <p className="text-sm font-light text-steel-400">{subTitle}</p>
           </div>
           <div className="h-fit border-[1px] border-steel-800 px-2 py-1 text-center">
             <p className="text-xxs text-steel-700">{type}</p>
