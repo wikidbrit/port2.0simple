@@ -10,7 +10,7 @@ const PersonalContent = () => {
     <div
       className={classNames(
         theme === "dark" ? "text-steel-300" : "text-steel-700",
-        "space-y-6 text-sm",
+        "space-y-6",
       )}
     >
       <div className="blockquote2 mx-6 flex w-full font-bold">
