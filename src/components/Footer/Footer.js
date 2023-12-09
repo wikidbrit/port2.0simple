@@ -21,6 +21,8 @@ import AboutMeModal from "../modals/AboutMeModal";
 import ContactMeModal from "../modals/ContactMeModal";
 import useGetBreakpoints from "../../hooks/useGetBreakpoints";
 
+import pdf from "../../pdfs/PaulFleming_Resume_v1.6.pdf";
+
 const Footer = ({ handleChange }) => {
   const theme = useContext(ThemeContext);
   const { isDesktop } = useGetBreakpoints();
@@ -132,10 +134,13 @@ const Footer = ({ handleChange }) => {
             >
               {(close) => <SkillsModal close={close} />}
             </Popup>
+            <a href={pdf} target="blank" rel="noreferrer">
+              {" "}
+              <IconButtonSmall
+                icon={<TbFileLike color="#D6D6D6" size={"1.2rem"} />}
+              />
+            </a>
 
-            <IconButtonSmall
-              icon={<TbFileLike color="#D6D6D6" size={"1.2rem"} />}
-            />
             <a
               target="blank"
               rel="noreferrer"

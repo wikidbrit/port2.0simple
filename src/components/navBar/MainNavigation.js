@@ -68,7 +68,9 @@ const MainNavigation = () => {
               </Popup>
             </li>
             <li>
-              <a href={pdf}>Resume</a>
+              <a href={pdf} target="blank" rel="noreferrer">
+                Resume
+              </a>
             </li>
           </ul>
         </di>
