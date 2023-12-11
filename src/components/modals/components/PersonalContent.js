@@ -21,8 +21,8 @@ const PersonalContent = () => {
         Welcome to my world where science fiction is more than just a genre –
         it's a lifelong fascination. Star Trek has been my loyal companion,
         sparking my imagination since childhood. When I'm not immersed in design
-        or coding, you might find me cycling through scenic routes or lifting
-        weights to channel my energy.
+        or coding, you might find me cycling through scenic routes, doing some
+        home DIY, or working out to channel my energy.
       </ReactMarkdown>
       <ReactMarkdown className="leading-7">
         Embracing my inner technophile, I constantly keep tabs on cutting-edge
@@ -30,7 +30,7 @@ const PersonalContent = () => {
         home automation. Innovation drives me, and I'm always excited to see how
         technology reshapes our world. Whether I'm crafting captivating designs
         or exploring new galaxies in science fiction, my journey is marked by
-        curiosity, creativity, and an desire to keep learning.
+        curiosity, creativity, and a desire to keep learning.
       </ReactMarkdown>
     </div>
   );
