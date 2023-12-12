@@ -163,8 +163,9 @@ const Footer = ({ handleChange }) => {
         )}
 
         {isDesktop && (
-          <div className="hidden self-end align-bottom text-steel-600 lg:block">
-            © Paul Fleming 2023
+          <div className="hidden self-end align-bottom lg:block">
+            {/* <p className="text-right">Update Notes</p> */}
+            <p className="text-steel-600 ">© Paul Fleming 2023</p>
           </div>
         )}
       </div>
