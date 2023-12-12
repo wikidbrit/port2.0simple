@@ -44,6 +44,7 @@ const Projects = () => {
         <Popup
           modal
           nested
+          overlayStyle={OVERLAY_STYLE}
           trigger={
             <ProjectButton
               eyebrow={"Who I am"}
@@ -60,6 +61,7 @@ const Projects = () => {
         <Popup
           modal
           nested
+          overlayStyle={OVERLAY_STYLE}
           trigger={
             <ProjectButton
               boxText={"What I know"}
