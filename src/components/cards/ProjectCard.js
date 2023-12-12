@@ -35,8 +35,22 @@ const ProjectCard = ({ title, subTitle, image, type }) => {
               "space-y-1 ",
             )}
           >
-            <p className="text-xl font-medium text-steel">{title}</p>
-            <p className="text-sm font-light text-steel-400">{subTitle}</p>
+            <p
+              className={classNames(
+                theme === "dark" ? "text-steel" : "text-steel-700",
+                "text-xl font-medium ",
+              )}
+            >
+              {title}
+            </p>
+            <p
+              className={classNames(
+                theme === "dark" ? "text-steel-400" : "text-steel-800",
+                "text-sm font-light ",
+              )}
+            >
+              {subTitle}
+            </p>
           </div>
           <div className="h-fit border-[1px] border-steel-800 px-2 py-1 text-center">
             <p className="text-xxs text-steel-700">{type}</p>
